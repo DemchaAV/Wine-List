@@ -161,10 +161,10 @@
     </div>
 
     <!-- Edit View (Full Screen) -->
-    <div id="editView" class="fixed inset-0 z-50 bg-bg-dark overflow-y-auto hidden">
+    <div id="editView" class="fixed inset-0 z-50 bg-bg-dark hidden flex flex-col">
         <!-- Top Nav -->
         <nav
-            class="sticky top-0 z-50 bg-bg-dark/80 backdrop-blur-md border-b border-primary/10 px-4 py-3 flex items-center justify-between">
+            class="flex-shrink-0 z-50 bg-bg-dark/80 backdrop-blur-md border-b border-primary/10 px-4 py-3 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <button id="editClose" class="p-1 hover:bg-primary/10 rounded-full transition-colors">
                     <span class="material-symbols-outlined text-slate-100">close</span>
@@ -180,154 +180,156 @@
             </div>
         </nav>
 
-        <main class="max-w-3xl mx-auto pb-24">
-            <input type="hidden" id="editId">
+        <div class="flex-1 overflow-y-auto relative">
+            <main class="max-w-3xl mx-auto pb-24">
+                <input type="hidden" id="editId">
 
-            <!-- Hero Image Section -->
-            <div class="relative group mt-4 px-4">
-                <div id="heroPreview"
-                    class="aspect-video w-full rounded-xl overflow-hidden bg-primary/5 border-2 border-dashed border-primary/20 flex flex-col items-center justify-center relative transition-all hover:border-primary/40">
-                    <img id="heroImg" alt="Dish Preview"
-                        class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity hidden">
-                    <div class="relative z-10 flex flex-col items-center gap-2">
-                        <span class="material-symbols-outlined text-4xl text-primary">photo_camera</span>
-                        <span
-                            class="text-sm font-bold bg-bg-dark/80 px-4 py-2 rounded-full border border-primary/20">Image
-                            Preview</span>
+                <!-- Hero Image Section -->
+                <div class="relative group mt-4 px-4">
+                    <div id="heroPreview"
+                        class="aspect-video w-full rounded-xl overflow-hidden bg-primary/5 border-2 border-dashed border-primary/20 flex flex-col items-center justify-center relative transition-all hover:border-primary/40">
+                        <img id="heroImg" alt="Dish Preview"
+                            class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity hidden">
+                        <div class="relative z-10 flex flex-col items-center gap-2">
+                            <span class="material-symbols-outlined text-4xl text-primary">photo_camera</span>
+                            <span
+                                class="text-sm font-bold bg-bg-dark/80 px-4 py-2 rounded-full border border-primary/20">Image
+                                Preview</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <form class="p-4 space-y-8" onsubmit="return false;">
-                <!-- Section: General Information -->
-                <section class="space-y-4">
-                    <div class="flex items-center gap-2 border-l-4 border-primary pl-3">
-                        <h2 class="text-xl font-bold">General Information</h2>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <label class="block space-y-1.5">
-                            <span class="text-sm font-semibold text-slate-400 ml-1">Dish Name *</span>
-                            <input type="text" id="editName"
-                                class="form-input w-full bg-primary/5 border border-primary/20 rounded-lg px-4 py-3 text-white"
-                                placeholder="Enter dish name...">
-                        </label>
-                        <label class="block space-y-1.5">
-                            <span class="text-sm font-semibold text-slate-400 ml-1">Subtitle</span>
-                            <input type="text" id="editSubtitle"
-                                class="form-input w-full bg-primary/5 border border-primary/20 rounded-lg px-4 py-3 text-white"
-                                placeholder="Short description or catchphrase...">
-                        </label>
-                        <div class="grid grid-cols-2 gap-4">
-                            <label class="block space-y-1.5">
-                                <span class="text-sm font-semibold text-slate-400 ml-1">Category *</span>
-                                <input type="text" id="editCategory"
-                                    class="form-input w-full bg-primary/5 border border-primary/20 rounded-lg px-4 py-3 text-white"
-                                    list="categorySuggestions" placeholder="e.g. Starters">
-                                <datalist id="categorySuggestions"></datalist>
-                            </label>
-                            <label class="block space-y-1.5">
-                                <span class="text-sm font-semibold text-slate-400 ml-1">Image Path</span>
-                                <input type="text" id="editImage"
-                                    class="form-input w-full bg-primary/5 border border-primary/20 rounded-lg px-4 py-3 text-white text-sm"
-                                    placeholder="data/categories/menu_images/...">
-                            </label>
+                <form class="p-4 space-y-8" onsubmit="return false;">
+                    <!-- Section: General Information -->
+                    <section class="space-y-4">
+                        <div class="flex items-center gap-2 border-l-4 border-primary pl-3">
+                            <h2 class="text-xl font-bold">General Information</h2>
                         </div>
-                    </div>
-                </section>
-
-                <!-- Section: Culinary Details -->
-                <section class="space-y-4">
-                    <div class="flex items-center gap-2 border-l-4 border-primary pl-3">
-                        <h2 class="text-xl font-bold">Culinary Details</h2>
-                    </div>
-                    <div class="space-y-4">
-                        <label class="block space-y-1.5">
-                            <span class="text-sm font-semibold text-slate-400 ml-1">Description</span>
-                            <textarea id="editDescription"
-                                class="form-input w-full bg-primary/5 border border-primary/20 rounded-lg px-4 py-3 text-white"
-                                placeholder="Describe the flavors and preparation..." rows="4"></textarea>
-                        </label>
-
-                        <!-- Allergens -->
-                        <div class="space-y-2">
-                            <span class="text-sm font-semibold text-slate-400 ml-1">Allergens</span>
-                            <div class="flex flex-wrap gap-2 p-3 bg-primary/5 border border-primary/20 rounded-lg min-h-[48px]"
-                                id="allergenContainer">
-                                <button type="button" id="addAllergenBtn"
-                                    class="border border-primary/30 text-primary px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 hover:bg-primary/10 transition-colors">
-                                    <span class="material-symbols-outlined text-sm">add</span> Add Allergen
-                                </button>
+                        <div class="grid grid-cols-1 gap-4">
+                            <label class="block space-y-1.5">
+                                <span class="text-sm font-semibold text-slate-400 ml-1">Dish Name *</span>
+                                <input type="text" id="editName"
+                                    class="form-input w-full bg-primary/5 border border-primary/20 rounded-lg px-4 py-3 text-white"
+                                    placeholder="Enter dish name...">
+                            </label>
+                            <label class="block space-y-1.5">
+                                <span class="text-sm font-semibold text-slate-400 ml-1">Subtitle</span>
+                                <input type="text" id="editSubtitle"
+                                    class="form-input w-full bg-primary/5 border border-primary/20 rounded-lg px-4 py-3 text-white"
+                                    placeholder="Short description or catchphrase...">
+                            </label>
+                            <div class="grid grid-cols-2 gap-4">
+                                <label class="block space-y-1.5">
+                                    <span class="text-sm font-semibold text-slate-400 ml-1">Category *</span>
+                                    <input type="text" id="editCategory"
+                                        class="form-input w-full bg-primary/5 border border-primary/20 rounded-lg px-4 py-3 text-white"
+                                        list="categorySuggestions" placeholder="e.g. Starters">
+                                    <datalist id="categorySuggestions"></datalist>
+                                </label>
+                                <label class="block space-y-1.5">
+                                    <span class="text-sm font-semibold text-slate-400 ml-1">Image Path</span>
+                                    <input type="text" id="editImage"
+                                        class="form-input w-full bg-primary/5 border border-primary/20 rounded-lg px-4 py-3 text-white text-sm"
+                                        placeholder="data/categories/menu_images/...">
+                                </label>
                             </div>
                         </div>
+                    </section>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Section: Culinary Details -->
+                    <section class="space-y-4">
+                        <div class="flex items-center gap-2 border-l-4 border-primary pl-3">
+                            <h2 class="text-xl font-bold">Culinary Details</h2>
+                        </div>
+                        <div class="space-y-4">
                             <label class="block space-y-1.5">
-                                <span class="text-sm font-semibold text-slate-400 ml-1">Kitchen MEP</span>
-                                <textarea id="editKitchenMep"
+                                <span class="text-sm font-semibold text-slate-400 ml-1">Description</span>
+                                <textarea id="editDescription"
                                     class="form-input w-full bg-primary/5 border border-primary/20 rounded-lg px-4 py-3 text-white"
-                                    placeholder="Kitchen prep details..." rows="3"></textarea>
+                                    placeholder="Describe the flavors and preparation..." rows="4"></textarea>
+                            </label>
+
+                            <!-- Allergens -->
+                            <div class="space-y-2">
+                                <span class="text-sm font-semibold text-slate-400 ml-1">Allergens</span>
+                                <div class="flex flex-wrap gap-2 p-3 bg-primary/5 border border-primary/20 rounded-lg min-h-[48px]"
+                                    id="allergenContainer">
+                                    <button type="button" id="addAllergenBtn"
+                                        class="border border-primary/30 text-primary px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 hover:bg-primary/10 transition-colors">
+                                        <span class="material-symbols-outlined text-sm">add</span> Add Allergen
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <label class="block space-y-1.5">
+                                    <span class="text-sm font-semibold text-slate-400 ml-1">Kitchen MEP</span>
+                                    <textarea id="editKitchenMep"
+                                        class="form-input w-full bg-primary/5 border border-primary/20 rounded-lg px-4 py-3 text-white"
+                                        placeholder="Kitchen prep details..." rows="3"></textarea>
+                                </label>
+                                <label class="block space-y-1.5">
+                                    <span class="text-sm font-semibold text-slate-400 ml-1">Service MEP</span>
+                                    <textarea id="editServiceMep"
+                                        class="form-input w-full bg-primary/5 border border-primary/20 rounded-lg px-4 py-3 text-white"
+                                        placeholder="Front of house requirements..." rows="3"></textarea>
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section: Wine Pairing -->
+                    <section class="p-5 rounded-xl bg-primary/5 border border-primary/10 space-y-4">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">wine_bar</span>
+                            <h2 class="text-lg font-bold">Wine Pairing</h2>
+                        </div>
+                        <div class="space-y-4">
+                            <label class="block space-y-1.5">
+                                <span class="text-sm font-semibold text-slate-400 ml-1">Wine Name</span>
+                                <input type="text" id="editWineName"
+                                    class="form-input w-full bg-bg-dark/50 border border-primary/20 rounded-lg px-4 py-3 text-white"
+                                    placeholder="e.g. Cloudy Bay Sauvignon Blanc">
                             </label>
                             <label class="block space-y-1.5">
-                                <span class="text-sm font-semibold text-slate-400 ml-1">Service MEP</span>
-                                <textarea id="editServiceMep"
-                                    class="form-input w-full bg-primary/5 border border-primary/20 rounded-lg px-4 py-3 text-white"
-                                    placeholder="Front of house requirements..." rows="3"></textarea>
+                                <span class="text-sm font-semibold text-slate-400 ml-1">Tasting Notes</span>
+                                <textarea id="editWineNotes"
+                                    class="form-input w-full bg-bg-dark/50 border border-primary/20 rounded-lg px-4 py-3 text-white"
+                                    placeholder="Describe the pairing..." rows="2"></textarea>
                             </label>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-                <!-- Section: Wine Pairing -->
-                <section class="p-5 rounded-xl bg-primary/5 border border-primary/10 space-y-4">
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-primary">wine_bar</span>
-                        <h2 class="text-lg font-bold">Wine Pairing</h2>
-                    </div>
-                    <div class="space-y-4">
-                        <label class="block space-y-1.5">
-                            <span class="text-sm font-semibold text-slate-400 ml-1">Wine Name</span>
-                            <input type="text" id="editWineName"
-                                class="form-input w-full bg-bg-dark/50 border border-primary/20 rounded-lg px-4 py-3 text-white"
-                                placeholder="e.g. Cloudy Bay Sauvignon Blanc">
+                    <!-- Section: Glossary -->
+                    <section class="space-y-4">
+                        <div class="flex items-center justify-between border-l-4 border-primary pl-3">
+                            <h2 class="text-xl font-bold">Glossary</h2>
+                            <button type="button" id="addGlossaryBtn"
+                                class="text-primary text-sm font-bold flex items-center gap-1 hover:underline">
+                                <span class="material-symbols-outlined text-sm">add_circle</span> Add Term
+                            </button>
+                        </div>
+                        <div id="glossaryContainer" class="space-y-3"></div>
+                    </section>
+
+                    <!-- Section: Additional Notes -->
+                    <section class="space-y-4">
+                        <div class="flex items-center gap-2 border-l-4 border-primary pl-3">
+                            <h2 class="text-xl font-bold">Additional Notes</h2>
+                        </div>
+                        <label class="block">
+                            <textarea id="editNotes"
+                                class="form-input w-full bg-primary/5 border border-primary/20 rounded-lg px-4 py-3 text-white"
+                                placeholder="Internal notes for staff..." rows="3"></textarea>
                         </label>
-                        <label class="block space-y-1.5">
-                            <span class="text-sm font-semibold text-slate-400 ml-1">Tasting Notes</span>
-                            <textarea id="editWineNotes"
-                                class="form-input w-full bg-bg-dark/50 border border-primary/20 rounded-lg px-4 py-3 text-white"
-                                placeholder="Describe the pairing..." rows="2"></textarea>
-                        </label>
-                    </div>
-                </section>
-
-                <!-- Section: Glossary -->
-                <section class="space-y-4">
-                    <div class="flex items-center justify-between border-l-4 border-primary pl-3">
-                        <h2 class="text-xl font-bold">Glossary</h2>
-                        <button type="button" id="addGlossaryBtn"
-                            class="text-primary text-sm font-bold flex items-center gap-1 hover:underline">
-                            <span class="material-symbols-outlined text-sm">add_circle</span> Add Term
-                        </button>
-                    </div>
-                    <div id="glossaryContainer" class="space-y-3"></div>
-                </section>
-
-                <!-- Section: Additional Notes -->
-                <section class="space-y-4">
-                    <div class="flex items-center gap-2 border-l-4 border-primary pl-3">
-                        <h2 class="text-xl font-bold">Additional Notes</h2>
-                    </div>
-                    <label class="block">
-                        <textarea id="editNotes"
-                            class="form-input w-full bg-primary/5 border border-primary/20 rounded-lg px-4 py-3 text-white"
-                            placeholder="Internal notes for staff..." rows="3"></textarea>
-                    </label>
-                </section>
-            </form>
-        </main>
+                    </section>
+                </form>
+            </main>
+        </div>
 
         <!-- Bottom Mobile Toolbar -->
         <div
-            class="fixed bottom-0 left-0 right-0 p-4 bg-bg-dark/95 backdrop-blur-md border-t border-primary/10 flex gap-3 md:hidden z-50">
+            class="flex-shrink-0 p-4 bg-bg-dark/95 backdrop-blur-md border-t border-primary/10 flex gap-3 md:hidden z-50">
             <button id="editDeleteMobile"
                 class="py-3 px-4 text-sm font-bold text-red-400 bg-red-500/10 rounded-lg border border-red-500/20 hidden">
                 <span class="material-symbols-outlined text-sm align-middle">delete</span>
