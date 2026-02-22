@@ -328,7 +328,7 @@
 
             detailContent.innerHTML = `
                 <!-- Hero Section -->
-                <div class="relative h-72 w-full overflow-hidden ${item.image ? 'hero-clickable' : 'hero-fallback'}" ${item.image ? `onclick="openLightbox('${item.image}', '${item.name.replace(/'/g, "\\'")}'"` : ''}>
+                <div class="relative h-72 w-full overflow-hidden ${item.image ? 'hero-clickable' : 'hero-fallback'}" ${item.image ? `onclick="openLightbox('${item.image}', '${item.name.replace(/'/g, "\\'")}')"` : ''}>
                     ${item.image ? `
                     <div class="absolute inset-0 hero-gradient z-10 pointer-events-none"></div>
                     <img alt="${item.name}" class="w-full h-full object-cover"

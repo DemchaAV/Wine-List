@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,28 @@
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍽️</text></svg>">
     <title>Scott's Food List</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#14b8a6',
+                        'bg-dark': '#0f1a1a',
+                        'card-dark': '#1a2b2c',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         * {
             -webkit-tap-highlight-color: transparent;
@@ -17,71 +39,144 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             min-height: 100dvh;
+            overscroll-behavior: none;
         }
 
         .card {
-            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            background: linear-gradient(135deg, #1a2b2c 0%, #0f1a1a 100%);
+            border: 1px solid rgba(20, 184, 166, 0.15);
             transition: all 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-6px);
+            border-color: rgba(20, 184, 166, 0.4);
+            box-shadow: 0 20px 50px rgba(20, 184, 166, 0.1), 0 0 0 1px rgba(20, 184, 166, 0.2);
         }
 
-        .card-icon {
-            font-size: 3rem;
+        .card:active {
+            transform: scale(0.97);
+        }
+
+        .card .card-icon {
             transition: transform 0.3s ease;
         }
 
         .card:hover .card-icon {
-            transform: scale(1.1);
+            transform: scale(1.15);
         }
 
         .gradient-text {
-            background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+            background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
+        .glow-ring {
+            box-shadow: 0 0 60px rgba(20, 184, 166, 0.15), 0 0 120px rgba(20, 184, 166, 0.05);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .float-icon {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .fade-in-delay-1 {
+            animation-delay: 0.1s;
+            opacity: 0;
+        }
+
+        .fade-in-delay-2 {
+            animation-delay: 0.2s;
+            opacity: 0;
+        }
+
+        .fade-in-delay-3 {
+            animation-delay: 0.3s;
+            opacity: 0;
+        }
     </style>
 </head>
 
-<body class="bg-gray-900 text-gray-200">
+<body class="bg-bg-dark text-slate-100">
     <div class="min-h-screen flex flex-col items-center justify-center p-6">
         <!-- Header -->
-        <div class="text-center mb-12">
-            <div class="text-6xl mb-4">🍽️</div>
-            <h1 class="text-4xl md:text-5xl font-bold gradient-text mb-2">Scott's Food List</h1>
-            <p class="text-gray-400 text-lg">Richmond Restaurant Training</p>
+        <div class="text-center mb-12 fade-in">
+            <div class="float-icon inline-block mb-4">
+                <div
+                    class="w-20 h-20 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center glow-ring">
+                    <span class="material-symbols-outlined text-primary text-4xl">restaurant</span>
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold gradient-text mb-3">Scott's</h1>
+            <p class="text-slate-400 text-lg tracking-wide">Richmond • Food Bible</p>
         </div>
 
         <!-- Navigation Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl w-full">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-4xl w-full">
             <!-- Food Trainer -->
-            <a href="food_trainer.html" class="card rounded-2xl p-8 text-center cursor-pointer">
-                <div class="card-icon mb-4">🎓</div>
-                <h2 class="text-xl font-bold text-amber-400 mb-2">Food Trainer</h2>
-                <p class="text-gray-400 text-sm">Learn dishes, wines & service</p>
+            <a href="food_trainer.html" class="card rounded-2xl p-8 text-center cursor-pointer fade-in fade-in-delay-1">
+                <div
+                    class="card-icon w-16 h-16 mx-auto rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-5">
+                    <span class="material-symbols-outlined text-primary text-3xl">school</span>
+                </div>
+                <h2 class="text-xl font-bold text-primary mb-2">Food Trainer</h2>
+                <p class="text-slate-400 text-sm leading-relaxed">Quiz yourself on dishes, wines, allergens & service
+                </p>
             </a>
 
             <!-- Mobile Catalog -->
-            <a href="mobile_food.html" class="card rounded-2xl p-8 text-center cursor-pointer">
-                <div class="card-icon mb-4">📱</div>
-                <h2 class="text-xl font-bold text-amber-400 mb-2">Mobile Catalog</h2>
-                <p class="text-gray-400 text-sm">Browse all dishes</p>
+            <a href="mobile_food.html" class="card rounded-2xl p-8 text-center cursor-pointer fade-in fade-in-delay-2">
+                <div
+                    class="card-icon w-16 h-16 mx-auto rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-5">
+                    <span class="material-symbols-outlined text-primary text-3xl">menu_book</span>
+                </div>
+                <h2 class="text-xl font-bold text-primary mb-2">Menu Catalog</h2>
+                <p class="text-slate-400 text-sm leading-relaxed">Browse all dishes with full detail view</p>
             </a>
 
             <!-- Food Builder -->
-            <a href="food_builder.html" class="card rounded-2xl p-8 text-center cursor-pointer">
-                <div class="card-icon mb-4">✏️</div>
-                <h2 class="text-xl font-bold text-amber-400 mb-2">Food Builder</h2>
-                <p class="text-gray-400 text-sm">Create & edit dishes</p>
+            <a href="food_builder.html" class="card rounded-2xl p-8 text-center cursor-pointer fade-in fade-in-delay-3">
+                <div
+                    class="card-icon w-16 h-16 mx-auto rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-5">
+                    <span class="material-symbols-outlined text-primary text-3xl">edit_note</span>
+                </div>
+                <h2 class="text-xl font-bold text-primary mb-2">Food Builder</h2>
+                <p class="text-slate-400 text-sm leading-relaxed">Create & edit dish entries</p>
             </a>
         </div>
 
         <!-- Footer -->
-        <div class="mt-12 text-center text-gray-500 text-xs">
+        <div class="mt-12 text-center text-slate-600 text-xs flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm text-primary/40">restaurant</span>
             <p>Scott's Richmond • Food Bible</p>
         </div>
     </div>
