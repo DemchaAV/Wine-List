@@ -1,0 +1,823 @@
+{
+  "document": "FOOD BIBLE",
+  "restaurant": "SCOTT'S RICHMOND",
+  "lastUpdated": "09/01/2026",
+  "categories": [
+    {
+      "name": "OYSTERS",
+      "items": [
+        {
+          "name": "GILLARDEAU (FR) OYSTER",
+          "subtitle": "",
+          "description": "The Gillardeau oyster itself is firm and full in the shell. It has a really sweet taste with notes of dried fruit. They are small and are starter level oyster.",
+          "wine_suggestion": "Ruinart Blanc de Blancs. Elegant, fresh and lively character, with delicate aromas of white flowers, citrus fruits, and brioche. on the palate it'S is crisp and creamy, with a fine, persistent mousse and a long, refreshing finish",
+          "glossary": "These oysters are produced by the Gillardeau family, near La Rochelle on the west coast of France. The shells are laser engraved with a 'G' to prevent counterfeiting.",
+          "additional_notes": "From the pass: Finger bowls, Shallot & Hogwash Dressing. 1-4 Oysters the stand should be small side up, 6+ large side up",
+          "allergens": "",
+          "kitchen_mep": "Oyster silver plate, crushed ice, seaweed, lemon",
+          "service_mep": "Medium plate, teaspoon, oyster fork, tabasco, stand."
+        },
+        {
+          "name": "BROWNSEA ISLAND ROCKS",
+          "subtitle": "",
+          "description": "Sweet and chewy. Complex flavours- earthy and nutty with a mineral finish. Full bodied, plump and meaty.",
+          "wine_suggestion": "Nyetimber Blanc de Blancs 2017. A golden colour, marked by delicate bubbles. On the nose the aromas are distinctly Blanc de Blanc - peach, citrus and floral notes backed by an almond-pastry-like richness. On the palate the citrus-fruit flavours give way to biscuity notes, and a exceptional balance and freshness is achieved",
+          "glossary": "Poole Bay Pacific oysters are cultivated and sustainably harvested by hand in micro-tidal waters at Poole Harbour, Poole, Dorset, England. These oysters benefit from four separate nutrient-rich rivers that flow into Poole Harbour.",
+          "additional_notes": "1-4 Oysters the stand should be small side up, 6+ large side up",
+          "allergens": "",
+          "kitchen_mep": "Oyster silver plate, crushed ice, seaweed, lemon",
+          "service_mep": "Medium plate, teaspoon, oyster fork, tabasco, stand."
+        },
+        {
+          "name": "JERSEY ROCKS",
+          "subtitle": "",
+          "description": "From Jersey in the UK. They have a crisp flavour of green wood and cucumber with a hint of lemon. Fresh ocean salty taste.",
+          "wine_suggestion": "Nyetimber Blanc de Blancs 2017",
+          "glossary": "Jersey has the third largest tidal range in the world, which means that Jersey grown oysters benefit directly from the daily natural filtering effect of Jersey's unique tides and crystal-clear nutrient waters.",
+          "additional_notes": "1-4 Oysters the stand should be small side up, 6+ large side up",
+          "allergens": "",
+          "kitchen_mep": "Oyster silver plate, crushed ice, seaweed, lemon",
+          "service_mep": "Medium plate, teaspoon, oyster fork, tabasco, stand."
+        },
+        {
+          "name": "CARLINGFORD ROCKS",
+          "subtitle": "",
+          "description": "They are from Carlingford Loughin Northern Ireland. They have citrus, buttery and creamy notes. Rich meaty body.",
+          "wine_suggestion": "Nyetimber Blanc de Blancs 2017",
+          "glossary": "The flow of Carlingford Lough's grade-A waters helps shape each oyster into a perfect tear-drop shape with a very strong shell and a smooth pearly white enamel. They are rich in protein and low in fat.",
+          "additional_notes": "",
+          "allergens": "",
+          "kitchen_mep": "Oyster silver plate, crushed ice, seaweed, lemon",
+          "service_mep": "Medium plate, teaspoon, oyster fork, tabasco, stand."
+        },
+        {
+          "name": "DRESSED CARLINGFORD OYSTER",
+          "subtitle": "BLOOD ORANGE AGUACHILE, PICKLED FENNEL",
+          "description": "Carlingford oyster dressed with a blood orange aguachile (blood orange, yuzu kosho and lemongrass) and topped with shaved, pickled fennel.",
+          "wine_suggestion": "Ruinart Rose. Rich and crunchy red fruits, On the palate rich expression of fruit such as raspberries, touch of creamy texture to finish. Grapes- Pinot Noir, Chardonnay",
+          "glossary": "Aguachile- a vibrant, spicy Mexican sauce. Ours is Blood orange, yuzu kosho and lemon grass. Yuzo koshu- a spicy, aromatic Japanese condiment.",
+          "additional_notes": "The oyster is still connected to its shell.",
+          "allergens": "",
+          "kitchen_mep": "Blue bowl, crushed ice, seaweed.",
+          "service_mep": "Small fork (oyster fork). If 4/6 or more will need stand and plate aswell."
+        },
+        {
+          "name": "MIXED OYSTERS",
+          "subtitle": "",
+          "description": "A selection of either 6 or 12 oysters. Served with Wild Boar sausages, and hogwash dressing and shallot vinegar.",
+          "wine_suggestion": "Ruinart Blanc de Blancs",
+          "glossary": "Hogwash: Mirin (Japanese rice wine), shallots, jalapeño pepper, Lime juice and coriander. A red wine vinegar and shallots (cabernet sauvignon red wine).",
+          "additional_notes": "Describe from the lemon then oysters are in alphabetic order - clockwise. There is no GILLARDEAU or dressed oysters in the mixed oysters.",
+          "allergens": "***SAUSAGES CONTAIN GLUTEN***",
+          "kitchen_mep": "Oyster silver plate, crushed ice, seaweed, lemon",
+          "service_mep": "Medium plate, teaspoon, oyster fork, tabasco, stand."
+        }
+      ]
+    },
+    {
+      "name": "CAVIAR",
+      "items": [
+        {
+          "name": "IMPERIAL CAVIAR",
+          "subtitle": "",
+          "description": "Size: 20g, 30g, 50g. Taste: Its a complex developed flavour. Offering a rich, briny, zesty and creamy flavour profile. The eggs are known for their firm texture and golden to dark chestnut colour.",
+          "wine_suggestion": "Ruinart Blanc de Blancs",
+          "glossary": "Imperial Caviar is a hybrid caviar created from Amur Sturgeon (male) and the Kaluga Sturgeon (female). About 8 to 10 years of maturation.",
+          "additional_notes": "From the pass: Comes with creme fraiche and blinis.",
+          "allergens": "",
+          "kitchen_mep": "Large white plate, silver caviar dish, crushed ice",
+          "service_mep": "Medium plate (If sharing), caviar spoon"
+        },
+        {
+          "name": "OSCIETRA CAVIAR",
+          "subtitle": "",
+          "description": "Size: 20g, 30g, 50g. Taste: Fresh intense flavour. Nutty, creamy walnut taste.",
+          "wine_suggestion": "Ruinart Blanc de Blancs",
+          "glossary": "Ossetra caviar is one of the most prized and expensive types of caviar. Obtained from the Ossetra sturgeon which varies in color from deep brown to gold.",
+          "additional_notes": "Served with creme fraiche and blinis.",
+          "allergens": "",
+          "kitchen_mep": "Large white plate, silver caviar dish, crushed ice",
+          "service_mep": "Medium plate and caviar spoon."
+        }
+      ]
+    },
+    {
+      "name": "STARTERS",
+      "items": [
+        {
+          "name": "PLATE AU DE FRUITS DE MER",
+          "subtitle": "",
+          "description": "FDM Includes: Atlantic prawns, whelks, 2 oysters pp, palourde clams, cockles, muscles, surf clams and seabass ceviche.",
+          "wine_suggestion": "Ruinart Blanc de Blancs",
+          "glossary": "Fruits de Mer is an array of seafood and dipping sauces commonly served cold. Richmond: Nothing additional. Scott's: Additional- King prawns and dressed crab with crab mayo. Deluxe: Additional- Half lobster mayo",
+          "additional_notes": "All served with mayonnaise, Marie rose sauce, Tomato & horseradish sauce. Marie Rose: Homemade Mayo, ketchup, Worcester sauce, tabasco, brandy.",
+          "allergens": "",
+          "kitchen_mep": "Oyster silver plate",
+          "service_mep": "Starter knife & fork, lobster pick, lobster cracker, oyster fork, teaspoon, Whelk pick, medium plate (2 per person), tabasco, bowl for debris, large stand, Finger Bowl"
+        },
+        {
+          "name": "SCOTT'S KING PRAWN AND AVOCADO COCKTAIL",
+          "subtitle": "MARIE ROSE SAUCE",
+          "description": "Diced prawns tossed with avocado, gem lettuce, cucumber and spring onion, served in an avocado glass and topped with Marie Rose sauce.",
+          "wine_suggestion": "Chablis Domaine de la Genillotte",
+          "glossary": "Marie rose sauce: consists of ketchup, mayonnaise, Worcester sauce, tabasco, brandy (cognac), seasoned to taste.",
+          "additional_notes": "Mary rose contains fresh alcohol.",
+          "allergens": "",
+          "kitchen_mep": "Silver coupe, scotts white disc, scotts bread plate (yellow).",
+          "service_mep": "Starter cutlery"
+        },
+        {
+          "name": "TIGER PRAWNS WITH GRILLED PINEAPPLE",
+          "subtitle": "CHILLI AND CORIANDER.",
+          "description": "5/8 (starters/mains). Tiger prawns cooked on the plancha and served on a lightly spiced chilli sauce, then topped with diced, grilled pineapple, lime juice and chopped coriander.",
+          "wine_suggestion": "Riesling Schloss Johannisberg",
+          "glossary": "Plancha: A griddle, in the UK also called a gridle, is a cooking device consisting mainly of a broad, usually flat cooking surface.",
+          "additional_notes": "Served with the heads and tails on but the body is peeled. Coriander cannot be removed from the sauce, however an alternative sauce can be made ie garlic/chilli/herb butter or oil.",
+          "allergens": "",
+          "kitchen_mep": "Pasta bowl",
+          "service_mep": "Starter fork and knife"
+        },
+        {
+          "name": "PORTLAND CRAB",
+          "subtitle": "AVOCADO, BROWN CRAB MAYO, MELBA TOAST, FINE HERB SALAD.",
+          "description": "Picked white crab meat served on a bed of pressed avocado which has been lightly seasoned with salt, olive oil and lemon zest. The crab is then topped with lemon mayo and brown crab mayo and finished with a fine herb salad. On the side is 2 pieces of Melba toast.",
+          "wine_suggestion": "Sancerre Jean-Pierre Vacher & Fils",
+          "glossary": "Brown Crab Mayo: brown crab cooked to a puree and put through our house mayo and added ketchup. Crab: From Portland England.",
+          "additional_notes": "White crab meat is found in the claws, legs and some of the main body section. It is low in fat and high in protein.",
+          "allergens": "Can be made gluten free - remove melba toast and both mayo's",
+          "kitchen_mep": "Pasta bowl",
+          "service_mep": "Starter fork and knife"
+        },
+        {
+          "name": "BAKED SPICED CRAB",
+          "subtitle": "WITH GARLIC TOASTS",
+          "description": "Brown crab meat cooked out with shallots, chili, ginger, garlic, sherry, and tomato puree. A base of hollandaise sauce. Baked in a crab shell and topped with breadcrumbs. Served with garlic buttered toast on the side.",
+          "wine_suggestion": "Chenin Blanc The Lark Olifantsberg",
+          "glossary": "Sherry: A fortified wine made from white grapes. Brown crab meat: located in the top of the crab. Hollandaise Sauce: mixture of egg yolk, melted butter, and lemon juice.",
+          "additional_notes": "***CONTAINS GLUTEN*** Contains cooked alcohol: Sherry",
+          "allergens": "",
+          "kitchen_mep": "Served in a crab shell in a blue bowl.",
+          "service_mep": "Starter fork & knife, teaspoon."
+        },
+        {
+          "name": "SEARED SCALLOPS IN THE SHELL",
+          "subtitle": "KIMCHI BUTTER AND NORI FURIKAKE",
+          "description": "3/5 (Starter/ Main) Scallops served in the shell. Pan-fried and served in the shell, topped with a butter made with kimchi sauce and lime juice. Dusted with furikake.",
+          "wine_suggestion": "Sancerre Jean-Pierre Vacher & Fils",
+          "glossary": "From the Isle of Mull. Kimchi is traditional Korean banchan. Nori Furikake: blend made from crushed nori seaweed blended with sesame seeds, sugar and salt.",
+          "additional_notes": "For large portion, bring a burner and main hot plate per person. No gluten in dish",
+          "allergens": "",
+          "kitchen_mep": "Main course plate",
+          "service_mep": "Starter fork & knife"
+        },
+        {
+          "name": "TEMPURA PRAWNS",
+          "subtitle": "",
+          "description": "5 prawns deep fried in tempura batter (sparkling water) served with spicy cocktail sauce, julienne of mooli, and togarashi pepper.",
+          "wine_suggestion": "Riesling Schloss Johannisberg",
+          "glossary": "Tempura: lightly battered and deep fried. Spicy Cocktail Sauce: Spicy Mayo- mayo, ketchup, tabasco, gochujang. Mooli: Radish. Togarashi Pepper: Japanese spice mixture.",
+          "additional_notes": "***CONTAINS GLUTEN***",
+          "allergens": "",
+          "kitchen_mep": "Blue bowl",
+          "service_mep": "Starter fork & knife"
+        },
+        {
+          "name": "MIXED BEETROOT",
+          "subtitle": "WITH LABNEH, WALNUT GRANOLA AND PICKLED WALNUT KETCHUP.",
+          "description": "Wedges of red beetroot which has been dressed with a cabernet sauvignon vinegar and pomegranate molasses. It is sat on a bed of labneh and garnished with a toasted walnut granola, endive, baby kale and Landress. Served alongside is pickled walnut ketchup.",
+          "wine_suggestion": "Bourgogne Pinot Noir OKA Arlaud",
+          "glossary": "Labneh- A strained yoghurt. Granola- Oats, walnuts, honey and brown sugar. Walnut ketchup- Pickled walnuts with malt vinegar and brown sugar.",
+          "additional_notes": "Watermelon is pickled and cured.",
+          "allergens": "",
+          "kitchen_mep": "White plate",
+          "service_mep": "Starter fork & knife"
+        },
+        {
+          "name": "CHALKSTREAM TROUT TARTARE",
+          "subtitle": "AVOCADO AND SPRING ONION, CHILLI AND GARLIC DRESSING, SESAME CRACKER",
+          "description": "Diced trout dressed with chilli and garlic dressing and mixed with diced cucumber and spring onion, served on a bed of crushed avocado and topped with crispy fried taro root which are seasoned with togarashi pepper.",
+          "wine_suggestion": "Château La Coste- Lady A",
+          "glossary": "Trout- Harvested by hand in Hampshire. Togarashi pepper- Japanese name for Capsicum annum.",
+          "additional_notes": "Can be made gluten free",
+          "allergens": "",
+          "kitchen_mep": "Patsa bowl",
+          "service_mep": "Starter fork & knife"
+        },
+        {
+          "name": "TUNA TATAKI",
+          "subtitle": "WASABI AND SHISO PONZU, SMOKED BONITO AIOLI AND SEAWEED SALAD.",
+          "description": "Slices of tuna tataki dressed in a wasabi and shiso ponzu dressing and served with an aioli seasoned with ponzu, The dish is garnished with seaweed, mooli and spring onion salad and topped with bonito flakes.",
+          "wine_suggestion": "Riesling Schloss Johannisberg",
+          "glossary": "Blue fin Tuna- rich, succulent. Tataki- seared on the outside and thinly sliced with a raw center. Ponzu-Japanese citrus-based sauce. Aioli- Garlic mayo.",
+          "additional_notes": "***CONTAINS GLUTEN*** (Can be removed) in dressing",
+          "allergens": "",
+          "kitchen_mep": "Sashimi Plate",
+          "service_mep": "Chop Sticks"
+        },
+        {
+          "name": "SEA BASS AND BLUE FIN TUNA CEVICHE",
+          "subtitle": "AJI AMARILLO AND PLANTAIN CRISPS",
+          "description": "Diced seabass and tuna dressed in Aji Amarillo dressing. Finished with sliced cucumber, red onion, coriander and plantain crisps.",
+          "wine_suggestion": "Sancerre Jean-Pierre Vacher & Fils",
+          "glossary": "Tigers Milk- Ginger, jalapeno, yuzu, celery, garlic, and galangal. Aji amarillo- Peruvian chili pepper. Plaintain crisps- starchy tropical fruit.",
+          "additional_notes": "Coriander can be removed. Contains gluten",
+          "allergens": "",
+          "kitchen_mep": "White Bowl",
+          "service_mep": "Starter knife and fork"
+        },
+        {
+          "name": "HOT SMOKED TROUT",
+          "subtitle": "WITH HORSERADISH BUTTERED PINK FIR POTATOES, CRISPY BACON AND LAND CRESS.",
+          "description": "Chalkstream trout which has been cured in sugar and salt then brushed with maple syrup and hot smoked, served with buttered pink fir potatoes, chives, horseradish cream, crispy bacon and landcress.",
+          "wine_suggestion": "Broockdale- old vine Chenin blanc",
+          "glossary": "Chalkstream trout- Harvested by hand in Hampshire. Hot smoked-a cooking method that infuses food with smoke flavor while cooking it through.",
+          "additional_notes": "No gluten in this dish",
+          "allergens": "",
+          "kitchen_mep": "Starter plate",
+          "service_mep": "Starter fork and knife"
+        },
+        {
+          "name": "WILD MUSHROOM RISOTTO",
+          "subtitle": "PARMIGIANO REGGIANO",
+          "description": "Carnaroli risotto rice cooked out with shallots, white wine and then mushroom stock is added. The rice is combined with sauteed mixed wild mushrooms, butter parmigiano cheese and chopped parsley.",
+          "wine_suggestion": "Chablis Domaine de la Genillotte",
+          "glossary": "Carnaroli risotto- A specific Italian variety of medium grain rice. Parmigiano reggiano- a hard, dry, granular Italian cheese.",
+          "additional_notes": "Can be made vegan, Can be made dairy free. Contains cooked alcohol- White wine. Cannot be made without alcohol. Is gluten free",
+          "allergens": "",
+          "kitchen_mep": "Pasta Bowl",
+          "service_mep": "Starter fork and knife and dessert spoon."
+        },
+        {
+          "name": "BAKED ROSCOFF ONION AND GOAT'S CHEESE TARTE TATIN",
+          "subtitle": "HAZELNUTS, FRISEE, TRUFFLED HONEY DRESSING.",
+          "description": "A Roscoff onion Tarte Tatin topped with goat's cheese and baked in the oven, topped with a frisee salad, dressed with a truffled honey vinaigrette and toasted hazelnuts.",
+          "wine_suggestion": "Chablis Domaine de la Genillotte",
+          "glossary": "Frisee- Curly endive (green salad leaf)- bitter.",
+          "additional_notes": "***CONTAINS GLUTEN, NUTS, DAIRY*** (none removable, except Nuts)",
+          "allergens": "",
+          "kitchen_mep": "White plate",
+          "service_mep": "Starter fork and knife"
+        },
+        {
+          "name": "PUGLIAN BURRATA",
+          "subtitle": "WITH BLOOD ORANGE, PICKLED CHILLI, SHAVED FENNEL AND PINK RADICCHIO.",
+          "description": "Burrata served on a bed of shaved fennel and sliced blood orange, then finished with pink radicchio leaves and pickled red chillies.",
+          "wine_suggestion": "Trebbiano - Amoterra",
+          "glossary": "Pink radicchio-",
+          "additional_notes": "NO gluten",
+          "allergens": "",
+          "kitchen_mep": "White plate",
+          "service_mep": "Starter fork and knife"
+        },
+        {
+          "name": "CARAMELISED JERUSALEM ARTICHOKE SOUP",
+          "subtitle": "TRUFFLED PARMESAN GOUGERE",
+          "description": "Jerusalem artichokes are sliced and caramelised in butter with shallots, celery and leeks then cooked out in vegetable stock before being blended with a touch of creme fraiche. On the side is a goujere filled with a truffled cheese sauce and topped with grated parmesan.",
+          "wine_suggestion": "Bourgogne Pinot Noir OKA Arlaud",
+          "glossary": "Goujere- a classic French savory pastry, essentially a cheese puff made from choux pastry.",
+          "additional_notes": "***CONTAINS GLUTEN*** Can be made gluten free (remove goujere). CANNOT be made dairy free",
+          "allergens": "",
+          "kitchen_mep": "Soup bowl",
+          "service_mep": "Remove starter cutlery. Add soup spoon."
+        },
+        {
+          "name": "SAUTEED MONKFISH CHEEKS AND SNAILS",
+          "subtitle": "",
+          "description": "Monkfish cheeks, snails and lardons finished with red wine and shallot sauce(bordelaise), spring onions, and chopped parsley served with roasted bone marrow and garlic buttered toasted sourdough.",
+          "wine_suggestion": "Bourgogne Pinot Noir - OKA- Arlaud",
+          "glossary": "Snails- mollusc, from France. Monkfish cheeks- tender pieces of meat from the monkfishes head. Bone marrow- Fatty tissue inside bones. Bordelaise- Sauce made of red wine reduction.",
+          "additional_notes": "Can be made gluten free. Contains alcohol- Bordelaise red wine",
+          "allergens": "",
+          "kitchen_mep": "Copper dish, large plate",
+          "service_mep": "Starter fork & knife, teaspoon"
+        },
+        {
+          "name": "ROBATA GRILLED OCTOPUS",
+          "subtitle": "CONFIT GARLIC AIOLI, NDUJA AND LEMON",
+          "description": "Octopus tentacle which has been steamed until tender and then finished on the grill, dressed with nduja and olive oil and served with a confit garlic aioli. Finished with grilled padron peppers.",
+          "wine_suggestion": "Riesling Schloss Johannisberg",
+          "glossary": "Octopus: Portugal. Nduja: spicy, spreadable pork sausage from Southern Italy. Aioli: cold sauce. Padron pepper: small green pepper.",
+          "additional_notes": "***CONTAINS PORK*** (can be removed). No gluten in this dish",
+          "allergens": "",
+          "kitchen_mep": "Starter plate",
+          "service_mep": "Starter fork and knife"
+        }
+      ]
+    },
+    {
+      "name": "MAINS",
+      "items": [
+        {
+          "name": "DOVER SOLE",
+          "subtitle": "",
+          "description": "Dover sole either grilled with olive oil or served with brown butter, parsley, lemon juice, salt.",
+          "wine_suggestion": "Puligny-Montrachet - Domaine Larue- Le Trézin",
+          "glossary": "***GUESTS MUST BE ASKED IF THEY WOULD LIKE IT ON/OFF THE BONE AND IF THEY WANT IT GRILLED/MEUNIERE*** Dover soles are a type of flatfish. Meuniere: Brown butter sauce (beurre noisette), finished with parsley and lemon.",
+          "additional_notes": "",
+          "allergens": "",
+          "kitchen_mep": "Platter, fish plate, copper pot with meuniere butter",
+          "service_mep": "Large fork and knife (off the bone), Fish knife & fish fork (on the bone), Offer lemon wrap"
+        },
+        {
+          "name": "SEARED SEABASS",
+          "subtitle": "WITH MISO AND YUZU KOSHU BUTTER AND CHIVES.",
+          "description": "Butterflied seabass cooked on the plancha and dressed with a butter flavoured with yuzu koshu, miso and chopped chives, spring onion and red chilli.",
+          "wine_suggestion": "Chenin Blanc The Lark Olifantsberg",
+          "glossary": "Seabass - white fleshed fish. Butterflied fish- fish is opened and debones and presented flat. Yuzu kosho- a type of japanese seasoning. Miso- a paste made from fermented soya beans",
+          "additional_notes": "",
+          "allergens": "",
+          "kitchen_mep": "White main plate",
+          "service_mep": "Main fork and knife"
+        },
+        {
+          "name": "DEEP-FRIED HADDOCK",
+          "subtitle": "",
+          "description": "Fillet of haddock deep-fried in beer batter and served on a bed of minted mushy peas served with chips and homemade tartar sauce on the side.",
+          "wine_suggestion": "Trebbiano - Amoterra",
+          "glossary": "Tartar- English condiment. Ours consists of: home made mayo, capers, gerkins and seasoned with salt. House mayo contains gluten because it has mustard inside (English mustard).",
+          "additional_notes": "Contains cooked alcohol- Beer batter. Can be made alcohol free with a tempura batter instead of the beer batter. Can change mushy peas to garden peas.",
+          "allergens": "",
+          "kitchen_mep": "Fish plate",
+          "service_mep": "Large fork and knife, Malt Vinegar. Offer lemon"
+        },
+        {
+          "name": "FILLET OF COD",
+          "subtitle": "SAUTEED CHORIZO, POTATO ROSTI, CAULIFLOWER PUREE.",
+          "description": "Pan fried fillet of cod served with deep-fried potato and chorizo rosti, cauliflower puree, chorizo velouté and sliced of chorizo.",
+          "wine_suggestion": "Chablis Domaine de la Genillotte",
+          "glossary": "Cod is a wild fish that commonly found in the Northwest Atlantic. Chorizo- Italian spicy sausage",
+          "additional_notes": "NO GLUTEN",
+          "allergens": "",
+          "kitchen_mep": "Bowl plate",
+          "service_mep": "Large fork and knife"
+        },
+        {
+          "name": "FILLET OF HALIBUT",
+          "subtitle": "PORTLAND CRAB, GRILLED HISPI CABBAGE AND SHELLFISH SAUCE.",
+          "description": "Pan-fried fillet of halibut served on a bed of hispi cabbage sauteed in butter and finished with lemon juice and chives, topped with picked white crab meat and finished with a shellfish sauce.",
+          "wine_suggestion": "Chenin Blanc The Lark Olifantsberg",
+          "glossary": "Halibut- white fish with a firm and meaty flesh. Shellfish sauce- made from different shellfish and sweated down with tomato paste.",
+          "additional_notes": "***CONTAINS GLUTEN*** - in the sauce.",
+          "allergens": "",
+          "kitchen_mep": "Bowl plate",
+          "service_mep": "Large fork and knife"
+        },
+        {
+          "name": "PAN-FRIED SKATE WING",
+          "subtitle": "BROWN BUTTER, LEMON AND CAPERS",
+          "description": "Pan-fried skate wing served with brown butter, lemon juice, capers and parsley.",
+          "wine_suggestion": "Milmanda-Conca de barbera (chardonnay)",
+          "glossary": "Peppercorn sauce- Shallots, cracked peppercorns, green peppercorns and pink peppercorns cooked with chicken stock, veal stock, cream brandy and white wine.",
+          "additional_notes": "Contains alcohol-white wine. And brandy. Contains meat - chicken and veal stock. Contains dairy- cream. NO GLUTEN",
+          "allergens": "",
+          "kitchen_mep": "Fish plate",
+          "service_mep": "Large fork and knife"
+        },
+        {
+          "name": "KASHMIRI MONKFISH AND TIGER PRAWN MASALA CURRY",
+          "subtitle": "CASHEW, CORIANDER AND PILAF RICE",
+          "description": "Monkfish and tiger prawns cooked in a Kashmiri curry sauce with diced roasted butternut squash. Topped with cashews and crispy sage. Served with pilaf rice topped with crispy shallots and coriander.",
+          "wine_suggestion": "Riesling Schloss Johannisberg",
+          "glossary": "Monkfish: wild fish from North Atlantic. Pilaf rice: Rice cooked in vegetable stock with turmeric (coriander cannot be removed from it)",
+          "additional_notes": "Vegetarian option available. Cannot be made vegan-cream in curry, butter in rice.",
+          "allergens": "",
+          "kitchen_mep": "Bowl plate, curry dish, rice dish, ramekin",
+          "service_mep": "Main fork and knife, soup spoon"
+        },
+        {
+          "name": "PAN-FRIED FILLET OF HAKE",
+          "subtitle": "BRAISED TOMATO AND OCTOPUS RAGU, STRAW POTATOES.",
+          "description": "Pan-fried fillet of hake sat on a ragu made of octopus, tomato, chicken stock, veal stock, shallots and garlic, finished with braised white beans and chopped parsley. The hake is topped with straw potatoes and dusted with smoked paprika.",
+          "wine_suggestion": "Yalumba- Samuel Collection - Viognier",
+          "glossary": "Hakes are members of the cod family. Ragu- a hearty, seasoned Italian sauce of meat and tomatoes. In this dish they use octopus not meat. *Contains chicken and veal stock*",
+          "additional_notes": "",
+          "allergens": "",
+          "kitchen_mep": "White plate",
+          "service_mep": "Large fork and knife"
+        },
+        {
+          "name": "ROASTED SHELLFISH",
+          "subtitle": "FOR ONE/TWO",
+          "description": "A whole lobster, 4 scallops, and 4 tiger prawns all roasted and dressed in garlic butter and a selection of sea herbs (sea beets, purslane, sea aster)",
+          "wine_suggestion": "Puligny-Montrachet Domaine Larue- Le Trézin",
+          "glossary": "Lobster: Native or Canadian lobster. Scallops: Hand dived in Isle of Mull, Scotland. Prawns: Indian Ocean",
+          "additional_notes": "Can be done for one- Roasted shellfish for one. Half portion, half price.",
+          "allergens": "",
+          "kitchen_mep": "Round silver tray",
+          "service_mep": "Large fork & knife, lobster cracker and pick, debris bowl, burner, Finger Bowl."
+        },
+        {
+          "name": "ROASTED LOBSTER",
+          "subtitle": "CHILLI, GINGER AND CORIANDER BUTTER AND CHIPS.",
+          "description": "Roasted lobster which is taken out the shell and sauteed in a chilli, ginger and coriander butter then placed back in the shell for presentation. Comes with chips.",
+          "wine_suggestion": "Puligny-Montrachet Domaine Larue- Le Trézin",
+          "glossary": "Lobster: Native or Canadian",
+          "additional_notes": "Can change the chips for another side (spinach, peas, different pots). No cracker and pick needed as it is out the shell. Dish is gluten free",
+          "allergens": "",
+          "kitchen_mep": "Large plate",
+          "service_mep": "Large fork & knife"
+        },
+        {
+          "name": "GRILLED LOBSTER",
+          "subtitle": "",
+          "description": "Whole grilled lobster, served with garlic butter and fresh sea herbs. Served with chips.",
+          "wine_suggestion": "Puligny-Montrachet Domaine Larue- Le Trézin",
+          "glossary": "****CANNOT BE DESHELLED**** Lobster: Native or Canadian. As a starter - comes with chips. As a main - comes with chips.",
+          "additional_notes": "Can make it dairy free. Dish is gluten free. Head is cleaned out",
+          "allergens": "",
+          "kitchen_mep": "Bowl plate, chip bowl",
+          "service_mep": "Large fork & knife, lobster cracker and pick, debris bowl, Finger Bowl"
+        },
+        {
+          "name": "CHARCOAL GRILLED BLACK ANGUS SIRLOIN STEAK",
+          "subtitle": "BEARNAISE SAUCE AND CHIPS.",
+          "description": "Black angus sirloin steak cooked to guests request, served with chips and bearnaise sauce.",
+          "wine_suggestion": "Malbec Malbec Seigneur de Grezette Cahors",
+          "glossary": "****Remember to ask cooking temperature**** Cooking: recommended-cooked medium rare. Sirloin- located toward the rear of the cow. Bearnaise- clarified butter, eggs yolk, white wine vinegar, herbs (tarragon).",
+          "additional_notes": "Angus beef is from a breed of cattle that originated in Scotland. Chips can be changed for a different potato or spinach or peas. Dish is gluten free",
+          "allergens": "",
+          "kitchen_mep": "Large main plate, chip bowl",
+          "service_mep": "Large fork & steak knife"
+        },
+        {
+          "name": "ROASTED DEVONSHIRE CORNISH CHICKEN",
+          "subtitle": "MISO AND VIOLINA SQUASH PUREE, TROMPETTE MUSHROOMS, CHICKEN AND SHISO JUS.",
+          "description": "Roast chicken breast served on a squash and miso puree, topped with sauteed trompette mushrooms, roasted squash and dressed with a chicken jus finished with chopped shiso leaf.",
+          "wine_suggestion": "Bourgogne Pinot Noir - OKA - Arlaud",
+          "glossary": "Violina- Italian type of squash. Miso- Flammeted soya bean paste.",
+          "additional_notes": "Contains DAIRY and GLUTEN",
+          "allergens": "",
+          "kitchen_mep": "Bowl Plate",
+          "service_mep": "Main fork and knife."
+        },
+        {
+          "name": "IBERICO PORK CHOP",
+          "subtitle": "PEPERONATA, AND PEDRO XIMINEZ SHERRY DRESSING",
+          "description": "Pan fried Iberico pork chop sliced and served on a bed of grilled peppers, tomato, olives, capers. The pork is dressed as a Pedro Ximenez sherry jus split with brown butter and roasting juices.",
+          "wine_suggestion": "Pombal do Vesuvio",
+          "glossary": "Iberico- a premium pork from the Black Iberian Pig, native to the Iberian Peninsula in southwestern Europe.",
+          "additional_notes": "",
+          "allergens": "",
+          "kitchen_mep": "",
+          "service_mep": "Main fork and steak knife."
+        }
+      ]
+    },
+    {
+      "name": "SIDES",
+      "items": [
+        {
+          "name": "POTATOES",
+          "subtitle": "CHIPPED, MASHED OR BUTTERED HERITAGE",
+          "description": "Chips- Koffmans fries. Mashed- (boiled, peeled and pu through a mouslin) - buttery mashed potato. Buttered heritage- buttered boiled potatoes with herbs.",
+          "wine_suggestion": "",
+          "glossary": "",
+          "additional_notes": "When served the server must ask the guest if they would like any sauces.",
+          "allergens": "",
+          "kitchen_mep": "Chip bowl",
+          "service_mep": ""
+        },
+        {
+          "name": "SPINACH",
+          "subtitle": "STEAMED, BUTTERED OR OLIVE OIL AND GARLIC",
+          "description": "Steamed, Buttered, Olive oil and garlic.",
+          "wine_suggestion": "",
+          "glossary": "",
+          "additional_notes": "",
+          "allergens": "",
+          "kitchen_mep": "Oval silver",
+          "service_mep": ""
+        },
+        {
+          "name": "ROCKET AND PARMESAN SALAD",
+          "subtitle": "BALSAMIC DRESSING",
+          "description": "Rocket leaves tossed with grated parmesan and balsamic dressing. Finished with parmesan shavings.",
+          "wine_suggestion": "",
+          "glossary": "ROCKET: A peppery green leaf.",
+          "additional_notes": "",
+          "allergens": "",
+          "kitchen_mep": "White salad bowl",
+          "service_mep": ""
+        },
+        {
+          "name": "BABY GEM SALAD",
+          "subtitle": "",
+          "description": "Baby gem lettuce dressed with our home made ranch dressing, picked shallots and crispy fried shallots. Finished with chives and dill.",
+          "wine_suggestion": "",
+          "glossary": "Ranch dressing- red vinegar, buttermilk, creme fraiche, celery, chives, parsley, shallots, mustard (English), mayo.",
+          "additional_notes": "Contains gluten- crispy shallots, croutons and dressing. Contains dairy- Crispy shallots (milk), croutons (butter) and dressing (creme fraiche and butter milk)",
+          "allergens": "",
+          "kitchen_mep": "Silver Veg Bowl",
+          "service_mep": "Serving spoon"
+        },
+        {
+          "name": "BAKED CAULIFLOWER CHEESE",
+          "subtitle": "",
+          "description": "Cauliflower bound in a mornay sauce- made with cheddar, gruyere and parmesan cheese then topped with parmesan cheese, then baked in the oven until golden and caramelised on top.",
+          "wine_suggestion": "",
+          "glossary": "Contains dairy. Monrnay sauce- a classic French cheese sauce. Gruyere - creamy, nutty, slightly sweet cheese.",
+          "additional_notes": "",
+          "allergens": "",
+          "kitchen_mep": "Silver oval veg dish",
+          "service_mep": ""
+        },
+        {
+          "name": "KIMCHI FRIED BRUSSELS SPROUTS",
+          "subtitle": "EDAMAME AND SESAME SEEDS.",
+          "description": "Brussels sprouts deep fried until golden brown and crispy, dressed in a kimchi dressing and tossed with edamame beans, spring onion and sesame seeds. The kimchi sauce contains molluscs and fish.",
+          "wine_suggestion": "",
+          "glossary": "",
+          "additional_notes": "CONTAINS- Fish and Molloscs",
+          "allergens": "",
+          "kitchen_mep": "Silver Veg Dish",
+          "service_mep": "Side spoon"
+        }
+      ]
+    },
+    {
+      "name": "DESSERTS",
+      "items": [
+        {
+          "name": "SELECTION OF THREE CHEESES",
+          "subtitle": "KERN, BARON BIGOD AND PEALES",
+          "description": "A selection of 3 cheeses served with house made onion chutney and assorted biscuits and crackers.",
+          "wine_suggestion": "Graham's LBV port 2019",
+          "glossary": "Montgomery Cheddar (traditional NOT VEG, unpasteurized cheese). Baron bigod (British, Brie-style cheese, traditional rennet NOT VEG). Stilton (traditional NOT VEG British blue cheese).",
+          "additional_notes": "",
+          "allergens": "",
+          "kitchen_mep": "Large plate, cracker silver",
+          "service_mep": "Starter fork & Steak knife & Salt and pepper."
+        },
+        {
+          "name": "YUZU POSSET",
+          "subtitle": "WITH CLEMENTINE AND SHISO SORBET.",
+          "description": "Yuzu posset is a set cream made by boiling cream and sugar. Then add yuzu juice to set it. It will be garnished with clementine and shiso sorbet, citrus meringue, fresh clementine segments, yuzu curd, lemon segments and vanilla shortbread.",
+          "wine_suggestion": "Nyetimber Cuvee Chérie M.V",
+          "glossary": "Posset- boiled then set double cream. Meringue- light fluffy and crunchy. Yuzu- Japanese citrus fruit.",
+          "additional_notes": "Contains gluten- can be removed. No pork gelatine.",
+          "allergens": "",
+          "kitchen_mep": "White bowl",
+          "service_mep": "Dessert Spoon"
+        },
+        {
+          "name": "ICE CREAMS",
+          "subtitle": "",
+          "description": "A selection of ice cream served in a silver coupe. Pistachio, Vanilla, Chocolate, rhubarb ripple, Praline, Honeycomb. Honeycomb can be offered as a single scoop but needs to be clarified with guest that is it not the honeycomb dessert.",
+          "wine_suggestion": "Sauternes La Fleur d'Or 2021",
+          "glossary": "",
+          "additional_notes": "All the ice-creams are homemade in house by the pastry chefs. We do not have chocolate ice-cream. No gluten",
+          "allergens": "",
+          "kitchen_mep": "Silver coupe & side plate with square Scott's paper napkin.",
+          "service_mep": "Just one scoop- Teaspoon. More than one scoop- Dessert spoon"
+        },
+        {
+          "name": "HONEYCOMB ICE CREAM",
+          "subtitle": "",
+          "description": "Vanilla ice cream layered with honeycomb pieces and white chocolate shards. Topped with honeycomb shards and served with hot chocolate sauce on the side.",
+          "wine_suggestion": "Sauternes La Fleur d'Or 2021",
+          "glossary": "Honeycomb is made by turning sugar into caramel by heating then adding bicarbonate soda.",
+          "additional_notes": "The Hot Choclate sauce contains ***SOYA***. No gluten",
+          "allergens": "",
+          "kitchen_mep": "Silver coupe & side plate with square Scott's paper napkin.",
+          "service_mep": "Dessert spoon"
+        },
+        {
+          "name": "SELECTION OF SORBETS",
+          "subtitle": "",
+          "description": "A selection of seasonal sorbets. Lemon, Coconut and lime sorbet, Blood orange.",
+          "wine_suggestion": "Moscato d'Asti Saracco",
+          "glossary": "Sorbet is low-fat and dairy-free.",
+          "additional_notes": "All sorbets are home made in house by our pastry chefs. No dairy, No gluten",
+          "allergens": "",
+          "kitchen_mep": "Silver coupe & side plate with square Scott's paper napkin.",
+          "service_mep": "1 scoop- Teaspoon. More than 1 scoop - Dessert spoon"
+        },
+        {
+          "name": "VANILLA PANNACOTTA",
+          "subtitle": "BLOOD ORANGE SORBET.",
+          "description": "Vanilla pannacotta, set with a blood orange jelly. Garnished with fresh blood orange segments, chocolate curls served alongside a blood orange sorbet and a blood orange crisp.",
+          "wine_suggestion": "Moscato d'Asti",
+          "glossary": "Panna cotta- a simple, elegant Italian dessert meaning 'cooked cream'.",
+          "additional_notes": "GLUTEN FREE. Contains pork gelatine",
+          "allergens": "",
+          "kitchen_mep": "White medium plate",
+          "service_mep": "Dessert spoon and fork"
+        },
+        {
+          "name": "PAVLOVA",
+          "subtitle": "WITH POACHED YORKSHIRE RHUBARB.",
+          "description": "Pavlova filled with a rhubarb sauce, rhubarb compote, rhubarb ripple ice cream and creme chantilly.",
+          "wine_suggestion": "Sauternes La Fleur d'Or 2021",
+          "glossary": "",
+          "additional_notes": "GLUTEN FREE. Contains egg",
+          "allergens": "",
+          "kitchen_mep": "White medium plate",
+          "service_mep": "Dessert spoon and fork"
+        },
+        {
+          "name": "CHOCOLATE AND HAZELNUT DELICE",
+          "subtitle": "COFFE AND LIME SYRUP.",
+          "description": "Chocolate delice dipped in a mirror glaze that is sat on a hazelnut praline crunchy base. Topped with a hazelnut and chocolate disc, caramelised hazelnut, praline ice cream and to finish a coffee and lime syrup drizzled over the praline ice cream.",
+          "wine_suggestion": "Graham's LBV port 2019",
+          "glossary": "Delice- smooth, creamy texture. Praline- confection made from nuts and caramelized sugar.",
+          "additional_notes": "Contains- dairy, gluten and pork gelatine.",
+          "allergens": "",
+          "kitchen_mep": "Silver coupe & side plate with square Scott's paper napkin.",
+          "service_mep": "1 scoop- Teaspoon. More than 1 scoop - Dessert spoon"
+        },
+        {
+          "name": "MANGO AND PASSIONFRUIT CHEESECAKE",
+          "subtitle": "",
+          "description": "Digestive biscuit base. The cheesecake filling will be made using mascarpone, vanilla, cream and sugar with a centre of passionfruit gel. Topped with a thin layer of mango jelly. Served with fresh mango, passionfruit and a sugared tuile.",
+          "wine_suggestion": "Clos Uroulat - Jurançon",
+          "glossary": "",
+          "additional_notes": "Contains- dairy, pork gelatine and gluten (none can be removed)",
+          "allergens": "",
+          "kitchen_mep": "Silver coupe & side plate with square Scott's paper napkin.",
+          "service_mep": "1 scoop- Teaspoon. More than 1 scoop - Dessert spoon"
+        },
+        {
+          "name": "CINNAMON DOUGHNUTS",
+          "subtitle": "",
+          "description": "Four fried doughnuts tossed in cinnamon sugar. Served with sauces on the side; hot chocolate sauce, raspberry sauce, and yuzu curd.",
+          "wine_suggestion": "Aszú 6 Puttonyos, Royal Tokaji",
+          "glossary": "The doughnut dough is made fresh daily. 54% Chocolate- contains **SOYA**. Yuzu- Japanese citrus fruit similar to lemon.",
+          "additional_notes": "",
+          "allergens": "",
+          "kitchen_mep": "White side plate",
+          "service_mep": "Starter fork & knife & spoon"
+        },
+        {
+          "name": "COX'S PIPPIN AND BRAMBLEY APPLE PIE",
+          "subtitle": "WITH AN CHOICE OF CUSTARD, CLOTTED CREAM OR VANILLA ICR-CREAM.",
+          "description": "Apple compote that is made by cooking down Brambley and Cox's apple in butter and vanilla until just cooked. Placed in a sweet pie pastry lined tin. Cooked in the oven until golden brown. Served wit either clotted cream, vanilla ice-cream or custard.",
+          "wine_suggestion": "Sauternes La Fleur d'Or 2021",
+          "glossary": "",
+          "additional_notes": "***CONTAINS DAIRY*** ***CONTAINS GLUTEN***",
+          "allergens": "",
+          "kitchen_mep": "White medium plate",
+          "service_mep": "Dessert spoon"
+        },
+        {
+          "name": "GOLDEN PINEAPPLE",
+          "subtitle": "WITH TROPICAL FRUITS, COCONUT AND LIME SORBET.",
+          "description": "Golden pineapple, pomegranate, mango, passion fruit served with a coconut and lime sorbet.",
+          "wine_suggestion": "Moscato d'Asti",
+          "glossary": "",
+          "additional_notes": "DAIRY FREE, GLUTEN FREE",
+          "allergens": "",
+          "kitchen_mep": "White medium plate",
+          "service_mep": "Dessert spoon and fork"
+        },
+        {
+          "name": "PARIS - BREST",
+          "subtitle": "",
+          "description": "A choux pastry ring filled with 3 scoops of our homemade pistachio ice cream, crème Chantilly and toasted pistachio nuts, topped with icing sugar and gold leaf. Hot chocolate sauce served on the side.",
+          "wine_suggestion": "Aszú 6 Puttonyos, Royal Tokaji",
+          "glossary": "A Paris-Brest is a French dessert. Pistachio ice cream is homemade. Edible gold is made of 99.9% 24-carat gold. Choux pastry: butter, water, flour, and eggs.",
+          "additional_notes": "***CONTAINS NUTS***",
+          "allergens": "",
+          "kitchen_mep": "Small green plate",
+          "service_mep": "Small fork and dessert spoon"
+        },
+        {
+          "name": "CHOCOLATE TRUFFLES",
+          "subtitle": "",
+          "description": "6 hand rolled truffles. 3 dark chocolate truffle shells filled with salted caramel (left) and 3 dark chocolate truffle shells filled with baileys and chocolate ganache (right)",
+          "wine_suggestion": "Graham's LBV port 2019",
+          "glossary": "",
+          "additional_notes": "***GLUTEN FREE*** ***NUT FREE***",
+          "allergens": "",
+          "kitchen_mep": "Truffle stand",
+          "service_mep": ""
+        },
+        {
+          "name": "TRUFFLE GIFT BOX",
+          "subtitle": "",
+          "description": "9 assorted chocolate truffles arranged in a luxury take away box tied with a gold ribbon.",
+          "wine_suggestion": "Graham's LBV port 2019",
+          "glossary": "",
+          "additional_notes": "",
+          "allergens": "",
+          "kitchen_mep": "Truffle box",
+          "service_mep": ""
+        },
+        {
+          "name": "LEMON MADELEINES",
+          "subtitle": "",
+          "description": "4 homemade cooked to order lemon madeleines finished with lemon syrup and icing sugar - made from a Sponge mix that is emulsified with brown butter.",
+          "wine_suggestion": "Clos Uroulat - Jurançon",
+          "glossary": "Madeleines are a sponge like cake. Sponge mix - flour, sugar, lemon zest, eggs, baking powder, brown butter. Emulsification = to slowly combine",
+          "additional_notes": "Freshly cooked to order. It takes 6 mins in the oven. ***CONTAINS EGGS & DAIRY & GLUTEN*** -all cannot be removed",
+          "allergens": "",
+          "kitchen_mep": "Truffle stand",
+          "service_mep": ""
+        }
+      ]
+    },
+    {
+      "name": "FESTIVE MENU",
+      "items": [
+        {
+          "name": "(SLM) SPICY SALMON TARTARE",
+          "subtitle": "AVOCADO, SPRING ONION, CHILLI AND GARLIC DRESSING SESAME CRACKER.",
+          "description": "Diced salmon mixed with cucumber, spring onion and coriander and serve on a bed of chopped avocado. Garnished with fried taro root crisps which are seasoned with togarashi pepper.",
+          "wine_suggestion": "Chablis Domaine de la Genillotte",
+          "glossary": "",
+          "additional_notes": "Contains gluten but can be removed (crisps).",
+          "allergens": "",
+          "kitchen_mep": "Devon crab bowl",
+          "service_mep": "Starter fork and knife"
+        },
+        {
+          "name": "(SLM) ROSCOFF ONION TARTE TATIN",
+          "subtitle": "RIPPED BURRATA AND SAUTEED WILD MUSHROOMS.",
+          "description": "Roscoff onions are baked in a puff pastry case with a light caramel and then topped with ripped burrata cheese and sauteed wild mushrooms, then garnished with land cress.",
+          "wine_suggestion": "Bourgogne Pinot Noir OKA Arlaud",
+          "glossary": "Roscoff onions- a sweet, pink-skinned French onion. Tarte tatin- classic French 'upside-down' dessert.",
+          "additional_notes": "Gluten and dairy CANNOT be removed.",
+          "allergens": "",
+          "kitchen_mep": "Medium plate",
+          "service_mep": "Starter knife and fork"
+        },
+        {
+          "name": "(SLM) CARAMELISED JERUSALEM ARTICHOKE SOUP",
+          "subtitle": "TRUFFLED PARMESAN GOUJERE.",
+          "description": "Jerusalem artichokes are sliced and caramelised in butter with shallots, celery and leeks then cooked out in vegetable stock before being blended with a touch of creme fraiche. On the side is a goujere filled with a truffled cheese sauce and topped with grated parmesan.",
+          "wine_suggestion": "Bourgogne Pinot Noir OKA Arlaud",
+          "glossary": "",
+          "additional_notes": "Served table side. Contains dairy which CANNOT be removed. Contains gluten which CAN be removed.",
+          "allergens": "",
+          "kitchen_mep": "Soup bowl, medium plate.",
+          "service_mep": "Soup spoon"
+        },
+        {
+          "name": "(SLM) FILLET OF CORNISH POLLOCK",
+          "subtitle": "BUTTERNUT SQUASH AND MISO PUREE, TOASTED SEEDS, BROWN BUTTER PONZU DRESSING.",
+          "description": "Pan-fried fillet of pollock served on a butternut squash and miso puree, then garnished with toasted pumpkin seed, brown butter and balsamic. Finished with Italian winter leaves dressed with mimosa and chives.",
+          "wine_suggestion": "Chablis Domaine de la Genillotte",
+          "glossary": "",
+          "additional_notes": "",
+          "allergens": "",
+          "kitchen_mep": "Masala bowl",
+          "service_mep": "Main fork and knife"
+        },
+        {
+          "name": "(SLM) SCOTTS FISH PIE",
+          "subtitle": "HALIBUT, SMOKED HADDOCK, SALMON AND PRAWNS.",
+          "description": "Halibut, salmon, smoked haddock and prawns bound in a fish veloute and topped with mashed potato, then baked in oven until golden brown on top.",
+          "wine_suggestion": "Chenin Blanc The Lark Olifantsberg",
+          "glossary": "Contains gluten and dairy - cannot be removed.",
+          "additional_notes": "Cold pass give ladle.",
+          "allergens": "",
+          "kitchen_mep": "Dessert plate and Masala bowl",
+          "service_mep": "Main fork and knife"
+        },
+        {
+          "name": "(SLM) FRIED CAULIFLOWER STEAK",
+          "subtitle": "CONFIT GARLIC HUMUS, PICKLED SHALLOT AND HERB SALAD.",
+          "description": "Wedge of cauliflower which has been blanched and then fried in a light tempura batter, then served on a bed of confit garlic hummus and topped with pickled shallot and herb salad.",
+          "wine_suggestion": "Chablis Domaine de la Genillotte",
+          "glossary": "",
+          "additional_notes": "Contains dairy and gluten.",
+          "allergens": "",
+          "kitchen_mep": "Masala bowl",
+          "service_mep": "Main fork and knife"
+        },
+        {
+          "name": "(SLM) YORKSHIRE RHUBARB COUPE",
+          "subtitle": "VANILLA ICECREAM.",
+          "description": "Vanilla ice cream rippled with a rhubarb jam. Served with poached rhubarb, creme Chantilly and a vanilla shortbread on the side.",
+          "wine_suggestion": "Aszú 6 Puttonyos, Royal Tokaji",
+          "glossary": "",
+          "additional_notes": "Contains dairy and gluten. Gluten can be removed (shortbread).",
+          "allergens": "",
+          "kitchen_mep": "",
+          "service_mep": "Dessert spoon"
+        },
+        {
+          "name": "(SLM) STEAMED SPONGE PUDDING",
+          "subtitle": "GOLDEN SYRUP.",
+          "description": "Vanilla steamed sponge pudding that is cooked in a steamer for 1 hour. Served warm and drizzled with golden syrup.",
+          "wine_suggestion": "Graham's LBV port 2019",
+          "glossary": "Gluten, dairy and eggs cannot be removed.",
+          "additional_notes": "",
+          "allergens": "",
+          "kitchen_mep": "Devon crab bowl",
+          "service_mep": "Starter fork and dessert spoon"
+        },
+        {
+          "name": "(SLM) CHOCOLATE AND HAZELNUT DELICE",
+          "subtitle": "PRALINE ICE-CREAM.",
+          "description": "Chocolate delice, that is dipped in a dark chocolate mirror glaze and has a crispy base od hazelnut praline, white chocolate and feuilletine. It is served with a chocolate and hazelnut tuile, hazelnut praline ice-cream and a caramelised hazelnut.",
+          "wine_suggestion": "Sauternes La Fleur d'Or 2021",
+          "glossary": "",
+          "additional_notes": "",
+          "allergens": "",
+          "kitchen_mep": "Black plate",
+          "service_mep": "Starter fork and spoon"
+        }
+      ]
+    }
+  ]
+}
