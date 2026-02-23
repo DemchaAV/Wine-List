@@ -1,5 +1,4 @@
-window.registerFoodCategory(
-  [
+window.registerFoodCategory([
   {
     "id": "gillardeau-fr-oyster0",
     "name": "GILLARDEAU (FR) OYSTER",
@@ -182,7 +181,7 @@ window.registerFoodCategory(
       "notes": "Elegant, fresh and lively character, with delicate aromas of white flowers, citrus fruits, and brioche. On the palate it is crisp and creamy, with a fine, persistent mousse and a long, refreshing finish"
     },
     "glossary": [
-      "Fruits de Mer: is an array of seafood and dipping sauces commonly served cold as an appetizer or hors d’oeuvre. As the origins of the name suggest, this dish is native to France and is widely served in many regions of the world, particularly in coastal cities and towns where there is a ready supply of seafood. Using fresh seafood is very important because this dish traditionally includes raw seafood and food safety is a concern. Richmond: Nothing additional", 
+      "Fruits de Mer: is an array of seafood and dipping sauces commonly served cold as an appetizer or hors d’oeuvre. As the origins of the name suggest, this dish is native to France and is widely served in many regions of the world, particularly in coastal cities and towns where there is a ready supply of seafood. Using fresh seafood is very important because this dish traditionally includes raw seafood and food safety is a concern. Richmond: Nothing additional",
       "Scott's: Additional- King prawns and dressed crab with crab mayo.",
       " Deluxe: Additional- Half lobster mayo"
     ],
@@ -1100,19 +1099,17 @@ window.registerFoodCategory(
       "notes": "Raspberry, cherry, and red plum, subtly infused with richer notes of blackcurrant and liquorice. The finish is impressively long and vigorous, with rich dark chocolate flavours adding a touch of lusciousness and opulence to the intense berry fruit."
     },
     "glossary": [
-      "Montgomery Cheddar (traditional (NOT VEG), handmade, unpasteurized cheese, Cows milk from Somerset, England, known for its complex, savory, and brothy flavor profile with nutty notes.)",
-      "Baron bigod British, Brie-style cheese, traditional rennet (NOT VEG) made at Fen Farm in Suffolk from the pasteurised milk of Montbéliarde cows. It is a soft, bloomy-rind cheese known for its smooth texture",
-      "Stilton traditional (NOT VEG) British blue cheese made from pasteurized cow's milk in the English counties of Derbyshire, Leicestershire, and Nottinghamshire. It is known for its strong flavor, crumbly yet creamy texture"
+      "Montgomery Cheddar (traditional (NOT VEG): handmade, unpasteurized cheese, Cows milk from Somerset, England, known for its complex, savory, and brothy flavor profile with nutty notes.)",
+      "Baron bigod British: Brie-style cheese, traditional rennet (NOT VEG) made at Fen Farm in Suffolk from the pasteurised milk of Montbéliarde cows. It is a soft, bloomy-rind cheese known for its smooth texture",
+      "Stilton traditional (NOT VEG): British blue cheese made from pasteurized cow's milk in the English counties of Derbyshire, Leicestershire, and Nottinghamshire. It is known for its strong flavor, crumbly yet creamy texture"
     ],
-    "allergens": [],
     "additionalNotes": null,
+    "allergens": ["Dairy",
+    "Gluten",
+    "Mold"],
     "kitchenMep": "Large plate, cracker silver",
     "serviceMep": "Starter fork & Steak knife & Salt and pepper.",
-    "image": [
-      "data/categories/menu_images/SELECTION OF THREE CHEESES_0.jpeg",
-      "data/categories/menu_images/SELECTION OF THREE CHEESES_1.jpeg",
-      "data/categories/menu_images/SELECTION OF THREE CHEESES_2.jpeg"
-    ]
+    "image": "data/categories/menu_images/SELECTION OF THREE CHEESES.png"
   },
   {
     "id": "yuzu-posset47",
@@ -1665,5 +1662,4 @@ window.registerFoodCategory(
     "serviceMep": "Starter fork and spoon",
     "image": "data/categories/menu_images/CHOCOLATE AND HAZELNUT DELICE.jpeg"
   }
-]
-);
+]);
