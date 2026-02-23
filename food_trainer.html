@@ -167,6 +167,35 @@
             background: rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(4px);
         }
+
+        /* Menu version toggle */
+        .menu-toggle {
+            display: flex;
+            background: #1a2b2c;
+            border-radius: 12px;
+            border: 1px solid rgba(20, 184, 166, 0.15);
+            overflow: hidden;
+        }
+
+        .menu-toggle button {
+            flex: 1;
+            padding: 8px 12px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            background: transparent;
+            color: #64748b;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .menu-toggle button.active {
+            background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+            color: white;
+            border-radius: 10px;
+        }
     </style>
     <script src="data/loader.js"></script>
 </head>
@@ -188,6 +217,20 @@
             </div>
 
             <div class="flex-1 flex flex-col justify-center">
+                <!-- Menu Version -->
+                <div class="mb-6">
+                    <h2 class="text-lg font-semibold text-center mb-3 flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-lg">menu_book</span>
+                        Menu Version
+                    </h2>
+                    <div class="menu-toggle mx-auto max-w-xs" id="menuVersionToggle">
+                        <button class="active" onclick="setTrainerMenuVersion('current')" data-version="current">Current
+                            Menu</button>
+                        <button onclick="setTrainerMenuVersion('previous')" data-version="previous">Previous
+                            Menu</button>
+                    </div>
+                </div>
+
                 <div class="mb-6">
                     <h2 class="text-lg font-semibold text-center mb-3 flex items-center justify-center gap-2">
                         <span class="material-symbols-outlined text-primary text-lg">category</span>
@@ -233,6 +276,14 @@
                         <button data-type="reverse"
                             class="filter-btn bg-card-dark text-slate-300 px-4 py-2 rounded-xl font-medium border border-primary/20 flex items-center gap-1.5">
                             <span class="material-symbols-outlined text-sm">lightbulb</span> Name It
+                        </button>
+                    </div>
+
+                    <!-- NEW Only filter -->
+                    <div class="mt-4 flex justify-center">
+                        <button id="trainerNewFilter" onclick="toggleTrainerNewFilter()"
+                            class="filter-btn bg-card-dark text-slate-300 px-5 py-2 rounded-xl font-medium border border-primary/20 flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-sm">new_releases</span> ✨ NEW Only
                         </button>
                     </div>
                 </div>
@@ -375,6 +426,8 @@
         let currentQuestion = null;
         let selectedCategory = 'all';
         let selectedType = 'mix';
+        let trainerMenuVersion = 'current';
+        let trainerNewOnly = false;
 
         const setupScreen = document.getElementById('setupScreen');
         const trainingScreen = document.getElementById('trainingScreen');
@@ -442,8 +495,14 @@
         }
 
         function getFilteredItems() {
-            if (selectedCategory === 'all') return allFoodItems;
-            return allFoodItems.filter(c => c.category && c.category.toLowerCase() === selectedCategory.toLowerCase());
+            let items = allFoodItems;
+            if (selectedCategory !== 'all') {
+                items = items.filter(c => c.category && c.category.toLowerCase() === selectedCategory.toLowerCase());
+            }
+            if (trainerNewOnly) {
+                items = items.filter(c => c.tags && c.tags.includes('new'));
+            }
+            return items;
         }
 
         function startSession() {
@@ -702,6 +761,32 @@
         exitSessionBtn.onclick = () => { if (confirm('Exit training session?')) showScreen('setupScreen'); };
         restartSessionBtn.onclick = startSession;
         changeCategoryBtn.onclick = () => showScreen('setupScreen');
+
+        // Menu version toggle
+        function setTrainerMenuVersion(version) {
+            trainerMenuVersion = version;
+            document.querySelectorAll('#menuVersionToggle button').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.version === version);
+            });
+            if (version === 'current') {
+                allFoodItems = window.allFoodItems || [];
+            } else {
+                allFoodItems = window.previousFoodItems || [];
+            }
+            renderCategoryButtons();
+            updateSessionInfo();
+        }
+
+        function toggleTrainerNewFilter() {
+            trainerNewOnly = !trainerNewOnly;
+            const btn = document.getElementById('trainerNewFilter');
+            if (trainerNewOnly) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+            updateSessionInfo();
+        }
 
         // Initialization
         function initializeTrainer() {

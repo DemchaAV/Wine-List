@@ -227,7 +227,12 @@
                 class="search-input w-full bg-card-dark text-white px-4 py-3 rounded-xl border border-primary/20 mb-3 placeholder-slate-500">
 
             <!-- Categories -->
-            <div id="categoryList" class="flex gap-2 overflow-x-auto pb-2 -mx-4 px-4"></div>
+            <div class="flex gap-2 items-center">
+                <button id="newFilterBtn" onclick="toggleNewFilter()"
+                    class="flex-shrink-0 px-3 py-2 rounded-xl font-medium text-sm bg-card-dark text-slate-400 border border-primary/10 flex items-center gap-1 whitespace-nowrap transition-all">✨
+                    NEW</button>
+                <div id="categoryList" class="flex gap-2 overflow-x-auto pb-2"></div>
+            </div>
         </div>
 
         <!-- Food List -->
@@ -267,6 +272,7 @@
         let filteredItems = [];
         let selectedCategory = 'all';
         let currentMenuVersion = 'current';
+        let filterNewOnly = false;
 
         const searchInput = document.getElementById('searchInput');
         const categoryList = document.getElementById('categoryList');
@@ -303,7 +309,8 @@
                     item.name.toLowerCase().includes(query) ||
                     (item.subtitle && item.subtitle.toLowerCase().includes(query)) ||
                     (item.description && item.description.toLowerCase().includes(query));
-                return matchCategory && matchSearch;
+                const matchNew = !filterNewOnly || (item.tags && item.tags.includes('new'));
+                return matchCategory && matchSearch && matchNew;
             });
             renderList();
         }
@@ -581,6 +588,23 @@
         });
 
         searchInput.oninput = filterAndRender;
+
+        function toggleNewFilter() {
+            filterNewOnly = !filterNewOnly;
+            const btn = document.getElementById('newFilterBtn');
+            if (filterNewOnly) {
+                btn.classList.add('active');
+                btn.style.background = 'linear-gradient(135deg, #14b8a6 0%, #0d9488 100%)';
+                btn.style.color = 'white';
+                btn.style.borderColor = 'transparent';
+            } else {
+                btn.classList.remove('active');
+                btn.style.background = '';
+                btn.style.color = '';
+                btn.style.borderColor = '';
+            }
+            filterAndRender();
+        }
 
         function switchMenuVersion(version) {
             currentMenuVersion = version;

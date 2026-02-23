@@ -233,6 +233,16 @@
                                         placeholder="data/categories/menu_images/...">
                                 </label>
                             </div>
+                            <div class="flex items-center gap-3 p-3 bg-primary/5 border border-primary/20 rounded-lg">
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" id="editNewTag" class="sr-only peer">
+                                    <div
+                                        class="w-11 h-6 bg-slate-700 peer-focus:ring-2 peer-focus:ring-primary/30 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary">
+                                    </div>
+                                </label>
+                                <span class="text-sm font-semibold text-slate-400">✨ Mark as <span
+                                        class="text-primary font-bold">NEW</span></span>
+                            </div>
                         </div>
                     </section>
 
@@ -425,6 +435,9 @@
             document.getElementById('editServiceMep').value = item?.serviceMep || '';
             document.getElementById('editImage').value = item?.image || '';
 
+            // NEW tag toggle
+            document.getElementById('editNewTag').checked = (item?.tags && item.tags.includes('new')) || false;
+
             // Hero image preview
             const heroImg = document.getElementById('heroImg');
             if (item?.image) {
@@ -597,7 +610,8 @@
                 allergens: currentAllergens.length > 0 ? [...currentAllergens] : [],
                 kitchenMep: document.getElementById('editKitchenMep').value.trim() || null,
                 serviceMep: document.getElementById('editServiceMep').value.trim() || null,
-                image: image || null
+                image: image || null,
+                tags: document.getElementById('editNewTag').checked ? ['new'] : (allFoodItems.find(i => i.id === id)?.tags || [])
             };
 
             if (id) {
