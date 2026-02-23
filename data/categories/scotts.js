@@ -184,7 +184,7 @@ window.registerFoodCategory(
     "glossary": [
       "Fruits de Mer: is an array of seafood and dipping sauces commonly served cold as an appetizer or hors d’oeuvre. As the origins of the name suggest, this dish is native to France and is widely served in many regions of the world, particularly in coastal cities and towns where there is a ready supply of seafood. Using fresh seafood is very important because this dish traditionally includes raw seafood and food safety is a concern. Richmond: Nothing additional", 
       "Scott's: Additional- King prawns and dressed crab with crab mayo.",
-      g" Deluxe: Additional- Half lobster mayo"
+      " Deluxe: Additional- Half lobster mayo"
     ],
     "additionalNotes": "All served with mayonnaise, Marie rose sauce, Tomato & horseradish sauce served with the deluxe dor the lobster Marie Rose – Seafood Sauce (Cocktail Sauce). Homemade Mayo, ketchup, Worcester sauce, tabasco, brandy . Tomato Horseradish – American Sauce, grated fresh horseradish, tomato and vinegar.",
     "allergens": [
