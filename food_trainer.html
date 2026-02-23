@@ -742,12 +742,20 @@
         trainerCard.addEventListener('touchend', (e) => {
             if (swipeStartX === null) return;
             const deltaX = e.changedTouches[0].clientX - swipeStartX;
-            trainerCard.style.transition = 'transform 0.3s';
-            if (deltaX < -80) handleCorrect();
-            else if (deltaX > 80) handleWrong();
-            else trainerCard.style.transform = '';
-            setTimeout(() => trainerCard.style.transition = '', 300);
             swipeStartX = null;
+            if (deltaX < -80) {
+                trainerCard.style.transform = '';
+                trainerCard.style.transition = '';
+                handleCorrect();
+            } else if (deltaX > 80) {
+                trainerCard.style.transform = '';
+                trainerCard.style.transition = '';
+                handleWrong();
+            } else {
+                trainerCard.style.transition = 'transform 0.3s';
+                trainerCard.style.transform = '';
+                setTimeout(() => trainerCard.style.transition = '', 300);
+            }
         });
 
         // Event listeners
