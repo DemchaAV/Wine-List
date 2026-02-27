@@ -597,7 +597,7 @@ window.registerFoodCategory([
     ],
     "kitchenMep": "Soupier",
     "serviceMep": "Soup spoon",
-    "image": null,
+    "image": "data/categories/menu_images/curried-parsnip-soup-generated.png",
     "tags": [
       "new"
     ],
@@ -629,7 +629,7 @@ window.registerFoodCategory([
     ],
     "kitchenMep": "Silver couple, side plate",
     "serviceMep": "Small knife/ fork",
-    "image": null,
+    "image": "data/categories/menu_images/scotts-king-prawn-cocktail-generated.png",
     "tags": [
       "new"
     ],
@@ -659,7 +659,7 @@ window.registerFoodCategory([
     ],
     "kitchenMep": "Speckled plate",
     "serviceMep": "Small knife/ fork",
-    "image": null,
+    "image": "data/categories/menu_images/robata-grilled-octopus-generated.png",
     "tags": [
       "new"
     ],
@@ -953,7 +953,7 @@ window.registerFoodCategory([
     ],
     "kitchenMep": "White bowl",
     "serviceMep": "Large knife/fork",
-    "image": null,
+    "image": "data/categories/menu_images/fillet-of-halibut-generated.png",
     "tags": [
       "new"
     ],
@@ -982,7 +982,7 @@ window.registerFoodCategory([
     ],
     "kitchenMep": "White bowl",
     "serviceMep": "Large knife/fork",
-    "image": null,
+    "image": "data/categories/menu_images/pan-fried-fillet-of-hake-generated.png",
     "tags": [
       "new"
     ],
@@ -1010,7 +1010,7 @@ window.registerFoodCategory([
     ],
     "kitchenMep": "White bowl",
     "serviceMep": "Large fork/ spoon",
-    "image": null,
+    "image": "data/categories/menu_images/portland-crab-linguini-generated.png",
     "tags": [
       "new"
     ],
@@ -1053,7 +1053,7 @@ window.registerFoodCategory([
     ],
     "kitchenMep": "Chip bowl",
     "serviceMep": null,
-    "image": "data/categories/menu_images/POTATOES.jpeg"
+    "image": "data/categories/menu_images/mashed-potatoes-generated.png"
   },
   {
     "id": "steamed-spinach41",
@@ -1175,7 +1175,7 @@ window.registerFoodCategory([
     ],
     "kitchenMep": "Side plate",
     "serviceMep": "Fork and knife",
-    "image": null,
+    "image": "data/categories/menu_images/grilled-hispi-cabbage-generated.png",
     "tags": [
       "new"
     ],
@@ -1199,7 +1199,7 @@ window.registerFoodCategory([
     "allergens": [],
     "kitchenMep": "Silver oval",
     "serviceMep": "Serving spoon",
-    "image": null,
+    "image": "data/categories/menu_images/fried-jerusalem-artichokes-generated.png",
     "tags": [
       "new"
     ],
@@ -1261,74 +1261,142 @@ window.registerFoodCategory([
     "image": "data/categories/menu_images/YUZU POSSET.jpeg"
   },
   {
-    "id": "ice-creams48",
-    "name": "ICE CREAMS",
-    "subtitle": "A selection of ice cream served in a silver coupe",
+    "id": "lemon-sorbet-ice-split1",
+    "name": "Lemon sorbet",
+    "subtitle": "",
     "category": "Desserts",
-    "description": "A selection of ice cream served in a silver coupe Pistachio, Vanilla, Chocolate, rhubarb ripple, Praline, Honeycomb. Honeycomb can be offered as a single scoop but needs to be clarified with guest that is it not the honeycomb dessert.",
+    "description": "Lemon sorbet.",
     "wineSuggestion": {
-      "name": "Sauternes La Fleur d’Or 2021",
-      "notes": "inviting nose, combining apricot fruit, creamy patisserie notes and a certain citrus brightness, leads to a sweet yet beautifully balanced palate. Luscious and rich."
+      "name": "",
+      "notes": ""
     },
-    "glossary": [
-      "Silver coupe: A small, elegant glass dish used for serving ice cream."
-    ],
-    "additionalNotes": "All the ice-creams are homemade in house by the pastry chefs. We do not have chocolate ice-cream. No Gluten, Dairy, Eggs",
-    "allergens": [
-      "Dairy",
-      "Eggs",
-      "Nuts",
-      "Soya",
-      "Sulphur Dioxide/Sulphites"
-    ],
-    "kitchenMep": "Silver coupe & side plate with square Scott’s paper napkin.",
-    "serviceMep": "Just one scoop- Teaspoon More than one scoop- Dessert spoon",
-    "image": null
-  },
-  {
-    "id": "honeycomb-ice-cream49",
-    "name": "Honeycomb ice cream",
-    "subtitle": "HONEYCOMB ICE CREAM",
-    "category": "Desserts",
-    "description": "Vanilla ice cream layered with honeycomb pieces and white chocolate shards. Topped with honeycomb shards and served with hot chocolate sauce on the side.",
-    "wineSuggestion": {
-      "name": "Sauternes La Fleur d’Or 2021",
-      "notes": "Inviting nose, combining apricot fruit, creamy patisserie notes and a certain citrus brightness, leads to a sweet yet beautifully balanced palate. Luscious and rich"
-    },
-    "glossary": [
-      "Honeycomb is made by turning sugar into caramel by heating then adding bicarbonate soda and then pouring it onto a surface and spreading thinly. Once hardened it is broken and portioned into shards."
-    ],
-    "additionalNotes": "The Hot Choclate sauce contains ***SOYA***. No gluten",
-    "allergens": [
-      "Dairy",
-      "Eggs",
-      "Soya",
-      "Sulphur Dioxide/Sulphites"
-    ],
-    "kitchenMep": "Silver coupe & side plate with square Scott’s paper napkin.",
-    "serviceMep": "Dessert spoon",
-    "image": "data/categories/menu_images/HONEYCOMB ICE CREAM.jpeg"
-  },
-  {
-    "id": "selection-of-sorbets50",
-    "name": "SELECTION OF SORBETS",
-    "subtitle": "A selection of seasonal sorbets Lemon, Coconut and lime sorbet, Blood orange.",
-    "category": "Desserts",
-    "description": "A selection of seasonal sorbets Lemon, Coconut and lime sorbet, Blood orange.",
-    "wineSuggestion": {
-      "name": "Moscato d’Asti Saracco",
-      "notes": "Intense and vibrant floral bouquet of jasmine and orange blossom, ripe peach and grape. The sweet sensations are well balanced with a pleasant acidity and fruity aromas typical of Muscat grapes."
-    },
-    "glossary": [
-      "Sorbet: is low-fat and dairy-free, a great dessert choice for people who are lactose intolerant or have other dairy allergies. Sorbet is made from fruit, sugar, and water."
-    ],
-    "additionalNotes": "All sorbets are home made in house by our pastry chefs. No Gluten, No Dairy",
+    "glossary": [],
+    "additionalNotes": null,
     "allergens": [
       "Sulphur Dioxide/Sulphites"
     ],
-    "kitchenMep": "Silver coupe & side plate with square Scott’s paper napkin.",
-    "serviceMep": "1 scoop- Teaspoon More than 1 scoop – Dessert spoon",
+    "kitchenMep": "Silver coupe",
+    "serviceMep": null,
     "image": "data/categories/menu_images/selection of seasonal sorbets.png"
+  },
+  {
+    "id": "coconut-lime-sorbet-ice-split2",
+    "name": "Coconut and lime sorbet",
+    "subtitle": "",
+    "category": "Desserts",
+    "description": "Coconut and lime sorbet.",
+    "wineSuggestion": {
+      "name": "",
+      "notes": ""
+    },
+    "glossary": [],
+    "additionalNotes": null,
+    "allergens": [],
+    "kitchenMep": "Silver coupe",
+    "serviceMep": null,
+    "image": "data/categories/menu_images/selection of seasonal sorbets.png"
+  },
+  {
+    "id": "blood-orange-sorbet-ice-split3",
+    "name": "Blood orange sorbet",
+    "subtitle": "",
+    "category": "Desserts",
+    "description": "Blood orange sorbet.",
+    "wineSuggestion": {
+      "name": "",
+      "notes": ""
+    },
+    "glossary": [],
+    "additionalNotes": null,
+    "allergens": [],
+    "kitchenMep": "Silver coupe",
+    "serviceMep": null,
+    "image": "data/categories/menu_images/selection of seasonal sorbets.png"
+  },
+  {
+    "id": "honeycomb-ice-cream-ice-split4",
+    "name": "Honeycomb ice cream",
+    "subtitle": "",
+    "category": "Desserts",
+    "description": "Honeycomb ice cream.",
+    "wineSuggestion": {
+      "name": "",
+      "notes": ""
+    },
+    "glossary": [],
+    "additionalNotes": null,
+    "allergens": [
+      "Dairy",
+      "Eggs",
+      "Soya",
+      "Sulphur Dioxide/Sulphites"
+    ],
+    "kitchenMep": "Silver coupe",
+    "serviceMep": null,
+    "image": "data/categories/menu_images/honeycomb-ice-cream-generated.png"
+  },
+  {
+    "id": "pistachio-ice-cream-ice-split5",
+    "name": "Pistachio ice cream",
+    "subtitle": "",
+    "category": "Desserts",
+    "description": "Pistachio ice cream.",
+    "wineSuggestion": {
+      "name": "",
+      "notes": ""
+    },
+    "glossary": [],
+    "additionalNotes": null,
+    "allergens": [
+      "Dairy",
+      "Eggs",
+      "Nuts"
+    ],
+    "kitchenMep": "Silver coupe",
+    "serviceMep": null,
+    "image": "data/categories/menu_images/pistachio-ice-cream-generated.png"
+  },
+  {
+    "id": "rhubarb-ripple-ice-cream-ice-split6",
+    "name": "Rhubarb ripple ice cream",
+    "subtitle": "",
+    "category": "Desserts",
+    "description": "Rhubarb ripple ice cream.",
+    "wineSuggestion": {
+      "name": "",
+      "notes": ""
+    },
+    "glossary": [],
+    "additionalNotes": null,
+    "allergens": [
+      "Dairy",
+      "Eggs"
+    ],
+    "kitchenMep": "Silver coupe",
+    "serviceMep": null,
+    "image": "data/categories/menu_images/rhubarb-ripple-ice-cream-generated.png"
+  },
+  {
+    "id": "chocolate-ice-cream-ice-split7",
+    "name": "Chocolate ice cream",
+    "subtitle": "",
+    "category": "Desserts",
+    "description": "Chocolate ice cream.",
+    "wineSuggestion": {
+      "name": "",
+      "notes": ""
+    },
+    "glossary": [],
+    "additionalNotes": null,
+    "allergens": [
+      "Dairy",
+      "Eggs",
+      "Soya",
+      "Sulphur Dioxide/Sulphites"
+    ],
+    "kitchenMep": "Silver coupe",
+    "serviceMep": null,
+    "image": "data/categories/menu_images/chocolate-ice-cream-generated.png"
   },
   {
     "id": "vanilla-pannacotta51",
@@ -1581,7 +1649,7 @@ window.registerFoodCategory([
     ],
     "kitchenMep": "Posset glass, side plate",
     "serviceMep": "Dessert spoon",
-    "image": null,
+    "image": "data/categories/menu_images/amedei-chocolate-mousse-generated.png",
     "tags": [
       "new"
     ],

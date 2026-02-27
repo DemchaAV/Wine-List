@@ -79,6 +79,13 @@ MANUAL_MATCH_RULES = [
     {"name": "STEAMED SPINACH", "target": "Steamed spinach", "menu_hint": "A La Carte"},
     {"name": "BUTTERED SPINACH", "target": "Buttered spinach", "menu_hint": "A La Carte"},
     {"name": "SPINACH, OLIVE OIL AND GARLIC", "target": "Spinach, olive oil and garlic", "menu_hint": "A La Carte"},
+    {"name": "LEMON SORBET", "target": "Lemon sorbet", "menu_hint": "Dessert menu"},
+    {"name": "COCONUT AND LIME SORBET", "target": "Coconut and lime sorbet", "menu_hint": "Dessert menu"},
+    {"name": "BLOOD ORANGE SORBET", "target": "Blood orange sorbet", "menu_hint": "Dessert menu"},
+    {"name": "HONEYCOMB ICE CREAM", "target": "Honeycomb ice cream", "menu_hint": "Dessert menu"},
+    {"name": "PISTACHIO ICE CREAM", "target": "Pistachio ice cream", "menu_hint": "Dessert menu"},
+    {"name": "RHUBARB RIPPLE ICE CREAM", "target": "Rhubarb ripple ice cream", "menu_hint": "Dessert menu"},
+    {"name": "CHOCOLATE ICE CREAM", "target": "Chocolate ice cream", "menu_hint": "Dessert menu"},
 ]
 
 # Fallback allergens for grouped local items that do not exist as a single dish on viewthe.menu.

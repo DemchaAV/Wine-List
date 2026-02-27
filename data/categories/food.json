@@ -593,37 +593,81 @@
           "service_mep": "Dessert Spoon"
         },
         {
-          "name": "ICE CREAMS",
+          "name": "Lemon sorbet",
           "subtitle": "",
-          "description": "A selection of ice cream served in a silver coupe. Pistachio, Vanilla, Chocolate, rhubarb ripple, Praline, Honeycomb. Honeycomb can be offered as a single scoop but needs to be clarified with guest that is it not the honeycomb dessert.",
-          "wine_suggestion": "Sauternes La Fleur d'Or 2021",
+          "description": "Lemon sorbet.",
+          "wine_suggestion": "",
           "glossary": "",
-          "additional_notes": "All the ice-creams are homemade in house by the pastry chefs. We do not have chocolate ice-cream. No gluten",
-          "allergens": "Dairy, Eggs, Nuts, Soya, Sulphur Dioxide/Sulphites",
-          "kitchen_mep": "Silver coupe & side plate with square Scott's paper napkin.",
-          "service_mep": "Just one scoop- Teaspoon. More than one scoop- Dessert spoon"
+          "additional_notes": "",
+          "allergens": "Sulphur Dioxide/Sulphites",
+          "kitchen_mep": "Silver coupe",
+          "service_mep": ""
+        },
+        {
+          "name": "Coconut and lime sorbet",
+          "subtitle": "",
+          "description": "Coconut and lime sorbet.",
+          "wine_suggestion": "",
+          "glossary": "",
+          "additional_notes": "",
+          "allergens": "",
+          "kitchen_mep": "Silver coupe",
+          "service_mep": ""
+        },
+        {
+          "name": "Blood orange sorbet",
+          "subtitle": "",
+          "description": "Blood orange sorbet.",
+          "wine_suggestion": "",
+          "glossary": "",
+          "additional_notes": "",
+          "allergens": "",
+          "kitchen_mep": "Silver coupe",
+          "service_mep": ""
         },
         {
           "name": "Honeycomb ice cream",
           "subtitle": "",
-          "description": "Vanilla ice cream layered with honeycomb pieces and white chocolate shards. Topped with honeycomb shards and served with hot chocolate sauce on the side.",
-          "wine_suggestion": "Sauternes La Fleur d'Or 2021",
-          "glossary": "Honeycomb is made by turning sugar into caramel by heating then adding bicarbonate soda.",
-          "additional_notes": "The Hot Choclate sauce contains ***SOYA***. No gluten",
+          "description": "Honeycomb ice cream.",
+          "wine_suggestion": "",
+          "glossary": "",
+          "additional_notes": "",
           "allergens": "Dairy, Eggs, Soya, Sulphur Dioxide/Sulphites",
-          "kitchen_mep": "Silver coupe & side plate with square Scott's paper napkin.",
-          "service_mep": "Dessert spoon"
+          "kitchen_mep": "Silver coupe",
+          "service_mep": ""
         },
         {
-          "name": "SELECTION OF SORBETS",
+          "name": "Pistachio ice cream",
           "subtitle": "",
-          "description": "A selection of seasonal sorbets. Lemon, Coconut and lime sorbet, Blood orange.",
-          "wine_suggestion": "Moscato d'Asti Saracco",
-          "glossary": "Sorbet is low-fat and dairy-free.",
-          "additional_notes": "All sorbets are home made in house by our pastry chefs. No dairy, No gluten",
-          "allergens": "Sulphur Dioxide/Sulphites",
-          "kitchen_mep": "Silver coupe & side plate with square Scott's paper napkin.",
-          "service_mep": "1 scoop- Teaspoon. More than 1 scoop - Dessert spoon"
+          "description": "Pistachio ice cream.",
+          "wine_suggestion": "",
+          "glossary": "",
+          "additional_notes": "",
+          "allergens": "Dairy, Eggs, Nuts",
+          "kitchen_mep": "Silver coupe",
+          "service_mep": ""
+        },
+        {
+          "name": "Rhubarb ripple ice cream",
+          "subtitle": "",
+          "description": "Rhubarb ripple ice cream.",
+          "wine_suggestion": "",
+          "glossary": "",
+          "additional_notes": "",
+          "allergens": "Dairy, Eggs",
+          "kitchen_mep": "Silver coupe",
+          "service_mep": ""
+        },
+        {
+          "name": "Chocolate ice cream",
+          "subtitle": "",
+          "description": "Chocolate ice cream.",
+          "wine_suggestion": "",
+          "glossary": "",
+          "additional_notes": "",
+          "allergens": "Dairy, Eggs, Soya, Sulphur Dioxide/Sulphites",
+          "kitchen_mep": "Silver coupe",
+          "service_mep": ""
         },
         {
           "name": "Vanilla pannacotta",

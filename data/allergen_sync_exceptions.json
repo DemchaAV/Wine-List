@@ -5,18 +5,18 @@
     "C:\\Users\\Demch\\OneDrive\\projects\\Food-list\\data\\categories\\food.json"
   ],
   "summary": {
-    "scotts_total": 74,
-    "scotts_updated": 73,
+    "scotts_total": 78,
+    "scotts_updated": 77,
     "scotts_renamed": 0,
-    "scotts_manual_matched": 14,
-    "scotts_fallback_applied": 3,
-    "food_total": 74,
-    "food_updated": 70,
+    "scotts_manual_matched": 21,
+    "scotts_fallback_applied": 1,
+    "food_total": 78,
+    "food_updated": 74,
     "food_renamed": 0,
-    "food_manual_matched": 13,
-    "food_fallback_applied": 3,
+    "food_manual_matched": 20,
+    "food_fallback_applied": 1,
     "exceptions_count": 5,
-    "unused_scraped_items_count": 125
+    "unused_scraped_items_count": 119
   },
   "exceptions": [
     {
@@ -175,42 +175,6 @@
       "menu_name": "Dessert menu",
       "section_name": "Cheese and savouries",
       "guid": "a923a48d-c29f-4dd4-9fba-2abf5fba3b5a-69417-0-0"
-    },
-    {
-      "name": "Blood orange sorbet",
-      "menu_name": "Dessert menu",
-      "section_name": "Cheese and savouries Ice creams and sorbets",
-      "guid": "c30f9e24-6246-419b-b413-f24a7ea5549a-69418-0-0"
-    },
-    {
-      "name": "Chocolate ice cream",
-      "menu_name": "Dessert menu",
-      "section_name": "Cheese and savouries Ice creams and sorbets",
-      "guid": "6adbfb5e-86a4-4500-a420-9f1fa1e4e860-69418-0-0"
-    },
-    {
-      "name": "Coconut and lime sorbet",
-      "menu_name": "Dessert menu",
-      "section_name": "Cheese and savouries Ice creams and sorbets",
-      "guid": "53c49bce-a597-4509-9c92-acc09743ea1f-69418-0-0"
-    },
-    {
-      "name": "Lemon sorbet",
-      "menu_name": "Dessert menu",
-      "section_name": "Cheese and savouries Ice creams and sorbets",
-      "guid": "d13b065d-f08f-419c-b195-64d0ec8d97ef-69418-0-0"
-    },
-    {
-      "name": "Pistachio ice cream",
-      "menu_name": "Dessert menu",
-      "section_name": "Cheese and savouries Ice creams and sorbets",
-      "guid": "444b2796-0abe-41d1-8bb3-700a5132fb7e-69418-0-0"
-    },
-    {
-      "name": "Rhubarb ripple ice cream",
-      "menu_name": "Dessert menu",
-      "section_name": "Cheese and savouries Ice creams and sorbets",
-      "guid": "b53dfb7b-4145-4a9d-9443-dd159609d6ba-69418-0-0"
     },
     {
       "name": "Hazelnut Truffles",
