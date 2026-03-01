@@ -1048,15 +1048,13 @@ window.registerFoodCategory([
       "name": "",
       "notes": ""
     },
-    "glossary": [
-      "Coconut and lime sorbet is a dairy-free frozen dessert with tropical sweetness and citrus acidity."
-    ],
+    "glossary": [],
     "additionalNotes": "When served the server must ask the guest if they would like any sauces.",
     "allergens": [
       "Dairy"
     ],
     "kitchenMep": "Chip bowl",
-    "serviceMep": "1 scoop - teaspoon. More than 1 scoop - dessert spoon.",
+    "serviceMep": null,
     "image": "data/categories/menu_images/mashed-potatoes-generated.png"
   },
   {
@@ -1069,13 +1067,11 @@ window.registerFoodCategory([
       "name": "",
       "notes": ""
     },
-    "glossary": [
-      "Blood orange sorbet is a dairy-free sorbet with bright citrus flavour and natural bitterness."
-    ],
+    "glossary": [],
     "additionalNotes": null,
     "allergens": [],
     "kitchenMep": "Oval silver",
-    "serviceMep": "1 scoop - teaspoon. More than 1 scoop - dessert spoon.",
+    "serviceMep": null,
     "image": "data/categories/menu_images/SPINACH.jpeg"
   },
   {
@@ -1088,15 +1084,13 @@ window.registerFoodCategory([
       "name": "",
       "notes": ""
     },
-    "glossary": [
-      "Honeycomb is sugar caramelised then aerated with bicarbonate soda, creating a crisp texture."
-    ],
+    "glossary": [],
     "additionalNotes": null,
     "allergens": [
       "Dairy"
     ],
     "kitchenMep": "Oval silver",
-    "serviceMep": "1 scoop - teaspoon. More than 1 scoop - dessert spoon.",
+    "serviceMep": null,
     "image": "data/categories/menu_images/SPINACH.jpeg"
   },
   {
@@ -1109,13 +1103,11 @@ window.registerFoodCategory([
       "name": "",
       "notes": ""
     },
-    "glossary": [
-      "Pistachio ice cream is made in house and contains nuts."
-    ],
+    "glossary": [],
     "additionalNotes": null,
     "allergens": [],
     "kitchenMep": "Oval silver",
-    "serviceMep": "1 scoop - teaspoon. More than 1 scoop - dessert spoon.",
+    "serviceMep": null,
     "image": "data/categories/menu_images/SPINACH.jpeg"
   },
   {
@@ -1173,9 +1165,7 @@ window.registerFoodCategory([
       "name": null,
       "notes": null
     },
-    "glossary": [
-      "Rhubarb ripple ice cream combines a vanilla base with stewed rhubarb ripple."
-    ],
+    "glossary": [],
     "additionalNotes": null,
     "allergens": [
       "Dairy",
