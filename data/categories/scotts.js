@@ -1,8 +1,8 @@
 window.registerFoodCategory([
   {
     "id": "gillardeau-fr-oyster0",
-    "name": "Oysters",
-    "subtitle": "These oysters are produced by the Gillardeau family, near La Rochelle on the west coast of France. The shells are laser engraved with a ‘G’ to prevent counterfeiting.",
+    "name": "Gillardeau (FR)",
+    "subtitle": "six £38.00 / dozen £76.00",
     "category": "Oysters",
     "description": "The Gillardeau oyster itself is firm and full in the shell. It has a really sweet taste with notes of dried fruit.",
     "wineSuggestion": {
@@ -26,8 +26,8 @@ window.registerFoodCategory([
   },
   {
     "id": "brownsea-island-rocks1",
-    "name": "Oysters",
-    "subtitle": "SUBTITLE",
+    "name": "Dorset rocks (ENG)",
+    "subtitle": "six £32.00 / dozen £64.00",
     "category": "Oysters",
     "description": "Sweet and chewy. Complex flavours- earthy and nutty with a mineral finish. Full bodied, plump and meaty.",
     "wineSuggestion": {
@@ -50,8 +50,8 @@ window.registerFoodCategory([
   },
   {
     "id": "jersey-rocks2",
-    "name": "Oysters",
-    "subtitle": "From Jersey in the UK.",
+    "name": "Jersey (ENG)",
+    "subtitle": "six £27.00 / dozen £54.00",
     "category": "Oysters",
     "description": "From Jersey in the UK. They have a crisp flavour of green wood and cucumber with a hint of lemon. Fresh ocean salty taste.",
     "wineSuggestion": {
@@ -74,8 +74,8 @@ window.registerFoodCategory([
   },
   {
     "id": "carlingford-rocks3",
-    "name": "Oysters",
-    "subtitle": "CARLINGFORD LOUGH, NORTHERN IRELAND",
+    "name": "Carlingford",
+    "subtitle": "six £32.00 / dozen £64.00",
     "category": "Oysters",
     "description": "They are from Carlingford Lough in Northern Ireland. They have citrus, buttery and creamy notes. Rich meaty body.",
     "wineSuggestion": {
@@ -98,7 +98,7 @@ window.registerFoodCategory([
   {
     "id": "dressed-carlingford-oyster4",
     "name": "Dressed Carlingford Oyster",
-    "subtitle": "BLOOD ORANGE AGUACHILE, PICKLED FENNEL",
+    "subtitle": "blood orange aguachile, pickled fennel, each £6.50",
     "category": "Oysters",
     "description": "Carlingford oyster dressed with a blood orange aguachile (blood orange, yuzu kosho and lemongrass) and topped with shaved, pickled fennel.",
     "wineSuggestion": {
@@ -124,7 +124,7 @@ window.registerFoodCategory([
   {
     "id": "mixed-oysters5",
     "name": "Mixed oysters",
-    "subtitle": "A selection of either 6 or 12 oysters.",
+    "subtitle": "spicy sausage, six £32.00 / dozen £64.00",
     "category": "Oysters",
     "description": "A selection of either 6 or 12 oysters. Served with Wild Boar sausages, hogwash dressing and shallot vinegar. WINE SUGGESTION: Ruinart Blanc de Blancs Elegant, fresh and lively character, with delicate aromas of white flowers, citrus fruits, and brioche. On the palate it is crisp and creamy, with a fine, persistent mousse and a long, refreshing finish.",
     "wineSuggestion": {
@@ -149,8 +149,8 @@ window.registerFoodCategory([
   },
   {
     "id": "imperial-caviar6",
-    "name": "Caviar",
-    "subtitle": "SIZE: 20g, 30g, 50g",
+    "name": "Imperial",
+    "subtitle": "20g £65.00 / 30g £95.00 / 50g £150.00",
     "category": "Caviar",
     "description": "Size: 20g, 30g, 50g Taste: Its a complex developed flavour. Offering a rich, briny, zesty and creamy flavour profile. The eggs are known for their firm texture and golden to dark chestnut colour.",
     "wineSuggestion": {
@@ -174,8 +174,8 @@ window.registerFoodCategory([
   },
   {
     "id": "oscietra-caviar7",
-    "name": "Caviar",
-    "subtitle": "SIZE: 20g, 30g, 50g",
+    "name": "Oscietra",
+    "subtitle": "20g £80.00 / 30g £120.00 / 50g £195.00",
     "category": "Caviar",
     "description": "Taste: Fresh intense flavour. Nutty, creamy walnut taste.",
     "wineSuggestion": {
@@ -352,7 +352,7 @@ window.registerFoodCategory([
   {
     "id": "tempura-prawns14",
     "name": "Tempura prawns",
-    "subtitle": "STARTERS",
+    "subtitle": "SPICY COCKTAIL SAUCE",
     "category": "Starters",
     "description": "5 prawns deep fried in tempura batter served with spicy cocktail sauce, julienne of mooli, and togarashi pepper.",
     "wineSuggestion": {
@@ -640,7 +640,7 @@ window.registerFoodCategory([
   {
     "id": "curried-parsnip-soup-fried-onion-pakora",
     "name": "Curried parsnip soup",
-    "subtitle": null,
+    "subtitle": "FRIED ONION PAKORA",
     "category": "Starters",
     "description": "Roasted parsnips blended in vegetable stock and cream with onions, leeks and curry powder until smooth. On the side are onion pakora. Sliced onion in a chickpea flour batter, deep-fried until crispy.",
     "wineSuggestion": {
@@ -674,8 +674,8 @@ window.registerFoodCategory([
   },
   {
     "id": "scotts-prawn-cocktail-marie-rose-sauce",
-    "name": "Scott’s king prawn cocktail",
-    "subtitle": null,
+    "name": "Scott’s prawn cocktail",
+    "subtitle": "MARIE ROSE SAUCE",
     "category": "Starters",
     "description": "Silver coupe filled with shredded iceberg lettuce, cucumber, spring onion and dill, topped with Marie Rose sauce and finished with five peeled prawns and a gem leaf.",
     "wineSuggestion": {
@@ -712,7 +712,7 @@ window.registerFoodCategory([
   {
     "id": "robata-grilled-octopus-romesco-sauce-pink-fir-potatoes-salsa-verde",
     "name": "Robata grilled octopus",
-    "subtitle": null,
+    "subtitle": "ROMESCO SAUCE, PINK FIR POTATOES AND SALSA VERDE",
     "category": "Starters",
     "description": "Grilled octopus served on a romesco sauce (peppers, almonds, smoked paprika) and finished with salsa verde (parsley, basil, mint and capers) and crispy fried pink fir potatoes.",
     "wineSuggestion": {
@@ -748,7 +748,7 @@ window.registerFoodCategory([
   {
     "id": "dover-sole26",
     "name": "Dover sole Meunière",
-    "subtitle": "Dover soles are a type of flatfish. Lives on sandy seabed’s, caught all around the UK.",
+    "subtitle": "GRILLED OR MEUNIERE 16oz",
     "category": "Mains",
     "description": "Dover sole either grilled with olive oil or served with brown butter, parsley, lemon juice, salt.",
     "wineSuggestion": {
@@ -803,7 +803,7 @@ window.registerFoodCategory([
   {
     "id": "deep-fried-haddock28",
     "name": "Deep-fried haddock",
-    "subtitle": "Subtitle",
+    "subtitle": "MINTED CRUSHED PEAS AND CHIPS",
     "category": "Mains",
     "description": "Fillet of haddock deep-fried in beer batter and served on a bed of minted mushy peas served with chips and homemade tartar sauce on the side.",
     "wineSuggestion": {
@@ -948,7 +948,7 @@ window.registerFoodCategory([
   {
     "id": "grilled-lobster36",
     "name": "Grilled lobster",
-    "subtitle": "SUBTITLE",
+    "subtitle": "GARLIC BUTTER, SEASHORE HERBS AND CHIPS.",
     "category": "Mains",
     "description": "Whole grilled lobster, served with garlic butter and fresh sea herbs. Served with chips.",
     "wineSuggestion": {
@@ -1054,7 +1054,7 @@ window.registerFoodCategory([
   {
     "id": "fillet-of-halibut-brown-shrimp-cucumber-chives-champagne-veloute",
     "name": "Fillet of halibut",
-    "subtitle": null,
+    "subtitle": "BROWN SHRIMP, CUCUMBER AND CHIVES, CHAMPAGNE VELOUTE AND WHIPPED PINK FIR POTATOES",
     "category": "Mains",
     "description": "Pan-fried fillet of halibut served on a bed of whipped, buttered pink fir potatoes and topped with a light cream based Champagne veloute finished with peeled brown shrimp, diced cucumber and chives. Finished with chive oil.",
     "wineSuggestion": {
@@ -1089,7 +1089,7 @@ window.registerFoodCategory([
   {
     "id": "fillet-of-hake-braised-white-beans-cavolo-nero-pancetta-chicken-butter-sauce",
     "name": "Pan-fried fillet of hake",
-    "subtitle": null,
+    "subtitle": "BRAISED WHITE BEANS, CAVOLO NERO, PANCETTA AND CHICKEN BUTTER SAUCE",
     "category": "Mains",
     "description": "Pan fried fillet of hake cooked until crispy and golden brown, served on a bed of braised white butter beans, sauteed cavolo nero, and smoked pancetta. Finished with a light chicken butter sauce.",
     "wineSuggestion": {
@@ -1125,7 +1125,7 @@ window.registerFoodCategory([
   {
     "id": "portland-crab-linguini-chilli-garlic-datterini-tomatoes",
     "name": "Portland crab linguini",
-    "subtitle": null,
+    "subtitle": "CHILLI, GARLIC AND DATTERINI TOMATOES",
     "category": "Mains",
     "description": "Linguini pasta cooked and tossed with picked white crab, olive oil, chilli, garlic and datterini tomatoes, finished with chopped parsley.",
     "wineSuggestion": {
@@ -1287,7 +1287,7 @@ window.registerFoodCategory([
   },
   {
     "id": "baby-gem-salad43",
-    "name": "Gem heart salad",
+    "name": "Baby gem salad",
     "subtitle": "BABY GEM SALAD",
     "category": "Sides",
     "description": "Baby gem lettuce dressed with our home made ranch dressing, picked shallots and crispy fried shallots. Finished with chives and dill.",
@@ -1380,7 +1380,7 @@ window.registerFoodCategory([
   {
     "id": "selection-of-three-cheeses46",
     "name": "Selection of three cheeses (to share)",
-    "subtitle": "KERN, BARON BIGOD AND PEALES",
+    "subtitle": "WITH BISCUITS AND HOMEMADE CHUTNEY",
     "category": "Desserts",
     "description": "A selection of 3 cheeses served with house made onion chutney and assorted biscuits and crackers.",
     "wineSuggestion": {
@@ -1404,34 +1404,6 @@ window.registerFoodCategory([
     "kitchenMep": "Large plate, cracker silver",
     "serviceMep": "Starter fork & Steak knife & Salt and pepper.",
     "image": "data/categories/menu_images/SELECTION OF THREE CHEESES.png"
-  },
-  {
-    "id": "yuzu-posset47",
-    "name": "YUZU POSSET",
-    "subtitle": "WITH CLEMENTINE AND SHISO SORBET.",
-    "category": "Desserts",
-    "description": "Yuzu posset is a set cream made by boiling cream and sugar. Then add yuzu juice to set it. It will be garnished with clementine and shiso sorbet, citrus meringue, fresh clementine segments, yuzu curd, lemon segments and vanilla shortbread.",
-    "wineSuggestion": {
-      "name": "Chablis",
-      "notes": "A crisp, dry white wine with citrus notes that complements the yuzu and clementine flavors."
-    },
-    "glossary": [
-      "Posset: A thick, creamy dessert set with a tart ingredient.",
-      "Yuzu: A Japanese citrus fruit with a unique, aromatic flavor.",
-      "Clementine: A sweet, orange-colored citrus fruit.",
-      "Shiso: A Japanese herb with a refreshing, minty taste.",
-      "Sorbet: Frozen dessert made with fruit juice and sugar.",
-      "Meringue: A sweet, airy dessert made from whipped egg whites."
-    ],
-    "additionalNotes": "Contains Gluten, Dairy. No pork gelatine.",
-    "allergens": [
-      "Gluten",
-      "Dairy",
-      "Eggs"
-    ],
-    "kitchenMep": "White bowl",
-    "serviceMep": "Dessert Spoon",
-    "image": "data/categories/menu_images/YUZU POSSET.jpeg"
   },
   {
     "id": "lemon-sorbet-ice-split1",
@@ -1594,7 +1566,7 @@ window.registerFoodCategory([
   },
   {
     "id": "vanilla-pannacotta51",
-    "name": "Vanilla pannacotta",
+    "name": "Vanilla Panna cotta",
     "subtitle": "BLOOD ORANGE SORBET.",
     "category": "Desserts",
     "description": "Vanilla pannacotta, set with a blood orange jelly. Garnished with fresh blood orange segments, chocolate curls served alongside a blood orange sorbet and a blood orange crisp.",
@@ -1647,7 +1619,7 @@ window.registerFoodCategory([
   {
     "id": "mango-and-passionfruit-cheesecake54",
     "name": "Mango and passionfruit cheesecake",
-    "subtitle": "SUBTITLE",
+    "subtitle": "",
     "category": "Desserts",
     "description": "Digestive biscuit base. The cheesecake filling will be made using mascarpone, vanilla, cream and sugar with a centre of passionfruit gel. Topped with a thin layer of mango jelly. Served with fresh mango, passionfruit and a sugared tuile.",
     "wineSuggestion": {
@@ -1781,7 +1753,7 @@ window.registerFoodCategory([
   {
     "id": "chocolate-truffles59",
     "name": "Chocolate truffles",
-    "subtitle": "SUBTITLE",
+    "subtitle": "SALTED CARAMEL & HAZELNUT PRALINE",
     "category": "Desserts",
     "description": "6 hand rolled truffles. 3 dark chocolate truffle shells filled with salted caramel and 3 dark chocolate truffle shells filled with hazelnut praline",
     "wineSuggestion": {
@@ -1837,7 +1809,7 @@ window.registerFoodCategory([
   {
     "id": "lemon-madeleines61",
     "name": "Lemon Madeleines",
-    "subtitle": "SUBTITLE",
+    "subtitle": "COOKED TO ORDER",
     "category": "Desserts",
     "description": "4 homemade cooked to order lemon madeleines finished with lemon syrup and icing sugar - made from a Sponge mix that is emulsified with brown butter.",
     "wineSuggestion": {
@@ -2157,3 +2129,4 @@ window.registerFoodCategory([
     "image": "data/categories/menu_images/CHOCOLATE AND HAZELNUT DELICE.jpeg"
   }
 ]);
+
