@@ -10,7 +10,8 @@ window.registerFoodCategory([
       "notes": "Elegant, fresh and lively character, with delicate aromas of white flowers, citrus fruits, and brioche. on the palate it’S is crisp and creamy, with a fine, persistent mousse and a long, refreshing finish"
     },
     "glossary": [
-      "Sorbet is a dairy-free frozen dessert made from fruit juice or puree, sugar and water."
+      "Sorbet is a dairy-free frozen dessert made from fruit juice or puree, sugar and water.",
+      "Oyster: A briny shellfish served raw or dressed, prized for minerality and texture."
     ],
     "additionalNotes": "From the pass: Finger bowls, Shallot & Hogwash Dressing 1 - 4 Oysters the stand should be small side up, 6+ large side up",
     "allergens": [
@@ -32,7 +33,8 @@ window.registerFoodCategory([
       "notes": "A golden colour, marked by delicate bubbles. On the nose the aromas are distinctly Blanc de Blanc - peach, citrus and floral notes backed by an almond-pastry-like richness. On the palate the citrus-fruit flavours give way to biscuity notes, and a exceptional balance and freshness is achieved"
     },
     "glossary": [
-      "Poole Bay Pacific oysters are cultivated and sustainably harvested by hand in micro-tidal waters at Poole Harbour, Poole, Dorset, England. These oysters benefit from four separate nutrient-rich rivers that flow into Poole Harbour."
+      "Poole Bay Pacific oysters are cultivated and sustainably harvested by hand in micro-tidal waters at Poole Harbour, Poole, Dorset, England. These oysters benefit from four separate nutrient-rich rivers that flow into Poole Harbour.",
+      "Key component: Sweet and chewy."
     ],
     "additionalNotes": "1 - 4 Oysters the stand should be small side up, 6+ large side up",
     "allergens": [
@@ -54,7 +56,8 @@ window.registerFoodCategory([
       "notes": "A golden colour, marked by delicate bubbles. On the nose the aromas are distinctly Blanc de Blanc - peach, citrus and floral notes backed by an almond-pastry-like richness. On the palate the citrus-fruit flavours give way to biscuity notes, and a exceptional balance and freshness is achieved"
     },
     "glossary": [
-      "Jersey has the third largest tidal range in the world, which means that Jersey grown oysters benefit directly from the daily natural filtering effect of Jersey's unique tides and crystal-clear nutrient waters. Growing in this kind of environment gives Jersey Rock Oysters their unique delicate, fresh and salty flavour."
+      "Jersey has the third largest tidal range in the world, which means that Jersey grown oysters benefit directly from the daily natural filtering effect of Jersey's unique tides and crystal-clear nutrient waters. Growing in this kind of environment gives Jersey Rock Oysters their unique delicate, fresh and salty flavour.",
+      "Key component: From Jersey in the UK."
     ],
     "additionalNotes": "1 -4 Oysters the stand should be small side up, 6+ large side up",
     "allergens": [
@@ -76,7 +79,8 @@ window.registerFoodCategory([
       "notes": "On the nose the aromas are distinctly Blanc de Blanc - peach, citrus and floral notes backed by an almond-pastry-like richness. On the palate the citrus-fruit flavours give way to biscuity notes, and a exceptional balance and freshness is achieved"
     },
     "glossary": [
-      "The flow of Carlingford Lough’s grade-A waters helps shape each oyster into a perfect tear-drop shape with a very strong shell and a smooth pearly white enamel. They are rich in protein and low in fat with exceptionally high levels of trace elements such as iodine, iron, selenium copper and zinc."
+      "The flow of Carlingford Lough’s grade-A waters helps shape each oyster into a perfect tear-drop shape with a very strong shell and a smooth pearly white enamel. They are rich in protein and low in fat with exceptionally high levels of trace elements such as iodine, iron, selenium copper and zinc.",
+      "Key component: They are from Carlingford Lough in Northern Ireland."
     ],
     "additionalNotes": null,
     "allergens": [
@@ -142,7 +146,8 @@ window.registerFoodCategory([
       "notes": "Elegant, fresh and lively character, with delicate aromas of white flowers, citrus fruits, and brioche. On the palate it is crisp and creamy, with a fine, persistent mousse and a long, refreshing finish"
     },
     "glossary": [
-      "Imperial Caviar is a hybrid caviar created from Amur Sturgeon (male) and the Kaluga Sturgeon (female). These hybrid sturgeons known as Imperial Sturgeons can grow quite large, reaching lengths of up to 5.6 meters and weights exceeding 1000 kgs. About 8 to 10 years of maturation."
+      "Imperial Caviar is a hybrid caviar created from Amur Sturgeon (male) and the Kaluga Sturgeon (female). These hybrid sturgeons known as Imperial Sturgeons can grow quite large, reaching lengths of up to 5.6 meters and weights exceeding 1000 kgs. About 8 to 10 years of maturation.",
+      "Key component: Size: 20g, 30g, 50g Taste: Its a complex developed flavour."
     ],
     "additionalNotes": "From the pass: Comes with creme fraiche and blinis.",
     "allergens": [
@@ -166,7 +171,8 @@ window.registerFoodCategory([
       "notes": "Elegant, fresh and lively character, with delicate aromas of white flowers, citrus fruits, and brioche. On the palate it is crisp and creamy, with a fine, persistent mousse and a long, refreshing finish"
     },
     "glossary": [
-      "Ossetra (also Oscietra, Osetra, or Asetra) caviar is one of the most prized and expensive types of caviar (eclipsed in price only by Beluga caviar). It is obtained from the Ossetra sturgeon which weighs 50-400 pounds and can live up to 50 years. Ossetra caviar varies in color from deep brown to gold."
+      "Ossetra (also Oscietra, Osetra, or Asetra) caviar is one of the most prized and expensive types of caviar (eclipsed in price only by Beluga caviar). It is obtained from the Ossetra sturgeon which weighs 50-400 pounds and can live up to 50 years. Ossetra caviar varies in color from deep brown to gold.",
+      "Key component: Taste: Fresh intense flavour."
     ],
     "additionalNotes": "Served with creme fraiche and blinis.",
     "allergens": [
@@ -472,7 +478,8 @@ window.registerFoodCategory([
       "notes": "Slightly oaked, rich and textured. Intense yellow fruit flavours."
     },
     "glossary": [
-      "Chalkstream trout- Harvested by hand in Hampshire, ChalkStream trout are a heritage British fish. Hot smoked-a cooking method that infuses food with smoke flavor while cooking it through, using moderate heat (around 70-120°C or 160-250°F) over wood chips or chunks, resulting in tender, flaky, and ready-to-eat items"
+      "Chalkstream trout- Harvested by hand in Hampshire, ChalkStream trout are a heritage British fish. Hot smoked-a cooking method that infuses food with smoke flavor while cooking it through, using moderate heat (around 70-120°C or 160-250°F) over wood chips or chunks, resulting in tender, flaky, and ready-to-eat items",
+      "Key component: Chalkstream trout which has been cured in sugar and salt then brushed with maple syrup and hot smoked, served with buttered pink fir potatoe."
     ],
     "allergens": [
       "Dairy",
@@ -497,7 +504,8 @@ window.registerFoodCategory([
     },
     "glossary": [
       "Carnaroli risotto - A specific Italian variety of medium grain rice. Its known for its higher starch content and firmer texture. It absorbs and retains the flavours of the stock and other ingredients contributing to a creamy velvety texture of risotto also while retaining an al dente (firm) texture.",
-      "Parmigiano reggiano - A hard, dry, granular Italian cheese made from cow’s milk. (parmesan)"
+      "Parmigiano reggiano - A hard, dry, granular Italian cheese made from cow’s milk. (parmesan)",
+      "Key component: Carnaroli risotto rice cooked with shallots, white wine and then mushroom stock is added."
     ],
     "additionalNotes": "Can be made vegan, Can be made dairy free. Contains cooked alcohol - White wine. Cannot be made without alcohol (sulphites). Is gluten free.",
     "allergens": [
@@ -1194,7 +1202,8 @@ window.registerFoodCategory([
       "notes": "red vinegar, buttermilk, creme fraiche, celery, chives, parsley, shallots, mustard (English), mayo."
     },
     "glossary": [
-      "Ranch dressing- red vinegar, buttermilk, creme fraiche, celery, chives, parsley, shallots, mustard (English), mayo."
+      "Ranch dressing- red vinegar, buttermilk, creme fraiche, celery, chives, parsley, shallots, mustard (English), mayo.",
+      "Key component: Baby gem lettuce dressed with our home made ranch dressing, picked shallots and crispy fried shallots."
     ],
     "additionalNotes": "Contains gluten- crispy shallots, croutons and dressing Contains dairy- Crispy shallots (milk), croutons (butter) and dressing (creme fraiche and butter milk)",
     "allergens": [
@@ -1329,7 +1338,8 @@ window.registerFoodCategory([
       "notes": ""
     },
     "glossary": [
-      "Sorbet is a dairy-free frozen dessert made from fruit juice or puree, sugar and water."
+      "Sorbet is a dairy-free frozen dessert made from fruit juice or puree, sugar and water.",
+      "Key component: Lemon sorbet."
     ],
     "additionalNotes": null,
     "allergens": [
@@ -1350,7 +1360,8 @@ window.registerFoodCategory([
       "notes": ""
     },
     "glossary": [
-      "Coconut and lime sorbet is a dairy-free frozen dessert with tropical sweetness and citrus acidity."
+      "Coconut and lime sorbet is a dairy-free frozen dessert with tropical sweetness and citrus acidity.",
+      "Key component: Coconut and lime sorbet."
     ],
     "additionalNotes": null,
     "allergens": [],
@@ -1369,7 +1380,8 @@ window.registerFoodCategory([
       "notes": ""
     },
     "glossary": [
-      "Blood orange sorbet is a dairy-free sorbet with bright citrus flavour and natural bitterness."
+      "Blood orange sorbet is a dairy-free sorbet with bright citrus flavour and natural bitterness.",
+      "Key component: Blood orange sorbet."
     ],
     "additionalNotes": null,
     "allergens": [],
@@ -1388,7 +1400,8 @@ window.registerFoodCategory([
       "notes": ""
     },
     "glossary": [
-      "Honeycomb is sugar caramelised then aerated with bicarbonate soda, creating a crisp texture."
+      "Honeycomb is sugar caramelised then aerated with bicarbonate soda, creating a crisp texture.",
+      "Ice cream: A dairy-based frozen dessert, richer than sorbet."
     ],
     "additionalNotes": null,
     "allergens": [
@@ -1412,7 +1425,8 @@ window.registerFoodCategory([
       "notes": ""
     },
     "glossary": [
-      "Pistachio ice cream is made in house and contains nuts."
+      "Pistachio ice cream is made in house and contains nuts.",
+      "Key component: Pistachio ice cream."
     ],
     "additionalNotes": null,
     "allergens": [
@@ -1435,7 +1449,8 @@ window.registerFoodCategory([
       "notes": ""
     },
     "glossary": [
-      "Rhubarb ripple ice cream combines a vanilla base with stewed rhubarb ripple."
+      "Rhubarb ripple ice cream combines a vanilla base with stewed rhubarb ripple.",
+      "Key component: Rhubarb ripple ice cream."
     ],
     "additionalNotes": null,
     "allergens": [
@@ -1457,7 +1472,8 @@ window.registerFoodCategory([
       "notes": ""
     },
     "glossary": [
-      "Chocolate ice cream is made with chocolate and contains soya."
+      "Chocolate ice cream is made with chocolate and contains soya.",
+      "Key component: Chocolate ice cream."
     ],
     "additionalNotes": null,
     "allergens": [
@@ -1672,7 +1688,8 @@ window.registerFoodCategory([
       "notes": "Raspberry, cherry, and red plum, subtly infused with richer notes of blackcurrant and liquorice. The finish is impressively long and vigorous, with rich dark chocolate flavours adding a touch of lusciousness and opulence to the intense berry fruit."
     },
     "glossary": [
-      "A gift selection of assorted handmade chocolate truffles prepared for takeaway."
+      "A gift selection of assorted handmade chocolate truffles prepared for takeaway.",
+      "Key component: 9 assorted chocolate truffles arranged in a luxury take away box tied with a gold ribbon."
     ],
     "additionalNotes": null,
     "allergens": [
@@ -1698,7 +1715,8 @@ window.registerFoodCategory([
       "notes": "Wonderfully fresh, this botrytis free wine has plenty of honeyed, orange tinged floral fruit Naturally high acidity – delivering aromatic notes of crisp quince and pineapple with a fresh zingy finish on the palate"
     },
     "glossary": [
-      "Madeleines are a sponge like cake cooked in specific shaped trays to form a 3-D like shaped small shell. Originated in Lorraine region in northeastern France. Sponge mix – flour, sugar, lemon zest, eggs, baking powder, brown butter. Emulsification = to slowly combine"
+      "Madeleines are a sponge like cake cooked in specific shaped trays to form a 3-D like shaped small shell. Originated in Lorraine region in northeastern France. Sponge mix – flour, sugar, lemon zest, eggs, baking powder, brown butter. Emulsification = to slowly combine",
+      "Key component: 4 homemade cooked to order lemon madeleines finished with lemon syrup and icing sugar - made from a Sponge mix that is emulsified with brown."
     ],
     "additionalNotes": "Freshly cooked to order. It takes 6 mins in the oven. Worth the wait! ***CONTAINS EGGS, DAIRY & GLUTEN*** -all cannot be removed",
     "allergens": [
@@ -1721,7 +1739,8 @@ window.registerFoodCategory([
       "notes": null
     },
     "glossary": [
-      "Amedei is a premium Italian chocolate producer. This mousse balances dark chocolate richness with olive oil and sea salt."
+      "Amedei is a premium Italian chocolate producer. This mousse balances dark chocolate richness with olive oil and sea salt.",
+      "Key component: Dark chocolate mousse, served with chocolate sponge, olive oil, sea salt and sourdough crisp that has been lightly toasted."
     ],
     "additionalNotes": null,
     "allergens": [
@@ -1937,7 +1956,8 @@ window.registerFoodCategory([
       "notes": "Raspberry, cherry, and red plum, subtly infused with richer notes of blackcurrant and liquorice. The finish is impressively long and vigorous, with rich dark chocolate flavours adding a touch of lusciousness and opulence to the intense berry fruit."
     },
     "glossary": [
-      "Gluten, dairy and eggs cannot be removed."
+      "Gluten, dairy and eggs cannot be removed.",
+      "Key component: Vanilla steamed sponge pudding that is cooked in a steamer for 1 hour."
     ],
     "additionalNotes": null,
     "allergens": [
