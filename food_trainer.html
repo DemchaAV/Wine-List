@@ -78,6 +78,15 @@
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
         }
 
+        .learning-card {
+            background: linear-gradient(135deg, #1a2b2c 0%, #0f1a1a 100%);
+            border: 1px solid rgba(20, 184, 166, 0.15);
+            border-radius: 1.25rem;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.26);
+            max-height: calc(100dvh - 180px);
+            overflow: auto;
+        }
+
         .answer-reveal {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             overflow: hidden;
@@ -286,6 +295,24 @@
                         </button>
                     </div>
                 </div>
+
+                <div class="mb-3">
+                    <h2
+                        class="text-sm font-semibold text-center mb-2 flex items-center justify-center gap-1.5 text-slate-400">
+                        <span class="material-symbols-outlined text-primary text-sm">school</span>
+                        Learning Flow
+                    </h2>
+                    <div id="flowSelect" class="flex flex-wrap justify-center gap-1.5">
+                        <button data-flow="cards-quiz"
+                            class="filter-btn active bg-card-dark text-slate-300 px-3 py-1.5 rounded-xl text-sm font-medium border border-primary/20 flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">style</span> Cards + Quiz
+                        </button>
+                        <button data-flow="quiz-only"
+                            class="filter-btn bg-card-dark text-slate-300 px-3 py-1.5 rounded-xl text-sm font-medium border border-primary/20 flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">bolt</span> Quiz only
+                        </button>
+                    </div>
+                </div>
             </div>
 
             <div class="pb-4">
@@ -294,6 +321,80 @@
                     class="btn-primary w-full text-white py-3 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
                     <span class="material-symbols-outlined">rocket_launch</span> Start Training
                 </button>
+            </div>
+        </div>
+
+        <!-- FLASHCARD SCREEN -->
+        <div id="flashcardScreen" class="screen p-3">
+            <div class="mb-3">
+                <div class="flex justify-between items-center mb-2">
+                    <button id="exitFlashcardsBtn" class="text-slate-400 hover:text-white text-sm flex items-center gap-1">
+                        <span class="material-symbols-outlined text-sm">arrow_back</span> Exit
+                    </button>
+                    <div id="flashcardProgressText" class="text-sm font-medium text-slate-300">0/0</div>
+                    <div class="flex gap-2">
+                        <span class="bg-green-900/50 text-green-400 px-2.5 py-1 rounded-full text-xs font-semibold">✓ <span id="flashKnownCount">0</span></span>
+                        <span class="bg-amber-900/50 text-amber-400 px-2.5 py-1 rounded-full text-xs font-semibold">↺ <span id="flashReviewCount">0</span></span>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div id="flashcardProgressBar" class="progress-bar" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div class="flex-1 flex items-start justify-center">
+                <div class="learning-card w-full p-4">
+                    <div class="mb-3">
+                        <h2 id="flashCardName" class="text-xl font-bold text-primary leading-tight"></h2>
+                        <div class="mt-1 flex flex-wrap gap-2">
+                            <span id="flashCardCategory"
+                                class="px-2 py-0.5 bg-primary/10 border border-primary/20 rounded-full text-xs text-primary"></span>
+                            <span id="flashCardSubtitle" class="text-xs text-slate-400"></span>
+                        </div>
+                    </div>
+
+                    <div id="flashCardDescriptionWrap" class="mb-3">
+                        <div class="text-xs text-slate-400 uppercase tracking-wide mb-1">Description</div>
+                        <div id="flashCardDescription" class="text-sm text-slate-200 leading-snug"></div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2 mb-3">
+                        <div class="bg-primary/5 border border-primary/20 p-2.5 rounded-lg">
+                            <div class="text-primary font-semibold text-[11px] uppercase">Wine</div>
+                            <div id="flashCardWine" class="text-slate-200 text-xs mt-1"></div>
+                        </div>
+                        <div class="bg-primary/5 border border-primary/20 p-2.5 rounded-lg">
+                            <div class="text-primary font-semibold text-[11px] uppercase">Allergens</div>
+                            <div id="flashCardAllergens" class="text-slate-200 text-xs mt-1"></div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-2 mb-3">
+                        <div class="bg-card-dark/70 border border-primary/15 rounded-lg p-2.5">
+                            <div class="text-xs text-slate-400 uppercase tracking-wide mb-1">Kitchen MEP</div>
+                            <div id="flashCardKitchen" class="text-xs text-slate-200 leading-snug"></div>
+                        </div>
+                        <div class="bg-card-dark/70 border border-primary/15 rounded-lg p-2.5">
+                            <div class="text-xs text-slate-400 uppercase tracking-wide mb-1">Service MEP</div>
+                            <div id="flashCardService" class="text-xs text-slate-200 leading-snug"></div>
+                        </div>
+                        <div class="bg-card-dark/70 border border-primary/15 rounded-lg p-2.5">
+                            <div class="text-xs text-slate-400 uppercase tracking-wide mb-1">Glossary</div>
+                            <div id="flashCardGlossary" class="text-xs text-slate-200 leading-snug"></div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2">
+                        <button id="flashNotYetBtn"
+                            class="btn-danger text-white py-2.5 rounded-xl font-semibold text-sm flex items-center justify-center gap-1.5">
+                            <span class="material-symbols-outlined text-sm">refresh</span> Not Yet
+                        </button>
+                        <button id="flashKnowBtn"
+                            class="btn-success text-white py-2.5 rounded-xl font-semibold text-sm flex items-center justify-center gap-1.5">
+                            <span class="material-symbols-outlined text-sm">check</span> Know It
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -425,14 +526,23 @@
         let currentQuestion = null;
         let selectedCategory = 'all';
         let selectedType = 'mix';
+        let selectedFlow = 'cards-quiz';
         let trainerMenuVersion = 'current';
         let trainerNewOnly = false;
 
+        let flashcardQueue = [];
+        let flashcardKnown = [];
+        let flashcardReview = [];
+        let flashcardTotal = 0;
+        let currentFlashcard = null;
+
         const setupScreen = document.getElementById('setupScreen');
+        const flashcardScreen = document.getElementById('flashcardScreen');
         const trainingScreen = document.getElementById('trainingScreen');
         const completeScreen = document.getElementById('completeScreen');
         const categorySelect = document.getElementById('categorySelect');
         const typeSelect = document.getElementById('typeSelect');
+        const flowSelect = document.getElementById('flowSelect');
         const sessionInfo = document.getElementById('sessionInfo');
         const startSessionBtn = document.getElementById('startSessionBtn');
         const progressText = document.getElementById('progressText');
@@ -453,9 +563,26 @@
         const foodInfoContent = document.getElementById('foodInfoContent');
         const restartSessionBtn = document.getElementById('restartSessionBtn');
         const changeCategoryBtn = document.getElementById('changeCategoryBtn');
+        const exitFlashcardsBtn = document.getElementById('exitFlashcardsBtn');
+        const flashcardProgressText = document.getElementById('flashcardProgressText');
+        const flashcardProgressBar = document.getElementById('flashcardProgressBar');
+        const flashKnownCount = document.getElementById('flashKnownCount');
+        const flashReviewCount = document.getElementById('flashReviewCount');
+        const flashCardName = document.getElementById('flashCardName');
+        const flashCardCategory = document.getElementById('flashCardCategory');
+        const flashCardSubtitle = document.getElementById('flashCardSubtitle');
+        const flashCardDescriptionWrap = document.getElementById('flashCardDescriptionWrap');
+        const flashCardDescription = document.getElementById('flashCardDescription');
+        const flashCardWine = document.getElementById('flashCardWine');
+        const flashCardAllergens = document.getElementById('flashCardAllergens');
+        const flashCardKitchen = document.getElementById('flashCardKitchen');
+        const flashCardService = document.getElementById('flashCardService');
+        const flashCardGlossary = document.getElementById('flashCardGlossary');
+        const flashNotYetBtn = document.getElementById('flashNotYetBtn');
+        const flashKnowBtn = document.getElementById('flashKnowBtn');
 
         function showScreen(screenId) {
-            [setupScreen, trainingScreen, completeScreen].forEach(s => s.classList.remove('active'));
+            [setupScreen, flashcardScreen, trainingScreen, completeScreen].forEach(s => s.classList.remove('active'));
             document.getElementById(screenId).classList.add('active');
         }
 
@@ -488,9 +615,21 @@
             });
         }
 
+        function setupFlowButtons() {
+            flowSelect.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.onclick = () => {
+                    flowSelect.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    selectedFlow = btn.dataset.flow;
+                    updateSessionInfo();
+                };
+            });
+        }
+
         function updateSessionInfo() {
             const count = getFilteredItems().length;
-            sessionInfo.textContent = `${count} dishes in this session`;
+            const flowLabel = selectedFlow === 'cards-quiz' ? 'cards + quiz' : 'quiz only';
+            sessionInfo.textContent = `${count} dishes • ${flowLabel}`;
         }
 
         function getFilteredItems() {
@@ -510,6 +649,14 @@
                 alert('No dishes in this category');
                 return;
             }
+            if (selectedFlow === 'cards-quiz') {
+                startFlashcards(items);
+            } else {
+                startQuiz(items);
+            }
+        }
+
+        function startQuiz(items) {
             sessionQueue = shuffleArray([...items]);
             sessionCompleted = [];
             sessionTotal = sessionQueue.length;
@@ -518,6 +665,17 @@
             updateStats();
             showScreen('trainingScreen');
             nextQuestion();
+        }
+
+        function startFlashcards(items) {
+            flashcardQueue = shuffleArray([...items]);
+            flashcardKnown = [];
+            flashcardReview = [];
+            flashcardTotal = flashcardQueue.length;
+            currentFlashcard = null;
+            updateFlashcardStats();
+            showScreen('flashcardScreen');
+            nextFlashcard();
         }
 
         function shuffleArray(array) {
@@ -536,6 +694,90 @@
             const accuracy = sessionTotal > 0 ? Math.round((statCorrect / sessionTotal) * 100) : 0;
             document.getElementById('finalAccuracy').textContent = accuracy + '%';
             showScreen('completeScreen');
+        }
+
+        function updateFlashcardStats() {
+            const done = flashcardKnown.length + flashcardReview.length;
+            const total = flashcardTotal;
+            const percent = total > 0 ? Math.round((done / total) * 100) : 0;
+            flashKnownCount.textContent = flashcardKnown.length;
+            flashReviewCount.textContent = flashcardReview.length;
+            flashcardProgressText.textContent = `${done}/${total}`;
+            flashcardProgressBar.style.width = percent + '%';
+        }
+
+        function compactText(value, fallback = 'N/A', max = 120) {
+            if (!value) return fallback;
+            const text = String(value).trim();
+            return text.length > max ? text.substring(0, max) + '...' : text;
+        }
+
+        function renderFlashcard(item) {
+            flashCardName.textContent = item.name || 'Unknown Dish';
+            flashCardCategory.textContent = item.category || 'uncategorized';
+            flashCardSubtitle.textContent = item.subtitle || '';
+
+            if (item.description) {
+                flashCardDescriptionWrap.classList.remove('hidden');
+                flashCardDescription.textContent = compactText(item.description, 'N/A', 220);
+            } else {
+                flashCardDescriptionWrap.classList.add('hidden');
+                flashCardDescription.textContent = '';
+            }
+
+            flashCardWine.textContent = item.wineSuggestion?.name
+                ? compactText(item.wineSuggestion.name, 'N/A', 50)
+                : 'N/A';
+
+            if (Array.isArray(item.allergens) && item.allergens.length > 0) {
+                flashCardAllergens.textContent = item.allergens.join(', ');
+            } else if (item.allergens) {
+                flashCardAllergens.textContent = String(item.allergens);
+            } else {
+                flashCardAllergens.textContent = 'None';
+            }
+
+            flashCardKitchen.textContent = compactText(item.kitchenMep, 'N/A', 160);
+            flashCardService.textContent = compactText(item.serviceMep, 'N/A', 160);
+
+            if (item.glossary) {
+                const gloss = Array.isArray(item.glossary)
+                    ? item.glossary.slice(0, 2).map(g => typeof g === 'string' ? g : (g.term ? `${g.term}: ${g.definition || ''}` : '')).join(' | ')
+                    : compactText(typeof item.glossary === 'string' ? item.glossary : JSON.stringify(item.glossary), 'N/A', 150);
+                flashCardGlossary.textContent = compactText(gloss, 'N/A', 170);
+            } else {
+                flashCardGlossary.textContent = 'N/A';
+            }
+        }
+
+        function nextFlashcard() {
+            if (flashcardQueue.length === 0) {
+                const quizPool = flashcardReview.length > 0
+                    ? [...flashcardReview, ...flashcardKnown]
+                    : [...flashcardKnown];
+                if (quizPool.length === 0) {
+                    showScreen('setupScreen');
+                    return;
+                }
+                startQuiz(quizPool);
+                return;
+            }
+
+            currentFlashcard = flashcardQueue.shift();
+            renderFlashcard(currentFlashcard);
+            updateFlashcardStats();
+        }
+
+        function markFlashcardKnown() {
+            if (!currentFlashcard) return;
+            flashcardKnown.push(currentFlashcard);
+            nextFlashcard();
+        }
+
+        function markFlashcardReview() {
+            if (!currentFlashcard) return;
+            flashcardReview.push(currentFlashcard);
+            nextFlashcard();
         }
 
         function nextQuestion() {
@@ -759,6 +1001,8 @@
 
         // Event listeners
         startSessionBtn.onclick = startSession;
+        flashKnowBtn.onclick = markFlashcardKnown;
+        flashNotYetBtn.onclick = markFlashcardReview;
         showAnswerBtn.onclick = showAnswer;
         correctBtn.onclick = handleCorrect;
         wrongBtn.onclick = handleWrong;
@@ -766,6 +1010,7 @@
         closeInfoBtn.onclick = closeModal;
         foodInfoModal.onclick = (e) => { if (e.target === foodInfoModal) closeModal(); };
         exitSessionBtn.onclick = () => { if (confirm('Exit training session?')) showScreen('setupScreen'); };
+        exitFlashcardsBtn.onclick = () => { if (confirm('Exit flashcards session?')) showScreen('setupScreen'); };
         restartSessionBtn.onclick = startSession;
         changeCategoryBtn.onclick = () => showScreen('setupScreen');
 
@@ -801,6 +1046,7 @@
                 allFoodItems = window.allFoodItems;
                 renderCategoryButtons();
                 setupTypeButtons();
+                setupFlowButtons();
                 updateSessionInfo();
             } else {
                 sessionInfo.textContent = 'Loading data...';
