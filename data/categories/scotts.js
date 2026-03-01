@@ -1478,7 +1478,7 @@ window.registerFoodCategory([
       "Soya"
     ],
     "kitchenMep": "Silver coupe & side plate with square Scott’s paper napkin.",
-    "serviceMep": "1 scoop – Teaspoon More than 1 scoop – Dessert spoon",
+    "serviceMep": "Dessert spoon and fork",
     "image": "data/categories/menu_images/MANGO AND PASSIONFRUIT CHEESECAKE.jpeg"
   },
   {
