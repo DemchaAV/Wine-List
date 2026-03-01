@@ -352,6 +352,10 @@
 
             <div class="flex-1 flex items-start justify-center">
                 <div class="learning-card w-full p-4">
+                    <div id="flashCardImageWrap" class="mb-3 hidden">
+                        <img id="flashCardImage" src="" alt="Dish image"
+                            class="w-full h-36 object-cover rounded-xl border border-primary/20">
+                    </div>
                     <div class="mb-3">
                         <h2 id="flashCardName" class="text-xl font-bold text-primary leading-tight"></h2>
                         <div class="mt-1 flex flex-wrap gap-2">
@@ -434,6 +438,10 @@
 
             <div class="flex-1 flex items-center justify-center">
                 <div id="trainerCard" class="question-card w-full p-6">
+                    <div id="questionImageWrap" class="mb-4 hidden">
+                        <img id="questionImage" src="" alt="Dish image"
+                            class="w-full h-40 object-cover rounded-xl border border-primary/20">
+                    </div>
                     <div class="flex items-start justify-between gap-3 mb-4">
                         <div id="questionBlock" class="text-xl font-semibold flex-1"></div>
                         <button id="showInfoBtn"
@@ -561,6 +569,8 @@
         const trainerCard = document.getElementById('trainerCard');
         const questionBlock = document.getElementById('questionBlock');
         const answerBlock = document.getElementById('answerBlock');
+        const questionImageWrap = document.getElementById('questionImageWrap');
+        const questionImage = document.getElementById('questionImage');
         const showAnswerBtn = document.getElementById('showAnswerBtn');
         const selfCheckBlock = document.getElementById('selfCheckBlock');
         const correctBtn = document.getElementById('correctBtn');
@@ -581,6 +591,8 @@
         const flashCardSubtitle = document.getElementById('flashCardSubtitle');
         const flashCardDescriptionWrap = document.getElementById('flashCardDescriptionWrap');
         const flashCardDescription = document.getElementById('flashCardDescription');
+        const flashCardImageWrap = document.getElementById('flashCardImageWrap');
+        const flashCardImage = document.getElementById('flashCardImage');
         const flashCardWine = document.getElementById('flashCardWine');
         const flashCardAllergens = document.getElementById('flashCardAllergens');
         const flashCardKitchen = document.getElementById('flashCardKitchen');
@@ -720,7 +732,31 @@
             return text.length > max ? text.substring(0, max) + '...' : text;
         }
 
+        function getItemImage(item) {
+            if (!item || !item.image) return '';
+            if (Array.isArray(item.image)) return item.image[0] || '';
+            return typeof item.image === 'string' ? item.image : '';
+        }
+
+        function bindImage(imgEl, wrapEl, src, altText) {
+            if (!src) {
+                wrapEl.classList.add('hidden');
+                imgEl.src = '';
+                return;
+            }
+            imgEl.alt = altText || 'Dish image';
+            imgEl.src = src;
+            imgEl.onerror = () => {
+                wrapEl.classList.add('hidden');
+                imgEl.src = '';
+            };
+            imgEl.onload = () => {
+                wrapEl.classList.remove('hidden');
+            };
+        }
+
         function renderFlashcard(item) {
+            bindImage(flashCardImage, flashCardImageWrap, getItemImage(item), item.name || 'Dish image');
             flashCardName.textContent = item.name || 'Unknown Dish';
             flashCardCategory.textContent = item.category || 'uncategorized';
             flashCardSubtitle.textContent = item.subtitle || '';
@@ -801,6 +837,7 @@
             }
 
             const item = sessionQueue.shift();
+            bindImage(questionImage, questionImageWrap, getItemImage(item), item.name || 'Dish image');
             let type = selectedType;
             if (type === 'mix') {
                 const types = ['description', 'wine', 'glossary', 'allergens', 'kitchenMep', 'serviceMep'];
