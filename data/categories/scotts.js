@@ -236,8 +236,7 @@ window.registerFoodCategory([
     "image": "data/categories/menu_images/TIGER PRAWNS WITH GRILLED PINEAPPLE.jpeg",
     "glossary": [
       "Plancha: A griddle, in the UK also called a gridle, is a cooking device consisting mainly of a broad, usually flat cooking surface.",
-      "Tiger prawns: Large warm-water prawns with firm, sweet meat.",
-      "Cooking style: Pan-fried/grilled/roasted methods shape texture and caramelization."
+      "Tiger prawns: Large warm-water prawns with firm, sweet meat."
     ]
   },
   {
@@ -312,8 +311,9 @@ window.registerFoodCategory([
       "notes": "Very expressive nose of green citrus and herbaceous aromas of classic Sauvignon Blanc concentrated gooseberry fruit flavours, ripe citrus, balanced by a steely, dry palate. mineral, elegant and long finish."
     },
     "glossary": [
-      "From the Isle of Mull The clean water gives the scallops the best opportunity for max taste. Kimchi is traditional Korean banchan consisting of salted and fermented vegetables, mostly commonly using napa cabbage or Korean radish. A wide selection of seasonings are used, including gochujang, spring onions, garlic, ginger and jeotgal, etc. Nori Furikake: is a basic blend made from a base of crushed or sliced nori seaweed blended with sesame seeds, sugar and salt.",
-      "Cooking style: Pan-fried/grilled/roasted methods shape texture and caramelization."
+      "Scallops (Isle of Mull): Harvested in clean Scottish waters, giving sweet and delicate flavor.",
+      "Kimchi: A Korean fermented vegetable preparation adding acidity, spice and umami.",
+      "Nori furikake: A Japanese seasoning blend, typically nori seaweed, sesame and spices."
     ],
     "additionalNotes": "For large portion, bring a burner and main hot plate per person. No Dairy, Gluten in dish",
     "allergens": [
@@ -608,9 +608,7 @@ window.registerFoodCategory([
       "name": null,
       "notes": null
     },
-    "glossary": [
-      "Cooking style: Pan-fried/grilled/roasted methods shape texture and caramelization."
-    ],
+    "glossary": [],
     "additionalNotes": null,
     "allergens": [
       "Celery",
@@ -674,8 +672,7 @@ window.registerFoodCategory([
     },
     "glossary": [
       "Romesco: A Spanish-style sauce of peppers, nuts, oil and acidity.",
-      "Salsa verde: A herb sauce with bright acidity and fresh aromatics.",
-      "Cooking style: Pan-fried/grilled/roasted methods shape texture and caramelization."
+      "Salsa verde: A herb sauce with bright acidity and fresh aromatics."
     ],
     "additionalNotes": null,
     "allergens": [
@@ -708,8 +705,7 @@ window.registerFoodCategory([
     },
     "glossary": [
       "Dover soles: Dover soles are a type of flatfish. Lives on sandy seabed’s, caught all around the UK.",
-      "Meuniere: Brown butter sauce (beurre noisette), finished with parsley and lemon.",
-      "Cooking style: Pan-fried/grilled/roasted methods shape texture and caramelization."
+      "Meuniere: Brown butter sauce (beurre noisette), finished with parsley and lemon."
     ],
     "additionalNotes": null,
     "allergens": [
@@ -786,7 +782,6 @@ window.registerFoodCategory([
     },
     "glossary": [
       "Cod is a wild fish that commonly found in the Northwest Atlantic. Chorizo is Italian spicy sausage.",
-      "Cooking style: Pan-fried/grilled/roasted methods shape texture and caramelization.",
       "White fish profile: Delicate flesh where sauce and cookery define final character."
     ],
     "additionalNotes": "Gluten-Free",
@@ -875,8 +870,7 @@ window.registerFoodCategory([
     "serviceMep": "Large fork & knife",
     "image": "data/categories/menu_images/ROASTED LOBSTER.jpeg",
     "glossary": [
-      "Lobster: Native or Canadian",
-      "Cooking style: Pan-fried/grilled/roasted methods shape texture and caramelization."
+      "Lobster: Native or Canadian"
     ]
   },
   {
@@ -898,8 +892,7 @@ window.registerFoodCategory([
     "serviceMep": "Large fork & knife, lobster cracker and pick, debris bowl, Finger Bowl",
     "image": "data/categories/menu_images/GRILLED LOBSTER.jpeg",
     "glossary": [
-      "****CANNOT BE DESHELLED**** Lobster: Native or Canadian As a starter – comes with chips. As a main – comes with chips.",
-      "Cooking style: Pan-fried/grilled/roasted methods shape texture and caramelization."
+      "****CANNOT BE DESHELLED**** Lobster: Native or Canadian As a starter – comes with chips. As a main – comes with chips."
     ]
   },
   {
@@ -914,8 +907,7 @@ window.registerFoodCategory([
     },
     "glossary": [
       "**Remember to ask cooking temperature** Cooking: recommended- cooked medium rare Sirloin- located toward the rear of the cow, near the rump. It is covered with a layer of fat which contributes to its tenderness. Bearnaise- clarified butter, eggs yolk, white wine vinegar, herbs (tarragon).",
-      "Hollandaise/Bearnaise: Classic emulsified butter sauces finished with acidity and herbs.",
-      "Cooking style: Pan-fried/grilled/roasted methods shape texture and caramelization."
+      "Hollandaise/Bearnaise: Classic emulsified butter sauces finished with acidity and herbs."
     ],
     "allergens": [
       "Dairy",
@@ -939,8 +931,7 @@ window.registerFoodCategory([
     },
     "glossary": [
       "Violina: Italian type of squash",
-      "Miso: Fermented soya bean paste",
-      "Cooking style: Pan-fried/grilled/roasted methods shape texture and caramelization."
+      "Miso: Fermented soya bean paste"
     ],
     "additionalNotes": "Contains DAIRY and GLUTEN",
     "allergens": [
@@ -963,8 +954,7 @@ window.registerFoodCategory([
       "notes": "Fresh, bright, sweet, earthy red pit fruits and tobacco leaf on the palate the wine is round, juicy, with blackberry and currants. Tannins are ripe, medium to full body."
     },
     "glossary": [
-      "Iberico - A premium pork from the Black Iberian Pig, native to the Iberian Peninsula in southwestern Europe.",
-      "Cooking style: Pan-fried/grilled/roasted methods shape texture and caramelization."
+      "Iberico - A premium pork from the Black Iberian Pig, native to the Iberian Peninsula in southwestern Europe."
     ],
     "additionalNotes": null,
     "allergens": [
@@ -988,7 +978,6 @@ window.registerFoodCategory([
     },
     "glossary": [
       "Veloute: A light, smooth sauce built from stock and roux/cream.",
-      "Cooking style: Pan-fried/grilled/roasted methods shape texture and caramelization.",
       "White fish profile: Delicate flesh where sauce and cookery define final character."
     ],
     "additionalNotes": null,
@@ -1019,7 +1008,6 @@ window.registerFoodCategory([
       "notes": null
     },
     "glossary": [
-      "Cooking style: Pan-fried/grilled/roasted methods shape texture and caramelization.",
       "White fish profile: Delicate flesh where sauce and cookery define final character."
     ],
     "additionalNotes": null,
@@ -1225,9 +1213,7 @@ window.registerFoodCategory([
       "name": null,
       "notes": null
     },
-    "glossary": [
-      "Cooking style: Pan-fried/grilled/roasted methods shape texture and caramelization."
-    ],
+    "glossary": [],
     "additionalNotes": null,
     "allergens": [
       "Dairy",
@@ -1259,7 +1245,6 @@ window.registerFoodCategory([
       "notes": null
     },
     "glossary": [
-      "Cooking style: Pan-fried/grilled/roasted methods shape texture and caramelization.",
       "Jerusalem artichoke: A nutty, sweet root also known as sunchoke."
     ],
     "additionalNotes": null,
