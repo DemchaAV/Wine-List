@@ -143,26 +143,28 @@
         </div>
 
         <div class="mt-7 text-slate-400 text-xs text-center">
-            <p>Wine List <span id="app-version">v2026.3.5.1342</span></p>
+            <p>Wine List <span id="app-version">v-</span></p>
         </div>
     </div>
 
     <script>
         if (window.location.protocol.indexOf('http') === 0) {
-            fetch('./manifest.json')
+            fetch('./manifest.json', { cache: 'no-cache' })
                 .then(function (response) { return response.json(); })
                 .then(function (manifest) {
-                    if (manifest && manifest.version) {
-                        document.getElementById('app-version').textContent = 'v' + manifest.version;
+                    var version = (manifest && manifest.version) ? String(manifest.version) : 'dev';
+                    document.getElementById('app-version').textContent = 'v' + version;
+                    if ('serviceWorker' in navigator) {
+                        return navigator.serviceWorker.register('./sw.js?v=' + encodeURIComponent(version));
                     }
                 })
-                .catch(function () { });
-        }
-
-        if ('serviceWorker' in navigator && window.location.protocol.indexOf('http') === 0) {
-            navigator.serviceWorker.register('./sw.js').catch(function (err) {
-                console.log('SW error:', err);
-            });
+                .catch(function () {
+                    if ('serviceWorker' in navigator) {
+                        navigator.serviceWorker.register('./sw.js?v=dev').catch(function (err) {
+                            console.log('SW error:', err);
+                        });
+                    }
+                });
         }
     </script>
 </body>
