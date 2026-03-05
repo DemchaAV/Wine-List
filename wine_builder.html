@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wine Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7a1f3d',
+                        'primary-strong': '#5f1530',
+                        accent: '#d4a373',
+                        'bg-dark': '#14090e',
+                        'card-dark': '#241019'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="data/loader.js"></script>
+    <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: radial-gradient(circle at 20% -10%, #2c111b 0%, #14090e 46%, #10070b 100%);
+        }
+
+        .panel {
+            background: linear-gradient(145deg, #2a121d 0%, #1c0d14 55%, #15090f 100%);
+            border: 1px solid rgba(122, 31, 61, 0.45);
+        }
+
+        .input,
+        .textarea,
+        .select {
+            width: 100%;
+            background: #221019;
+            border: 1px solid rgba(122, 31, 61, 0.5);
+            border-radius: 0.75rem;
+            padding: 0.7rem 0.85rem;
+            color: #e2e8f0;
+            min-height: 44px;
+        }
+
+        .textarea {
+            min-height: 98px;
+            resize: vertical;
+        }
+
+        .input:focus,
+        .textarea:focus,
+        .select:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(122, 31, 61, 0.55);
+        }
+
+        .btn-main {
+            min-height: 44px;
+            background: linear-gradient(135deg, #7a1f3d 0%, #5f1530 100%);
+        }
+
+        .btn-soft {
+            min-height: 44px;
+        }
+    </style>
+</head>
+
+<body class="bg-bg-dark text-slate-100">
+    <div class="min-h-screen flex flex-col">
+        <header class="sticky top-0 z-20 bg-bg-dark/95 backdrop-blur-md p-4 border-b border-primary/40">
+            <div class="flex items-center gap-2 mb-3">
+                <a href="index.html" class="text-accent inline-flex min-h-[44px] min-w-[44px] items-center justify-center"><span
+                        class="material-symbols-outlined">arrow_back</span></a>
+                <h1 class="text-base font-bold uppercase tracking-[0.14em] text-slate-300 flex-1">Wine Builder</h1>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-2">
+                <input id="searchInput" class="input sm:col-span-2" placeholder="Search wine, producer, region...">
+                <select id="typeFilter" class="select"></select>
+                <div class="grid grid-cols-3 gap-2">
+                    <button id="addBtn" class="btn-main rounded-xl font-semibold">Add</button>
+                    <button id="saveLocalBtn" class="btn-soft rounded-xl border border-primary/40">Save</button>
+                    <button id="resetBtn" class="btn-soft rounded-xl border border-primary/40">Reset</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2 mt-2">
+                <button id="exportJsonBtn" class="btn-main rounded-xl font-semibold">Export wines-list.json</button>
+                <button id="exportRuntimeBtn" class="btn-soft rounded-xl border border-primary/40">Export wines-runtime.js</button>
+            </div>
+        </header>
+
+        <main class="flex-1 p-4 space-y-3" id="listView"></main>
+    </div>
+
+    <div id="editorOverlay" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden overflow-y-auto p-3">
+        <div class="panel rounded-2xl max-w-4xl mx-auto p-4">
+            <div class="flex items-center gap-2 mb-3 sticky top-0 bg-card-dark/90 backdrop-blur p-2 rounded-xl">
+                <h2 id="editorTitle" class="text-lg font-bold text-accent flex-1">Edit Wine</h2>
+                <button id="deleteBtn" class="btn-soft px-3 rounded-lg border border-red-500/40 text-red-300 hidden">Delete</button>
+                <button id="closeEditorBtn" class="btn-soft px-3 rounded-lg border border-primary/40">Close</button>
+            </div>
+
+            <form id="wineForm" class="space-y-4" onsubmit="return false;">
+                <input type="hidden" id="rec_index">
+                <section>
+                    <h3 class="text-sm uppercase tracking-[0.14em] text-slate-400 mb-2">Core</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <input class="input" id="wine_name" placeholder="Wine name *">
+                        <input class="input" id="producer" placeholder="Producer">
+                        <input class="input" id="country" placeholder="Country">
+                        <input class="input" id="region" placeholder="Region">
+                        <input class="input" id="subregion" placeholder="Subregion">
+                        <input class="input" id="appellation" placeholder="Appellation">
+                        <input class="input" id="vintage" placeholder="Vintage">
+                        <input class="input" id="wine_type" placeholder="Wine type">
+                        <input class="input" id="wine_color" placeholder="Wine color">
+                        <input class="input md:col-span-2" id="image" placeholder="Image file name (from data/categories/images)">
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="text-sm uppercase tracking-[0.14em] text-slate-400 mb-2">Study</h3>
+                    <div class="grid grid-cols-1 gap-2">
+                        <input class="input" id="grape_varieties" placeholder="Grape varieties (comma separated)">
+                        <textarea class="textarea" id="tasting_notes" placeholder="Tasting notes"></textarea>
+                        <input class="input" id="aroma" placeholder="Aroma">
+                        <input class="input" id="palate" placeholder="Palate">
+                        <input class="input" id="finish" placeholder="Finish">
+                        <textarea class="textarea" id="food_pairing" placeholder="Food pairing"></textarea>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="text-sm uppercase tracking-[0.14em] text-slate-400 mb-2">Technical</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <input class="input" id="alcohol_abv" placeholder="Alcohol ABV">
+                        <input class="input" id="residual_sugar" placeholder="Residual sugar">
+                        <input class="input" id="acidity" placeholder="Acidity">
+                        <input class="input" id="ph" placeholder="pH">
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="text-sm uppercase tracking-[0.14em] text-slate-400 mb-2">Production</h3>
+                    <div class="grid grid-cols-1 gap-2">
+                        <input class="input" id="vineyard" placeholder="Vineyard">
+                        <input class="input" id="soil" placeholder="Soil">
+                        <input class="input" id="harvest" placeholder="Harvest">
+                        <textarea class="textarea" id="vinification" placeholder="Vinification"></textarea>
+                        <textarea class="textarea" id="aging" placeholder="Aging"></textarea>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="text-sm uppercase tracking-[0.14em] text-slate-400 mb-2">Commercial</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <input class="input" id="certifications" placeholder="Certifications (comma separated)">
+                        <input class="input" id="awards" placeholder="Awards (comma separated)">
+                        <input class="input" id="importer" placeholder="Importer">
+                        <input class="input" id="distributor" placeholder="Distributor">
+                        <input class="input md:col-span-2" id="website" placeholder="Website">
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="text-sm uppercase tracking-[0.14em] text-slate-400 mb-2">Meta</h3>
+                    <textarea class="textarea" id="all_facts" placeholder="All facts"></textarea>
+                    <input class="input mt-2" id="missing_fields" placeholder="Missing fields (auto, comma separated)">
+                </section>
+
+                <div class="grid grid-cols-2 gap-2">
+                    <button id="saveBtn" class="btn-main rounded-xl font-bold">Save Record</button>
+                    <button id="cancelBtn" class="btn-soft rounded-xl border border-primary/40">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var STORAGE_KEY = 'wineBuilderItems_v1';
+        var rawItems = [];
+        var filteredItems = [];
+
+        function parseCsv(value) {
+            return String(value || '').split(',').map(function (x) { return x.trim(); }).filter(Boolean);
+        }
+
+        function joinCsv(arr) {
+            return Array.isArray(arr) ? arr.join(', ') : '';
+        }
+
+        function compact(value) {
+            return value == null ? '' : String(value);
+        }
+
+        function safe(value) {
+            return String(value || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
+        function slugify(text) {
+            return String(text || '').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+        }
+
+        function normalizeCategoryValue(value) {
+            var v = String(value || '').trim();
+            if (!v) return '';
+            var normalized = v
+                .normalize('NFKD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .toLowerCase()
+                .replace(/\s+/g, ' ')
+                .trim();
+            var map = {
+                'rose': 'rose',
+                'rose wine': 'rose',
+                'pink': 'rose',
+                'red': 'red',
+                'white': 'white',
+                'white wine': 'white',
+                'chardonnay': 'white',
+                'viognier': 'white',
+                'moscato': 'white',
+                'sweet white': 'white',
+                'yellow': 'white',
+                'straw yellow with greenish hues': 'white',
+                'pale gold': 'white',
+                'pale in color': 'white',
+                'gelb': 'white',
+                'sparkling wine': 'sparkling',
+                'sparkling white': 'sparkling',
+                'sparkling': 'sparkling',
+                'champagne': 'sparkling',
+                'brut': 'sparkling',
+                'port': 'port',
+                'tawny port': 'port',
+                'madeira': 'port',
+                'amber, golden tawny': 'port',
+                'dry': 'white',
+                'null': ''
+            };
+            return map[normalized] || normalized;
+        }
+
+        function getCategoryFromRaw(raw) {
+            var base = normalizeCategoryValue(raw.wine_type) || normalizeCategoryValue(raw.wine_color) || normalizeCategoryValue(raw.country) || 'other';
+            var sweetness = detectSweetness(raw);
+            if (base === 'port') return 'port';
+            if (sweetness === 'sweet') return 'dessert wine';
+            return base;
+        }
+
+        function normalizeForRuntime(raw, index) {
+            var vintage = raw.vintage || 'nv';
+            var id = slugify((raw.wine_name || 'wine') + '-' + vintage) || ('wine-' + index);
+            var category = getCategoryFromRaw(raw);
+            var sweetness = detectSweetness(raw);
+            return {
+                id: id,
+                name: raw.wine_name || 'Unnamed Wine',
+                subtitle: raw.producer || '',
+                category: category,
+                description: raw.tasting_notes || (raw.all_facts ? String(raw.all_facts).slice(0, 220) + '...' : null),
+                image: raw.image ? 'data/categories/images/' + String(raw.image).replace(/^\/+/, '') : null,
+                tags: [],
+                wineMeta: {
+                    producer: raw.producer || null,
+                    country: raw.country || null,
+                    region: raw.region || null,
+                    subregion: raw.subregion || null,
+                    appellation: raw.appellation || null,
+                    vintage: raw.vintage || null,
+                    wineType: raw.wine_type || null,
+                    wineColor: raw.wine_color || null,
+                    grapeVarieties: Array.isArray(raw.grape_varieties) ? raw.grape_varieties : [],
+                    alcoholAbv: raw.alcohol_abv || null,
+                    residualSugar: raw.residual_sugar || null,
+                    acidity: raw.acidity || null,
+                    ph: raw.ph || null,
+                    tastingNotes: raw.tasting_notes || null,
+                    aroma: raw.aroma || null,
+                    palate: raw.palate || null,
+                    finish: raw.finish || null,
+                    foodPairing: raw.food_pairing || null,
+                    allFacts: raw.all_facts || null,
+                    sweetness: sweetness,
+                    isSweet: sweetness === 'sweet'
+                }
+            };
+        }
+
+        function parseResidualSugar(value) {
+            if (!value) return null;
+            var text = String(value).toLowerCase().replace(',', '.');
+            var m = text.match(/(\d+(\.\d+)?)/);
+            if (!m) return null;
+            return Number(m[1]);
+        }
+
+        function hasSweetKeyword(raw) {
+            var text = [
+                raw.wine_name,
+                raw.wine_type,
+                raw.tasting_notes,
+                raw.all_facts
+            ].filter(Boolean).join(' ').toLowerCase();
+            var words = [
+                'sweet wine',
+                'dessert wine',
+                'puttonyos',
+                'tokaji',
+                'moscato',
+                'port',
+                'madeira',
+                'late harvest',
+                'ice wine',
+                'vin santo',
+                'sauternes'
+            ];
+            function escapeRe(str) {
+                return String(str).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            }
+            return words.some(function (w) {
+                var re = new RegExp('\\b' + escapeRe(w) + '\\b', 'i');
+                return re.test(text);
+            });
+        }
+
+        function detectSweetness(raw) {
+            var sugar = parseResidualSugar(raw.residual_sugar);
+            if (sugar !== null) {
+                if (sugar >= 45) return 'sweet';
+                if (sugar >= 12) return 'off-dry';
+                return 'dry';
+            }
+            if (hasSweetKeyword(raw)) return 'sweet';
+            return 'unknown';
+        }
+
+        function computeMissingFields(rec) {
+            var required = [
+                'wine_name', 'producer', 'country', 'region', 'vintage', 'wine_type',
+                'grape_varieties', 'tasting_notes', 'food_pairing', 'alcohol_abv', 'image'
+            ];
+            return required.filter(function (k) {
+                var val = rec[k];
+                if (Array.isArray(val)) return !val.length;
+                return !String(val || '').trim();
+            });
+        }
+
+        function loadTypeFilter() {
+            var types = Array.from(new Set(rawItems.map(function (x) { return getCategoryFromRaw(x); }))).sort();
+            var host = document.getElementById('typeFilter');
+            host.innerHTML = '<option value="all">All Types</option>' + types.map(function (t) { return '<option value="' + safe(t) + '">' + safe(t) + '</option>'; }).join('');
+        }
+
+        function renderList() {
+            var host = document.getElementById('listView');
+            if (!filteredItems.length) {
+                host.innerHTML = '<div class="text-slate-400 text-center py-10">No records</div>';
+                return;
+            }
+            host.innerHTML = filteredItems.map(function (item, idx) {
+                var type = getCategoryFromRaw(item);
+                var imagePath = item.image ? 'data/categories/images/' + item.image : null;
+                var actualIndex = rawItems.indexOf(item);
+                return '<button class="panel rounded-xl w-full p-3 text-left" onclick="openEditor(' + actualIndex + ')">'
+                    + '<div class="flex items-center gap-3">'
+                    + (imagePath ? '<img src="' + safe(imagePath) + '" alt="' + safe(item.wine_name) + '" class="w-16 h-16 rounded-lg object-cover" onerror="this.style.display=\'none\'">' : '')
+                    + '<div class="min-w-0 flex-1">'
+                    + '<div class="text-accent font-semibold truncate">' + safe(item.wine_name || 'Unnamed wine') + '</div>'
+                    + '<div class="text-slate-300 text-sm truncate">' + safe(item.producer || '') + '</div>'
+                    + '<div class="text-xs text-slate-400 mt-1 truncate">' + safe([type, item.vintage, item.region, item.country].filter(Boolean).join(' | ')) + '</div>'
+                    + '</div>'
+                    + '<span class="material-symbols-outlined text-slate-500">edit</span>'
+                    + '</div></button>';
+            }).join('');
+        }
+
+        function applyFilters() {
+            var q = document.getElementById('searchInput').value.trim().toLowerCase();
+            var type = document.getElementById('typeFilter').value;
+            filteredItems = rawItems.filter(function (item) {
+                var itemType = getCategoryFromRaw(item);
+                var typeMatch = type === 'all' || itemType === type;
+                var blob = [item.wine_name, item.producer, item.country, item.region, item.subregion, item.appellation, (item.grape_varieties || []).join(' ')].join(' ').toLowerCase();
+                var searchMatch = !q || blob.indexOf(q) !== -1;
+                return typeMatch && searchMatch;
+            });
+            renderList();
+        }
+
+        function getFormFields() {
+            return [
+                'wine_name', 'producer', 'country', 'region', 'subregion', 'appellation', 'vintage', 'wine_type', 'wine_color',
+                'grape_varieties', 'tasting_notes', 'aroma', 'palate', 'finish', 'food_pairing',
+                'alcohol_abv', 'residual_sugar', 'acidity', 'ph',
+                'vineyard', 'soil', 'harvest', 'vinification', 'aging',
+                'certifications', 'awards', 'importer', 'distributor', 'website',
+                'all_facts', 'missing_fields', 'image'
+            ];
+        }
+
+        function fillForm(rec, idx) {
+            document.getElementById('rec_index').value = idx;
+            document.getElementById('editorTitle').textContent = idx >= 0 ? 'Edit Wine' : 'Add Wine';
+            document.getElementById('deleteBtn').classList.toggle('hidden', idx < 0);
+
+            getFormFields().forEach(function (id) {
+                var el = document.getElementById(id);
+                if (id === 'grape_varieties' || id === 'certifications' || id === 'awards' || id === 'missing_fields') {
+                    el.value = joinCsv(rec[id]);
+                } else {
+                    el.value = compact(rec[id]);
+                }
+            });
+        }
+
+        function readForm() {
+            var rec = {};
+            getFormFields().forEach(function (id) {
+                var val = document.getElementById(id).value.trim();
+                if (id === 'grape_varieties' || id === 'certifications' || id === 'awards' || id === 'missing_fields') {
+                    rec[id] = parseCsv(val);
+                } else {
+                    rec[id] = val || '';
+                }
+            });
+            rec.wine_type = normalizeCategoryValue(rec.wine_type);
+            rec.wine_color = normalizeCategoryValue(rec.wine_color);
+            rec.missing_fields = computeMissingFields(rec);
+            return rec;
+        }
+
+        function normalizeRawCategoriesInPlace() {
+            rawItems.forEach(function (rec) {
+                rec.wine_type = normalizeCategoryValue(rec.wine_type);
+                rec.wine_color = normalizeCategoryValue(rec.wine_color);
+            });
+        }
+
+        function openEditor(idx) {
+            var rec = idx >= 0 ? rawItems[idx] : {
+                wine_name: '', producer: '', country: '', region: '', subregion: '', appellation: '', vintage: '', wine_type: '', wine_color: '',
+                grape_varieties: [], tasting_notes: '', aroma: '', palate: '', finish: '', food_pairing: '',
+                alcohol_abv: '', residual_sugar: '', acidity: '', ph: '',
+                vineyard: '', soil: '', harvest: '', vinification: '', aging: '',
+                certifications: [], awards: [], importer: '', distributor: '', website: '',
+                all_facts: '', missing_fields: [], image: ''
+            };
+            fillForm(rec, idx);
+            document.getElementById('editorOverlay').classList.remove('hidden');
+        }
+
+        function closeEditor() {
+            document.getElementById('editorOverlay').classList.add('hidden');
+        }
+
+        function saveRecord() {
+            var idx = Number(document.getElementById('rec_index').value);
+            var rec = readForm();
+            if (!rec.wine_name) {
+                alert('Wine name is required');
+                return;
+            }
+            if (idx >= 0) rawItems[idx] = rec;
+            else rawItems.push(rec);
+            persist();
+            closeEditor();
+            refresh();
+        }
+
+        function deleteRecord() {
+            var idx = Number(document.getElementById('rec_index').value);
+            if (idx < 0) return;
+            if (!confirm('Delete this wine record?')) return;
+            rawItems.splice(idx, 1);
+            persist();
+            closeEditor();
+            refresh();
+        }
+
+        function persist() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(rawItems));
+        }
+
+        function resetToSource() {
+            if (!confirm('Reset local records to source data?')) return;
+            localStorage.removeItem(STORAGE_KEY);
+            loadData();
+        }
+
+        function exportFile(filename, content, type) {
+            var blob = new Blob([content], { type: type || 'text/plain' });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function exportJson() {
+            exportFile('wines-list.json', JSON.stringify(rawItems, null, 2), 'application/json;charset=utf-8');
+        }
+
+        function exportRuntime() {
+            var normalized = rawItems.map(normalizeForRuntime);
+            var js = 'window.registerFoodCategory(' + JSON.stringify(normalized, null, 2) + ');\n';
+            exportFile('wines-runtime.js', js, 'application/javascript;charset=utf-8');
+        }
+
+        function refresh() {
+            loadTypeFilter();
+            applyFilters();
+        }
+
+        function loadData() {
+            var local = localStorage.getItem(STORAGE_KEY);
+            if (local) {
+                try {
+                    rawItems = JSON.parse(local);
+                    normalizeRawCategoriesInPlace();
+                    refresh();
+                    return;
+                } catch (e) {
+                    console.error('Invalid local builder data', e);
+                }
+            }
+            rawItems = Array.isArray(window.allWineItems) ? JSON.parse(JSON.stringify(window.allWineItems)) : [];
+            normalizeRawCategoriesInPlace();
+            persist();
+            refresh();
+        }
+
+        document.getElementById('searchInput').oninput = applyFilters;
+        document.getElementById('typeFilter').onchange = applyFilters;
+        document.getElementById('addBtn').onclick = function () { openEditor(-1); };
+        document.getElementById('saveLocalBtn').onclick = persist;
+        document.getElementById('resetBtn').onclick = resetToSource;
+        document.getElementById('exportJsonBtn').onclick = exportJson;
+        document.getElementById('exportRuntimeBtn').onclick = exportRuntime;
+        document.getElementById('closeEditorBtn').onclick = closeEditor;
+        document.getElementById('cancelBtn').onclick = closeEditor;
+        document.getElementById('saveBtn').onclick = saveRecord;
+        document.getElementById('deleteBtn').onclick = deleteRecord;
+
+        window.addEventListener('wineLoaded', loadData);
+        window.addEventListener('foodLoaded', loadData);
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.wineDataReady || window.foodDataReady) loadData();
+        });
+
+        if ('serviceWorker' in navigator && window.location.protocol.indexOf('http') === 0) {
+            navigator.serviceWorker.register('./sw.js').catch(function (err) {
+                console.log('SW error:', err);
+            });
+        }
+
+        window.openEditor = openEditor;
+    </script>
+</body>
+
+</html>

@@ -1,13 +1,12 @@
-const CACHE_NAME = 'food-list-v4';
+const CACHE_NAME = 'wine-list-v5';
 const ASSETS = [
     './',
     './index.html',
-    './food_trainer.html',
-    './mobile_food.html',
-    './food_builder.html',
+    './wine_trainer.html',
+    './wine_catalog.html',
+    './wine_builder.html',
     './data/loader.js',
-    './data/categories/scotts.js',
-    './data/categories/scotts_previous.js'
+    './data/categories/wines-list.json'
 ];
 
 self.addEventListener('install', (event) => {
@@ -27,16 +26,13 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-    // Only handle http/https requests (skip chrome-extension:// etc.)
     if (!event.request.url.startsWith('http')) return;
 
     event.respondWith(
         fetch(event.request)
             .then(response => {
-                const responseClone = response.clone();
-                caches.open(CACHE_NAME).then(cache => {
-                    cache.put(event.request, responseClone);
-                });
+                const clone = response.clone();
+                caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
                 return response;
             })
             .catch(() => {

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wine Trainer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7a1f3d',
+                        'primary-strong': '#5f1530',
+                        accent: '#d4a373',
+                        'bg-dark': '#14090e',
+                        'card-dark': '#241019'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="data/loader.js"></script>
+    <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: radial-gradient(circle at 20% 0%, #2c111b 0%, #14090e 48%, #10070b 100%);
+        }
+
+        .screen {
+            display: none;
+            min-height: 100dvh;
+        }
+
+        .screen.active {
+            display: flex;
+        }
+
+        .panel {
+            background: linear-gradient(145deg, #2a121d 0%, #1c0d14 55%, #15090f 100%);
+            border: 1px solid rgba(122, 31, 61, 0.45);
+        }
+
+        .btn-main {
+            min-height: 52px;
+            background: linear-gradient(135deg, #7a1f3d 0%, #5f1530 100%);
+        }
+
+        .btn-soft {
+            min-height: 44px;
+        }
+
+        .filter.active {
+            background: linear-gradient(135deg, #7a1f3d 0%, #5f1530 100%);
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .progress-track {
+            height: 6px;
+            border-radius: 999px;
+            background: rgba(122, 31, 61, 0.25);
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, #d4a373 0%, #7a1f3d 100%);
+            transition: width 0.25s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-bg-dark text-slate-100">
+    <section id="setupScreen" class="screen active flex-col p-4">
+        <div class="text-center pt-2 pb-3">
+            <a href="index.html" class="inline-flex items-center gap-1 text-accent text-sm min-h-[44px]"><span
+                    class="material-symbols-outlined">arrow_back</span>Home</a>
+            <h1 class="text-2xl font-bold text-accent mt-1">Wine Trainer</h1>
+            <p class="text-slate-400 text-sm">Core sommelier training</p>
+        </div>
+
+        <div class="panel rounded-2xl p-4 space-y-4">
+            <div>
+                <p class="text-xs uppercase tracking-[0.14em] text-slate-400 mb-2">Category</p>
+                <div id="categorySelect" class="flex flex-wrap gap-2"></div>
+            </div>
+            <div>
+                <p class="text-xs uppercase tracking-[0.14em] text-slate-400 mb-2">Question Focus</p>
+                <div id="typeSelect" class="grid grid-cols-2 gap-2">
+                    <button class="filter active border border-primary/40 rounded-xl px-3 py-2 text-sm btn-soft" data-type="mix">Mix</button>
+                    <button class="filter border border-primary/40 rounded-xl px-3 py-2 text-sm btn-soft" data-type="region">Region</button>
+                    <button class="filter border border-primary/40 rounded-xl px-3 py-2 text-sm btn-soft" data-type="grapes">Grapes</button>
+                    <button class="filter border border-primary/40 rounded-xl px-3 py-2 text-sm btn-soft" data-type="tasting">Tasting</button>
+                    <button class="filter border border-primary/40 rounded-xl px-3 py-2 text-sm btn-soft" data-type="foodPairing">Pairing</button>
+                    <button class="filter border border-primary/40 rounded-xl px-3 py-2 text-sm btn-soft" data-type="technical">Technical</button>
+                    <button class="filter border border-primary/40 rounded-xl px-3 py-2 text-sm btn-soft col-span-2" data-type="producer">Producer</button>
+                </div>
+            </div>
+            <div>
+                <p class="text-xs uppercase tracking-[0.14em] text-slate-400 mb-2">Flow</p>
+                <div id="flowSelect" class="grid grid-cols-2 gap-2">
+                    <button class="filter active border border-primary/40 rounded-xl px-3 py-2 text-sm btn-soft" data-flow="cards-quiz">Cards + Quiz</button>
+                    <button class="filter border border-primary/40 rounded-xl px-3 py-2 text-sm btn-soft" data-flow="quiz-only">Quiz only</button>
+                </div>
+            </div>
+            <div class="text-sm text-slate-400" id="sessionInfo">0 wines</div>
+            <button id="startBtn" class="btn-main rounded-xl w-full font-bold">Start Session</button>
+        </div>
+    </section>
+
+    <section id="flashcardScreen" class="screen flex-col p-4">
+        <div class="flex items-center justify-between mb-3">
+            <button id="exitCards" class="btn-soft px-3 rounded-lg border border-primary/40 text-slate-300">Exit</button>
+            <span id="cardsCount" class="text-sm text-slate-400">0/0</span>
+        </div>
+        <div class="progress-track mb-4">
+            <div id="cardsProgress" class="progress-bar"></div>
+        </div>
+        <div id="cardBox" class="panel rounded-2xl p-4 space-y-3 flex-1">
+            <img id="cardImage" src="" alt="" class="w-full h-44 object-cover rounded-xl hidden">
+            <h2 id="cardName" class="text-xl font-bold text-accent"></h2>
+            <div id="cardMeta" class="text-sm text-slate-300"></div>
+            <div id="cardTasting" class="text-sm text-slate-300"></div>
+            <div id="cardGrapes" class="text-sm text-slate-300"></div>
+            <div id="cardPairing" class="text-sm text-slate-300"></div>
+        </div>
+        <div class="grid grid-cols-2 gap-3 mt-4">
+            <button id="cardReview" class="btn-soft rounded-xl border border-primary/40">Review</button>
+            <button id="cardKnow" class="btn-main rounded-xl font-bold">Know</button>
+        </div>
+    </section>
+
+    <section id="quizScreen" class="screen flex-col p-4">
+        <div class="flex items-center justify-between mb-3">
+            <button id="exitQuiz" class="btn-soft px-3 rounded-lg border border-primary/40 text-slate-300">Exit</button>
+            <span id="quizCount" class="text-sm text-slate-400">0/0</span>
+        </div>
+        <div class="progress-track mb-4">
+            <div id="quizProgress" class="progress-bar"></div>
+        </div>
+        <div class="panel rounded-2xl p-4" id="quizCard">
+            <img id="quizImage" src="" alt="" class="w-full h-40 object-cover rounded-xl hidden mb-3">
+            <p id="questionText" class="text-base leading-relaxed"></p>
+            <div id="answerBox" class="mt-4 hidden">
+                <p class="text-xs uppercase tracking-[0.12em] text-slate-400 mb-1">Answer</p>
+                <p id="answerText" class="text-sm text-slate-200 whitespace-pre-wrap"></p>
+            </div>
+        </div>
+        <button id="showAnswer" class="btn-main rounded-xl font-bold w-full mt-4">Show Answer</button>
+        <div id="rateRow" class="grid grid-cols-2 gap-3 mt-3 hidden">
+            <button id="wrongBtn" class="btn-soft rounded-xl border border-primary/40">Not Correct</button>
+            <button id="correctBtn" class="btn-main rounded-xl font-bold">Correct</button>
+        </div>
+    </section>
+
+    <section id="doneScreen" class="screen flex-col p-4 items-center justify-center text-center gap-3">
+        <div class="panel rounded-2xl p-6 w-full max-w-sm">
+            <h2 class="text-2xl font-bold text-accent">Session Complete</h2>
+            <p class="text-slate-300 mt-2">Correct: <span id="finalCorrect">0</span></p>
+            <p class="text-slate-300">Wrong: <span id="finalWrong">0</span></p>
+            <p class="text-slate-300">Accuracy: <span id="finalAccuracy">0%</span></p>
+            <button id="restartBtn" class="btn-main rounded-xl font-bold w-full mt-4">Restart</button>
+            <button id="backSetup" class="btn-soft rounded-xl border border-primary/40 w-full mt-2">Back to Setup</button>
+        </div>
+    </section>
+
+    <script>
+        var allFoodItems = [];
+        var selectedCategory = 'all';
+        var selectedType = 'mix';
+        var selectedFlow = 'cards-quiz';
+
+        var flashQueue = [];
+        var flashKnown = [];
+        var flashReview = [];
+        var currentCard = null;
+
+        var quizQueue = [];
+        var quizTotal = 0;
+        var currentQuestion = null;
+        var statCorrect = 0;
+        var statWrong = 0;
+        var doneCount = 0;
+
+        function m(item) { return item.wineMeta || {}; }
+        function choose(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+        function esc(t) { return t == null ? 'N/A' : String(t); }
+
+        function showScreen(id) {
+            ['setupScreen', 'flashcardScreen', 'quizScreen', 'doneScreen'].forEach(function (x) {
+                document.getElementById(x).classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+
+        function shuffle(arr) {
+            var a = arr.slice();
+            for (var i = a.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var t = a[i]; a[i] = a[j]; a[j] = t;
+            }
+            return a;
+        }
+
+        function filteredItems() {
+            return allFoodItems.filter(function (item) {
+                return selectedCategory === 'all' || item.category === selectedCategory;
+            });
+        }
+
+        function updateSetupInfo() {
+            document.getElementById('sessionInfo').textContent = filteredItems().length + ' wines';
+        }
+
+        function renderCategories() {
+            var categories = ['all'].concat(Array.from(new Set(allFoodItems.map(function (i) { return i.category; }).filter(Boolean))).sort());
+            var host = document.getElementById('categorySelect');
+            host.innerHTML = '';
+            categories.forEach(function (cat) {
+                var btn = document.createElement('button');
+                btn.className = 'filter btn-soft border border-primary/40 rounded-xl px-3 py-2 text-sm';
+                if (cat === selectedCategory) btn.classList.add('active');
+                btn.textContent = cat === 'all' ? 'All Types' : cat;
+                btn.onclick = function () {
+                    selectedCategory = cat;
+                    renderCategories();
+                    updateSetupInfo();
+                };
+                host.appendChild(btn);
+            });
+        }
+
+        function bindOptionGroup(containerId, setter) {
+            document.querySelectorAll('#' + containerId + ' .filter').forEach(function (btn) {
+                btn.onclick = function () {
+                    document.querySelectorAll('#' + containerId + ' .filter').forEach(function (b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+                    setter(btn.dataset.type || btn.dataset.flow);
+                };
+            });
+        }
+
+        function startSession() {
+            var items = filteredItems();
+            if (!items.length) {
+                alert('No wines in this category');
+                return;
+            }
+            statCorrect = 0;
+            statWrong = 0;
+            doneCount = 0;
+            if (selectedFlow === 'cards-quiz') {
+                startCards(items);
+            } else {
+                startQuiz(items);
+            }
+        }
+
+        function startCards(items) {
+            flashQueue = shuffle(items);
+            flashKnown = [];
+            flashReview = [];
+            currentCard = null;
+            showScreen('flashcardScreen');
+            nextCard();
+        }
+
+        function updateCardsProgress() {
+            var done = flashKnown.length + flashReview.length;
+            var total = flashKnown.length + flashReview.length + flashQueue.length;
+            var pct = total ? Math.round((done / total) * 100) : 0;
+            document.getElementById('cardsCount').textContent = done + '/' + total;
+            document.getElementById('cardsProgress').style.width = pct + '%';
+        }
+
+        function renderCard(item) {
+            var mm = m(item);
+            document.getElementById('cardName').textContent = item.name;
+            document.getElementById('cardMeta').textContent = [mm.producer, mm.wineType || item.category, mm.vintage, mm.region, mm.country].filter(Boolean).join(' | ') || 'N/A';
+            document.getElementById('cardTasting').textContent = 'Tasting: ' + esc(mm.tastingNotes || item.description);
+            document.getElementById('cardGrapes').textContent = 'Grapes: ' + ((mm.grapeVarieties || []).join(', ') || 'N/A');
+            document.getElementById('cardPairing').textContent = 'Food pairing: ' + esc(mm.foodPairing);
+            var img = document.getElementById('cardImage');
+            if (item.image) {
+                img.src = item.image;
+                img.classList.remove('hidden');
+                img.onerror = function () { img.classList.add('hidden'); };
+            } else {
+                img.classList.add('hidden');
+            }
+        }
+
+        function nextCard() {
+            updateCardsProgress();
+            if (!flashQueue.length) {
+                var quizPool = flashReview.length ? flashReview.concat(flashKnown) : flashKnown;
+                if (!quizPool.length) {
+                    showScreen('setupScreen');
+                    return;
+                }
+                startQuiz(quizPool);
+                return;
+            }
+            currentCard = flashQueue.shift();
+            renderCard(currentCard);
+        }
+
+        function cardKnow() {
+            if (!currentCard) return;
+            flashKnown.push(currentCard);
+            nextCard();
+        }
+
+        function cardReview() {
+            if (!currentCard) return;
+            flashReview.push(currentCard);
+            nextCard();
+        }
+
+        function makeQuestion(item) {
+            var mm = m(item);
+            var type = selectedType === 'mix'
+                ? choose(['region', 'grapes', 'tasting', 'foodPairing', 'technical', 'producer'])
+                : selectedType;
+            var q = { item: item, type: type, question: '', answer: '' };
+
+            if (type === 'region') {
+                q.question = 'Where is "' + item.name + '" from?';
+                q.answer = [mm.country, mm.region, mm.subregion, mm.appellation].filter(Boolean).join(' / ') || 'N/A';
+            } else if (type === 'grapes') {
+                q.question = 'Which grapes are used in "' + item.name + '"?';
+                q.answer = (mm.grapeVarieties || []).join(', ') || 'N/A';
+            } else if (type === 'tasting') {
+                q.question = 'Describe the tasting profile of "' + item.name + '".';
+                q.answer = [
+                    'Notes: ' + esc(mm.tastingNotes || item.description),
+                    'Aroma: ' + esc(mm.aroma),
+                    'Palate: ' + esc(mm.palate),
+                    'Finish: ' + esc(mm.finish)
+                ].join('\n');
+            } else if (type === 'foodPairing') {
+                q.question = 'What food pairing is suggested for "' + item.name + '"?';
+                q.answer = esc(mm.foodPairing);
+            } else if (type === 'technical') {
+                q.question = 'Give technical facts for "' + item.name + '" (ABV / vintage).';
+                q.answer = 'ABV: ' + esc(mm.alcoholAbv) + '\nVintage: ' + esc(mm.vintage);
+            } else {
+                q.question = 'Who is the producer of "' + item.name + '"?';
+                q.answer = esc(mm.producer || item.subtitle);
+            }
+
+            return q;
+        }
+
+        function startQuiz(items) {
+            quizQueue = shuffle(items);
+            quizTotal = quizQueue.length;
+            currentQuestion = null;
+            showScreen('quizScreen');
+            nextQuestion();
+        }
+
+        function updateQuizProgress() {
+            var pct = quizTotal ? Math.round((doneCount / quizTotal) * 100) : 0;
+            document.getElementById('quizCount').textContent = doneCount + '/' + quizTotal;
+            document.getElementById('quizProgress').style.width = pct + '%';
+        }
+
+        function nextQuestion() {
+            document.getElementById('answerBox').classList.add('hidden');
+            document.getElementById('rateRow').classList.add('hidden');
+            document.getElementById('showAnswer').classList.remove('hidden');
+
+            if (!quizQueue.length) {
+                finishSession();
+                return;
+            }
+
+            var item = quizQueue.shift();
+            currentQuestion = makeQuestion(item);
+            document.getElementById('questionText').textContent = currentQuestion.question;
+            document.getElementById('answerText').textContent = currentQuestion.answer;
+
+            var img = document.getElementById('quizImage');
+            if (item.image) {
+                img.src = item.image;
+                img.classList.remove('hidden');
+                img.onerror = function () { img.classList.add('hidden'); };
+            } else {
+                img.classList.add('hidden');
+            }
+
+            updateQuizProgress();
+        }
+
+        function revealAnswer() {
+            document.getElementById('answerBox').classList.remove('hidden');
+            document.getElementById('rateRow').classList.remove('hidden');
+            document.getElementById('showAnswer').classList.add('hidden');
+        }
+
+        function markCorrect() {
+            statCorrect += 1;
+            doneCount += 1;
+            nextQuestion();
+        }
+
+        function markWrong() {
+            statWrong += 1;
+            doneCount += 1;
+            if (currentQuestion && currentQuestion.item) {
+                quizQueue.push(currentQuestion.item);
+                quizTotal += 1;
+            }
+            nextQuestion();
+        }
+
+        function finishSession() {
+            var accuracy = (statCorrect + statWrong) ? Math.round((statCorrect / (statCorrect + statWrong)) * 100) : 0;
+            document.getElementById('finalCorrect').textContent = statCorrect;
+            document.getElementById('finalWrong').textContent = statWrong;
+            document.getElementById('finalAccuracy').textContent = accuracy + '%';
+            showScreen('doneScreen');
+        }
+
+        function initialize() {
+            allFoodItems = Array.isArray(window.allFoodItems) ? window.allFoodItems : [];
+            renderCategories();
+            bindOptionGroup('typeSelect', function (v) { selectedType = v; });
+            bindOptionGroup('flowSelect', function (v) { selectedFlow = v; updateSetupInfo(); });
+            updateSetupInfo();
+        }
+
+        document.getElementById('startBtn').onclick = startSession;
+        document.getElementById('cardKnow').onclick = cardKnow;
+        document.getElementById('cardReview').onclick = cardReview;
+        document.getElementById('showAnswer').onclick = revealAnswer;
+        document.getElementById('correctBtn').onclick = markCorrect;
+        document.getElementById('wrongBtn').onclick = markWrong;
+        document.getElementById('restartBtn').onclick = startSession;
+        document.getElementById('backSetup').onclick = function () { showScreen('setupScreen'); };
+        document.getElementById('exitCards').onclick = function () { showScreen('setupScreen'); };
+        document.getElementById('exitQuiz').onclick = function () { showScreen('setupScreen'); };
+
+        window.addEventListener('wineLoaded', initialize);
+        window.addEventListener('foodLoaded', initialize);
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.wineDataReady || window.foodDataReady) initialize();
+        });
+
+        if ('serviceWorker' in navigator && window.location.protocol.indexOf('http') === 0) {
+            navigator.serviceWorker.register('./sw.js').catch(function (err) {
+                console.log('SW error:', err);
+            });
+        }
+    </script>
+</body>
+
+</html>

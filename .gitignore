@@ -1,5 +1,6 @@
 # Node modules
 node_modules/
+.npm/
 
 # OS files
 .DS_Store
@@ -8,16 +9,8 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+.venv/
 
 # Temp
 *.tmp
 *.log
-
-# original files
-Scotts Bibles - New-23.pdf
-images_migrate.py
-allergens_report.txt
-fix_allergens.py
-verify_allergens.py
-fix_mep_fields.py
-update_menu_feb2026.py

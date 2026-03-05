@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wine Catalog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7a1f3d',
+                        'primary-strong': '#5f1530',
+                        accent: '#d4a373',
+                        'bg-dark': '#14090e',
+                        'card-dark': '#241019'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="data/loader.js"></script>
+    <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: radial-gradient(circle at 20% -10%, #2c111b 0%, #14090e 46%, #10070b 100%);
+        }
+
+        .catalog-card {
+            background: linear-gradient(145deg, #2a121d 0%, #1f0e17 55%, #160a10 100%);
+            border: 1px solid rgba(122, 31, 61, 0.45);
+            transition: transform 0.2s ease;
+        }
+
+        .catalog-card:active {
+            transform: scale(0.985);
+        }
+
+        .pill.active {
+            background: linear-gradient(135deg, #7a1f3d 0%, #5f1530 100%);
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .search-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(122, 31, 61, 0.55);
+        }
+
+        #detailView {
+            transition: transform 0.25s ease;
+        }
+
+        #detailView.hidden {
+            transform: translateX(100%);
+        }
+
+        .lightbox {
+            background: rgba(0, 0, 0, 0.92);
+        }
+
+        details summary {
+            list-style: none;
+        }
+
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-bg-dark text-slate-100">
+    <div id="catalogView" class="min-h-screen flex flex-col">
+        <header class="sticky top-0 z-20 bg-bg-dark/95 backdrop-blur-md border-b border-primary/40 p-4">
+            <div class="flex items-center gap-3 mb-3">
+                <a href="index.html" class="text-accent inline-flex items-center"><span
+                        class="material-symbols-outlined">arrow_back</span></a>
+                <h1 class="text-base font-bold uppercase tracking-[0.18em] text-slate-300 flex-1 min-w-0">Wine Catalog</h1>
+                <span id="itemCount" class="text-xs text-slate-400">0 items</span>
+            </div>
+            <input id="searchInput" type="text" placeholder="Search wine, producer, region, grapes..."
+                class="search-input w-full bg-card-dark border border-primary/40 rounded-xl px-4 py-3 text-sm placeholder-slate-500 min-h-[44px]">
+            <div id="categoryList" class="flex gap-2 overflow-x-auto pt-3 pb-1"></div>
+        </header>
+
+        <main id="wineList" class="flex-1 p-4 space-y-3"></main>
+    </div>
+
+    <div id="detailView" class="fixed inset-0 bg-bg-dark z-50 hidden overflow-y-auto">
+        <nav class="sticky top-0 z-20 bg-bg-dark/95 backdrop-blur-md border-b border-primary/40 p-3 flex items-center gap-3">
+            <button id="detailBack" class="text-accent inline-flex items-center justify-center min-h-[44px] min-w-[44px]"><span
+                    class="material-symbols-outlined">arrow_back</span></button>
+            <h2 class="text-sm font-semibold uppercase tracking-[0.16em] text-slate-300">Wine Profile</h2>
+        </nav>
+        <main id="detailContent" class="pb-14"></main>
+    </div>
+
+    <div id="lightbox" class="fixed inset-0 z-[80] hidden lightbox items-center justify-center p-4">
+        <button id="lightboxClose"
+            class="absolute top-4 right-4 rounded-full bg-black/50 p-2 text-white min-h-[44px] min-w-[44px]"><span
+                class="material-symbols-outlined">close</span></button>
+        <img id="lightboxImg" src="" alt="" class="max-w-full max-h-full object-contain rounded-lg">
+    </div>
+
+    <script>
+        var allFoodItems = [];
+        var filteredItems = [];
+        var selectedCategory = 'all';
+
+        var searchInput = document.getElementById('searchInput');
+        var categoryList = document.getElementById('categoryList');
+        var wineList = document.getElementById('wineList');
+        var itemCount = document.getElementById('itemCount');
+        var catalogView = document.getElementById('catalogView');
+        var detailView = document.getElementById('detailView');
+        var detailContent = document.getElementById('detailContent');
+
+        function esc(text) {
+            return String(text || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
+        function meta(item) {
+            return item.wineMeta || {};
+        }
+
+        function renderCategories() {
+            var categories = ['all'].concat(Array.from(new Set(allFoodItems.map(function (i) { return i.category; }).filter(Boolean))).sort());
+            categoryList.innerHTML = '';
+            categories.forEach(function (cat) {
+                var btn = document.createElement('button');
+                btn.className = 'pill flex-shrink-0 border border-primary/40 bg-card-dark text-slate-300 rounded-xl px-3 py-2 text-xs font-semibold min-h-[44px]';
+                btn.textContent = cat === 'all' ? 'All Types' : cat;
+                if (cat === selectedCategory) btn.classList.add('active');
+                btn.onclick = function () {
+                    selectedCategory = cat;
+                    renderCategories();
+                    filterAndRender();
+                };
+                categoryList.appendChild(btn);
+            });
+        }
+
+        function includeBySearch(item, q) {
+            if (!q) return true;
+            var m = meta(item);
+            var pool = [
+                item.name,
+                item.subtitle,
+                item.category,
+                m.country,
+                m.region,
+                m.subregion,
+                m.appellation,
+                m.vintage,
+                (m.grapeVarieties || []).join(' ')
+            ].join(' ').toLowerCase();
+            return pool.indexOf(q) !== -1;
+        }
+
+        function filterAndRender() {
+            var q = searchInput.value.trim().toLowerCase();
+            filteredItems = allFoodItems.filter(function (item) {
+                var catMatch = selectedCategory === 'all' || item.category === selectedCategory;
+                return catMatch && includeBySearch(item, q);
+            });
+            renderList();
+        }
+
+        function renderList() {
+            itemCount.textContent = filteredItems.length + ' items';
+            if (!filteredItems.length) {
+                wineList.innerHTML = '<div class="text-center text-slate-500 py-10">No wines found.</div>';
+                return;
+            }
+
+            wineList.innerHTML = filteredItems.map(function (item) {
+                var m = meta(item);
+                var sweetBadge = m.isSweet
+                    ? '<span class="text-[11px] px-2 py-1 rounded-full border border-amber-400/40 bg-amber-400/15 text-amber-300">SWEET</span>'
+                    : '';
+                return '<button class="catalog-card rounded-2xl w-full p-3 text-left" onclick="showDetail(\'' + esc(item.id) + '\')">'
+                    + '<div class="flex items-center gap-3">'
+                    + (item.image ? '<img src="' + esc(item.image) + '" alt="' + esc(item.name) + '" class="w-16 h-16 rounded-xl object-cover flex-shrink-0" onerror="this.style.display=\'none\'">' : '')
+                    + '<div class="flex-1 min-w-0">'
+                    + '<h3 class="text-accent font-semibold text-sm truncate">' + esc(item.name) + '</h3>'
+                    + (item.subtitle ? '<p class="text-slate-300 text-xs truncate mt-0.5">' + esc(item.subtitle) + '</p>' : '')
+                    + '<div class="flex flex-wrap gap-1.5 mt-2">'
+                    + '<span class="text-[11px] px-2 py-1 rounded-full border border-primary/40 bg-primary/15 text-slate-200">' + esc(item.category || 'Other') + '</span>'
+                    + sweetBadge
+                    + (m.vintage ? '<span class="text-[11px] px-2 py-1 rounded-full border border-primary/40 bg-card-dark text-slate-300">' + esc(m.vintage) + '</span>' : '')
+                    + (m.region ? '<span class="text-[11px] px-2 py-1 rounded-full border border-primary/40 bg-card-dark text-slate-300 truncate max-w-[120px]">' + esc(m.region) + '</span>' : '')
+                    + '</div></div>'
+                    + '<span class="material-symbols-outlined text-slate-500">chevron_right</span>'
+                    + '</div></button>';
+            }).join('');
+        }
+
+        function section(title, icon, content) {
+            if (!content) return '';
+            return '<section class="px-4 py-3 border-b border-primary/20">'
+                + '<h3 class="text-sm font-bold uppercase tracking-[0.14em] text-accent flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-base">' + icon + '</span>' + title + '</h3>'
+                + content + '</section>';
+        }
+
+        function detailLine(label, value) {
+            if (!value) return '';
+            return '<div class="text-sm text-slate-300"><span class="text-slate-500">' + esc(label) + ':</span> ' + esc(value) + '</div>';
+        }
+
+        function showDetail(id) {
+            var item = allFoodItems.find(function (x) { return x.id === id; });
+            if (!item) return;
+            var m = meta(item);
+            var grapes = (m.grapeVarieties || []).filter(Boolean);
+            var overview = detailLine('Name', item.name)
+                + detailLine('Producer', m.producer || item.subtitle)
+                + detailLine('Type', m.wineType || item.category)
+                + detailLine('Vintage', m.vintage)
+                + detailLine('Country', m.country)
+                + detailLine('Region', [m.region, m.subregion].filter(Boolean).join(' / '))
+                + detailLine('Appellation', m.appellation);
+
+            var tasting = [
+                m.tastingNotes ? '<p class="text-sm text-slate-300 leading-relaxed mb-2">' + esc(m.tastingNotes) + '</p>' : '',
+                detailLine('Aroma', m.aroma),
+                detailLine('Palate', m.palate),
+                detailLine('Finish', m.finish)
+            ].join('');
+
+            var grapesHtml = grapes.length
+                ? '<div class="flex flex-wrap gap-2">' + grapes.map(function (g) {
+                    return '<span class="px-2 py-1 text-xs rounded-full bg-primary/15 border border-primary/30 text-slate-200">' + esc(g) + '</span>';
+                }).join('') + '</div>'
+                : '<p class="text-sm text-slate-400">No grape details.</p>';
+
+            var technical = detailLine('ABV', m.alcoholAbv)
+                + detailLine('Acidity', m.acidity)
+                + detailLine('Residual sugar', m.residualSugar)
+                + detailLine('pH', m.ph)
+                + detailLine('Sweetness', m.sweetness);
+
+            var facts = m.allFacts
+                ? '<details class="rounded-xl border border-primary/30 bg-card-dark p-3"><summary class="cursor-pointer text-sm font-semibold text-slate-200">Open full notes</summary><p class="text-sm text-slate-300 mt-2 leading-relaxed">' + esc(m.allFacts) + '</p></details>'
+                : '';
+
+            detailContent.innerHTML = ''
+                + '<div class="relative">'
+                + (item.image ? '<img src="' + esc(item.image) + '" alt="' + esc(item.name) + '" class="w-full h-72 object-cover cursor-zoom-in" onclick="openLightbox(\'' + esc(item.image) + '\')" onerror="this.style.display=\'none\'">' : '<div class="h-56 bg-card-dark"></div>')
+                + '<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-bg-dark to-transparent p-4">'
+                + '<h2 class="text-xl font-bold text-white">' + esc(item.name) + '</h2>'
+                + (item.subtitle ? '<p class="text-sm text-slate-200">' + esc(item.subtitle) + '</p>' : '')
+                + '</div></div>'
+                + section('Overview', 'info', overview)
+                + section('Tasting Profile', 'local_bar', tasting)
+                + section('Grapes', 'spa', grapesHtml)
+                + section('Food Pairing', 'restaurant', m.foodPairing ? '<p class="text-sm text-slate-300 leading-relaxed">' + esc(m.foodPairing) + '</p>' : '<p class="text-sm text-slate-400">No pairing notes.</p>')
+                + section('Technical Snapshot', 'monitoring', technical || '<p class="text-sm text-slate-400">No technical data.</p>')
+                + section('Extended Facts', 'article', facts || '<p class="text-sm text-slate-400">No extended facts.</p>');
+
+            catalogView.style.display = 'none';
+            detailView.classList.remove('hidden');
+            history.pushState({ detail: id }, '', '#' + id);
+        }
+
+        function hideDetail() {
+            detailView.classList.add('hidden');
+            catalogView.style.display = '';
+            if (location.hash) history.back();
+        }
+
+        document.getElementById('detailBack').onclick = hideDetail;
+
+        var lightbox = document.getElementById('lightbox');
+        var lightboxImg = document.getElementById('lightboxImg');
+        document.getElementById('lightboxClose').onclick = function () {
+            lightbox.classList.add('hidden');
+            lightboxImg.src = '';
+            document.body.style.overflow = '';
+        };
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        window.openLightbox = openLightbox;
+        window.showDetail = showDetail;
+
+        lightbox.onclick = function (e) {
+            if (e.target === lightbox) {
+                document.getElementById('lightboxClose').click();
+            }
+        };
+
+        window.addEventListener('popstate', function () {
+            if (!detailView.classList.contains('hidden')) {
+                detailView.classList.add('hidden');
+                catalogView.style.display = '';
+            }
+        });
+
+        searchInput.oninput = filterAndRender;
+
+        function initialize() {
+            allFoodItems = Array.isArray(window.allFoodItems) ? window.allFoodItems : [];
+            renderCategories();
+            filterAndRender();
+            if (location.hash) {
+                showDetail(location.hash.slice(1));
+            }
+        }
+
+        window.addEventListener('wineLoaded', initialize);
+        window.addEventListener('foodLoaded', initialize);
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.wineDataReady || window.foodDataReady) initialize();
+        });
+
+        if ('serviceWorker' in navigator && window.location.protocol.indexOf('http') === 0) {
+            navigator.serviceWorker.register('./sw.js').catch(function (err) {
+                console.log('SW error:', err);
+            });
+        }
+    </script>
+</body>
+
+</html>
