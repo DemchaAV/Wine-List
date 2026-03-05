@@ -446,16 +446,6 @@
     "image": "terroir_sense_fronteres_montsant_negre_2022.jpeg"
   },
   {
-    "wine_name": "Graham's 20-year-old-tawny_port",
-    "grape_varieties": [],
-    "certifications": [],
-    "awards": [],
-    "missing_fields": [],
-    "image": "grahams_20-year-old-tawny_port.jpeg",
-    "wine_type": "",
-    "wine_color": ""
-  },
-  {
     "wine_name": "Graham's LBV Port 2019",
     "producer": "W & J Graham's Port",
     "country": "Portugal & Islands",
@@ -627,7 +617,7 @@
     "image": "henriot_brut_souverain.jpeg"
   },
   {
-    "wine_name": "Jurancos Clos Urolat",
+    "wine_name": "Jurancon sweet wine",
     "producer": "Clos Uroulat",
     "region": "Jurançon",
     "appellation": "A P P E L A T I O N Jurançon",
