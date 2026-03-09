@@ -1,0 +1,4 @@
+interface:
+  display_name: "App Version Bump"
+  short_description: "Refresh version after changes"
+  default_prompt: "Use $app-version-bump to update Wine-list manifest.json version so the service worker refreshes cached pages and wine data."

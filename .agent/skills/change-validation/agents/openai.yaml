@@ -1,0 +1,4 @@
+interface:
+  display_name: "Change Validation"
+  short_description: "Require tests and smoke checks"
+  default_prompt: "Use $change-validation to verify Wine-list changes with targeted commands, smoke checks, and a clear pass/fail summary."

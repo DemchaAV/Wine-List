@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update Wine Data"
+  short_description: "Edit wine data and regenerate runtime"
+  default_prompt: "Use $update-wine-data to change the Wine-list dataset, regenerate wines-runtime.js, and keep loader-visible data in sync."
