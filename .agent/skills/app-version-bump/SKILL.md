@@ -20,12 +20,12 @@ Before finishing a real change, bump `manifest.json.version`.
 ## Version Format
 
 - first version of the day: `YYYY.M.D`
-- another version on the same day: `YYYY.M.D.HH:mm`
+- another version on the same day: `YYYY.M.D.HHmm`
 
 Examples:
 
 - `2026.3.9`
-- `2026.3.9.11:24`
+- `2026.3.9.1124`
 
 ## Command
 

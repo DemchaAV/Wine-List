@@ -8,7 +8,7 @@ MANIFEST_PATH = Path("manifest.json")
 
 def build_versions(now: datetime) -> tuple[str, str]:
     base = f"{now.year}.{now.month}.{now.day}"
-    timed = f"{base}.{now:%H:%M}"
+    timed = f"{base}.{now:%H%M}"
     return base, timed
 
 
